@@ -8,8 +8,15 @@ const EnquirySchema = new mongoose.Schema(
       required: false, // Optional if it's a general enquiry
     },
     name: { type: String, required: true },
+    email: { type: String },
     phone: { type: String, required: true },
     message: { type: String, required: true },
+    plotId: { type: String },
+    status: {
+      type: String,
+      enum: ["pending", "contacted", "closed"],
+      default: "pending",
+    },
   },
   { timestamps: true },
 );

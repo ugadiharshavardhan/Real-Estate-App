@@ -1,4 +1,5 @@
 ﻿import { Playfair_Display, Inter } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -21,13 +22,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${playfair.variable} ${inter.variable} font-inter antialiased`}
-      >
-        {children}
-        <ScrollToTop />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="scroll-smooth">
+        <body
+          className={`${playfair.variable} ${inter.variable} font-inter antialiased`}
+        >
+          {children}
+          <ScrollToTop />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
