@@ -117,42 +117,42 @@ async function seed() {
           description:
             "Major transit hub connecting to Hyderabad and Bangalore.",
           image:
-            "https://images.unsplash.com/photo-1474487012301-49a374665f80?q=80&w=1000&auto=format&fit=crop",
+            "https://upload.wikimedia.org/wikipedia/commons/3/3f/Railway_station_in_kurnool_city.jpg",
           distance: "8 km",
         },
         {
           title: "Orvakal Airport",
           description: "Kurnool (Uyalawada Narasimha Reddy) Airport.",
           image:
-            "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1000&auto=format&fit=crop",
+            "https://www.sakshi.com/styles/webp/s3/article_images/2021/03/28/KURNOOL-AIRPORT_0.jpg.webp?itok=Jvp3XGz3",
           distance: "20 km",
         },
         {
           title: "Konda Reddy Fort",
           description: "Famous historical landmark of Kurnool.",
           image:
-            "https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?q=80&w=1000&auto=format&fit=crop",
+            "https://s7ap1.scene7.com/is/image/incredibleindia/konda-reddy-fort-kurnool-2-attr-hero?qlt=82&ts=1726743973387",
           distance: "6 km",
         },
         {
           title: "Silver Jubilee College",
           description: "One of the prestigious educational institutions.",
           image:
-            "https://images.unsplash.com/photo-1498243639359-2cee70984950?q=80&w=1000&auto=format&fit=crop",
+            "https://media.licdn.com/dms/image/v2/D4D1BAQF42j5iACorRg/company-background_10000/company-background_10000/0/1654854586189/sjgc_knl_cover?e=2147483647&v=beta&t=qYDnKCeS-6-qc9ZcShrnGi9Ner4lxnX3_ZiQFlDf_qI",
           distance: "5 km",
         },
         {
           title: "NH 44 Highway",
           description: "Direct connectivity to major cities via the highway.",
           image:
-            "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop",
+            "https://framerusercontent.com/images/eHIDYSLQtVHsrUX6Of9yEsYeR4.jpg?width=736&height=868",
           distance: "2 km",
         },
         {
-          title: "Gowri Gopal Hospital",
+          title: "Viswa Bharati Hospital",
           description: "Multi-specialty healthcare services for emergencies.",
           image:
-            "https://images.unsplash.com/photo-1519494026892-80bbd2d634cb?q=80&w=1000&auto=format&fit=crop",
+            "https://rmgoe.org/universities/India/images/1751016930_685e65e2b46b0.png",
           distance: "10 km",
         },
       ],
