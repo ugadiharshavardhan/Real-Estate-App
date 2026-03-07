@@ -1,0 +1,4562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="1191"
+   height="842"
+   viewBox="0 0 1191 842"
+   id="svg531"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13">
+    <clipPath
+       id="clip_1">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M0 1278H6742V8133H0V1278"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       id="clip_2">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M0 1278H6742V8133H0V1278"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       id="clip_3">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M0 1278H6742V8133H0V1278"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       id="clip_4">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M0 1278H6742V8133H0V1278"
+         id="path4" />
+    </clipPath>
+    <clipPath
+       id="clip_5">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M0 1278H6742V8133H0V1278"
+         id="path5" />
+    </clipPath>
+    <clipPath
+       id="clip_6">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M739 229H746V237H739Z"
+         id="path6" />
+    </clipPath>
+    <clipPath
+       id="clip_7">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M753 243H761V250H753Z"
+         id="path7" />
+    </clipPath>
+    <clipPath
+       id="clip_8">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M747 251H758V262H747Z"
+         id="path8" />
+    </clipPath>
+    <clipPath
+       id="clip_9">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M728 251H738V262H728Z"
+         id="path9" />
+    </clipPath>
+    <clipPath
+       id="clip_10">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M748 231H758V242H748Z"
+         id="path10" />
+    </clipPath>
+    <clipPath
+       id="clip_11">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M728 232H738V242H728Z"
+         id="path11" />
+    </clipPath>
+    <clipPath
+       id="clip_12">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M725 243H733V250H725Z"
+         id="path12" />
+    </clipPath>
+    <clipPath
+       id="clip_13">
+      <path
+         transform="matrix(0,-1,-1,-0,1191,842)"
+         d="M739 256H747V265H739Z"
+         id="path13" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#clip_1)"
+     id="g23">
+    <g
+       id="g22">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="M5440 7739H1514"
+         id="path14" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M5389 6727H1562"
+         id="path15" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M5466 6338H4828"
+         id="path16" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M5552 5910H4828"
+         id="path17" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M4361 6338H1581"
+         id="path18" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M4361 5482H3428"
+         id="path19" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M3428 5482H1623"
+         id="path20" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M4361 5054H3428"
+         id="path21" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M4361 4626H3428"
+         id="path22" />
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip_2)"
+     id="g49"
+     transform="translate(-2.1785252,-2.1785252)">
+    <g
+       id="g48">
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.03284749,-0.11541683,0.11541683,0.03284749,1160,826)"
+         font-size="173.922px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text48"><tspan
+           y="-4287.5488"
+           x="291.50659 339.85681 388.20703 436.55713 484.90735 591.17346"
+           id="tspan23">    TO</tspan><tspan
+           y="-4287.5483"
+           x="726.4845"
+           id="tspan24"> </tspan><tspan
+           y="-4287.5488"
+           x="774.83472"
+           id="tspan25"> </tspan><tspan
+           y="-4287.5483"
+           x="823.18481"
+           id="tspan26"> </tspan><tspan
+           y="-4287.5488"
+           x="871.53503"
+           id="tspan27">K</tspan><tspan
+           y="-4287.5483"
+           x="997.10632 1132.4174"
+           id="tspan28">OD</tspan><tspan
+           y="-4287.5488"
+           x="1257.9888"
+           id="tspan29">U</tspan><tspan
+           y="-4287.5483"
+           x="1383.5602"
+           id="tspan30">M</tspan><tspan
+           y="-4287.5488"
+           x="1528.4369"
+           id="tspan31">A</tspan><tspan
+           y="-4287.5483"
+           x="1654.0083 1779.5796"
+           id="tspan32">R </tspan><tspan
+           y="-4287.5488"
+           x="1827.9299"
+           id="tspan33"> </tspan><tspan
+           y="-4287.5483"
+           x="1876.2803"
+           id="tspan34"> </tspan><tspan
+           y="-4287.5488"
+           x="1924.6306 1972.9808"
+           id="tspan35">  </tspan><tspan
+           y="-4287.5483"
+           x="2021.3312"
+           id="tspan36"> </tspan><tspan
+           y="-4287.5488"
+           x="2069.6814"
+           id="tspan37"> </tspan><tspan
+           y="-4287.5483"
+           x="2118.0317"
+           id="tspan38"> </tspan><tspan
+           y="-4287.5488"
+           x="2166.3821 2214.7324 2263.0828 2388.6541 2523.9648"
+           id="tspan39">  ROA</tspan><tspan
+           y="-4287.5483"
+           x="2649.5364"
+           id="tspan40">D</tspan><tspan
+           y="-4287.5488"
+           x="2775.1077 2823.458 2871.8083 2920.1587 2968.5088 3016.8594 3065.2095 3113.5596 3161.9097 3210.2598 3258.6101 3306.96"
+           id="tspan41">           T</tspan><tspan
+           y="-4287.5483"
+           x="3413.2258"
+           id="tspan42">O</tspan><tspan
+           y="-4287.5488"
+           x="3548.5371"
+           id="tspan43"> </tspan><tspan
+           y="-4287.5483"
+           x="3596.887 3645.2373 3761.2429"
+           id="tspan44"> PY</tspan><tspan
+           y="-4287.5488"
+           x="3877.2488"
+           id="tspan45">A</tspan><tspan
+           y="-4287.5483"
+           x="4002.8203 4109.0859"
+           id="tspan46">LA</tspan><tspan
+           y="-4287.5488"
+           x="4234.6577"
+           id="tspan47">K</tspan><tspan
+           y="-4287.5483"
+           x="4360.229 4485.8003 4611.3716 4717.6382 4843.2095"
+           id="tspan48">URTHI</tspan></text>
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip_3)"
+     id="g283">
+    <g
+       id="g267">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6173 1911V1875L6137 1911Z"
+         id="path49" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="butt"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6173 1911V1875L6137 1911Z"
+         id="path50" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5949 1912H5985L5949 1876Z"
+         id="path51" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="butt"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5949 1912H5985L5949 1876Z"
+         id="path52" />
+      <path
+         transform="matrix(-.1199988,-.0006096,-.0006096,.1199988,943.94,98.619998)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M177.5 0C177.5 98.03055 98.03055 177.5 0 177.5-98.03055 177.5-177.5 98.03055-177.5 0-177.5-98.03055-98.03055-177.5 0-177.5 98.03055-177.5 177.5-98.03055 177.5 0"
+         id="path53" />
+      <path
+         transform="matrix(-.1199988,-.0006096,-.0006096,.1199988,943.94,98.619998)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M158.5 0C158.5 87.53714 87.53714 158.5 0 158.5-87.53714 158.5-158.5 87.53714-158.5 0-158.5-87.53714-87.53714-158.5 0-158.5 87.53714-158.5 158.5-87.53714 158.5 0"
+         id="path54" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6239 1799H6304"
+         id="path55" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6066 1698V1679H6054"
+         id="path56" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6066 1688H6059"
+         id="path57" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6066 1698H6054"
+         id="path58" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5883 1801H5885V1774Z"
+         id="path59" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5883 1801H5885V1774Z"
+         id="path60" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5885 1801V1774L5891 1801ZM5885 1774 5891 1801 5890 1748Z"
+         id="path61" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5885 1801V1774L5891 1801ZM5885 1774 5891 1801 5890 1748Z"
+         id="path62" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5891 1801 5890 1748 5900 1801ZM5890 1748 5900 1801V1723Z"
+         id="path63" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5891 1801 5890 1748 5900 1801ZM5890 1748 5900 1801V1723Z"
+         id="path64" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5900 1801V1723L5902 1801ZM5900 1723 5902 1801V1720Z"
+         id="path65" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5900 1801V1723L5902 1801ZM5900 1723 5902 1801V1720Z"
+         id="path66" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5902 1801V1720L5904 1776ZM5902 1720 5904 1776V1717Z"
+         id="path67" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5902 1801V1720L5904 1776ZM5902 1720 5904 1776V1717Z"
+         id="path68" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5904 1776V1717L5910 1752ZM5904 1717 5910 1752 5909 1707Z"
+         id="path69" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5904 1776V1717L5910 1752ZM5904 1717 5910 1752 5909 1707Z"
+         id="path70" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5910 1752 5909 1707 5913 1743ZM5909 1707 5913 1743V1700Z"
+         id="path71" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5910 1752 5909 1707 5913 1743ZM5909 1707 5913 1743V1700Z"
+         id="path72" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5913 1743V1700L5919 1729ZM5913 1700 5919 1729V1693Z"
+         id="path73" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5913 1743V1700L5919 1729ZM5913 1700 5919 1729V1693Z"
+         id="path74" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5919 1729V1693L5930 1711ZM5919 1693 5930 1711V1679Z"
+         id="path75" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5919 1729V1693L5930 1711ZM5919 1693 5930 1711V1679Z"
+         id="path76" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5930 1711V1679L5932 1707ZM5930 1679 5932 1707V1677Z"
+         id="path77" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5930 1711V1679L5932 1707ZM5930 1679 5932 1707V1677Z"
+         id="path78" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5932 1707V1677L5948 1688ZM5932 1677 5948 1688V1662Z"
+         id="path79" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5932 1707V1677L5948 1688ZM5932 1677 5948 1688V1662Z"
+         id="path80" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5948 1688V1662L5949 1687ZM5948 1662 5949 1687V1661Z"
+         id="path81" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5948 1688V1662L5949 1687ZM5948 1662 5949 1687V1661Z"
+         id="path82" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5949 1687V1661L5967 1672ZM5949 1661 5967 1672V1649Z"
+         id="path83" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5949 1687V1661L5967 1672ZM5949 1661 5967 1672V1649Z"
+         id="path84" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5967 1672V1649L5971 1669ZM5967 1649 5971 1669V1646Z"
+         id="path85" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5967 1672V1649L5971 1669ZM5967 1649 5971 1669V1646Z"
+         id="path86" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5985 1800 5986 1814V1800Z"
+         id="path87" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5985 1800 5986 1814V1800Z"
+         id="path88" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5971 1669V1646L5988 1659ZM5971 1646 5988 1659V1638Z"
+         id="path89" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5971 1669V1646L5988 1659ZM5971 1646 5988 1659V1638Z"
+         id="path90" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5986 1814V1800L5990 1828ZM5986 1800 5990 1828V1800Z"
+         id="path91" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5986 1814V1800L5990 1828ZM5986 1800 5990 1828V1800Z"
+         id="path92" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5988 1659V1638L5995 1656ZM5988 1638 5995 1656V1634Z"
+         id="path93" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5988 1659V1638L5995 1656ZM5988 1638 5995 1656V1634Z"
+         id="path94" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5990 1828V1800L5996 1840ZM5990 1800 5996 1840V1800Z"
+         id="path95" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5990 1828V1800L5996 1840ZM5990 1800 5996 1840V1800Z"
+         id="path96" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5996 1840V1800L6005 1851ZM5996 1800 6005 1851 6004 1800Z"
+         id="path97" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5996 1840V1800L6005 1851ZM5996 1800 6005 1851 6004 1800Z"
+         id="path98" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6005 1851 6004 1800 6007 1853ZM6004 1800 6007 1853V1800Z"
+         id="path99" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6005 1851 6004 1800 6007 1853ZM6004 1800 6007 1853V1800Z"
+         id="path100" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6007 1853V1800L6008 1854ZM6007 1800 6008 1854V1810Z"
+         id="path101" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6007 1853V1800L6008 1854ZM6007 1800 6008 1854V1810Z"
+         id="path102" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6008 1854V1810L6011 1857ZM6008 1810 6011 1857V1819Z"
+         id="path103" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6008 1854V1810L6011 1857ZM6008 1810 6011 1857V1819Z"
+         id="path104" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5995 1656V1634L6011 1649ZM5995 1634 6011 1649V1629Z"
+         id="path105" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5995 1656V1634L6011 1649ZM5995 1634 6011 1649V1629Z"
+         id="path106" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6011 1857V1819L6015 1861ZM6011 1819 6015 1861V1828ZM6015 1861V1828 1861ZM6015 1828V1861Z"
+         id="path107" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6011 1857V1819L6015 1861ZM6011 1819 6015 1861V1828ZM6015 1861V1828 1861ZM6015 1828V1861Z"
+         id="path108" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6015 1861V1828L6021 1864ZM6015 1828 6021 1864V1836Z"
+         id="path109" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6015 1861V1828L6021 1864ZM6015 1828 6021 1864V1836Z"
+         id="path110" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6011 1649V1629L6020 1647ZM6011 1629 6020 1647V1627Z"
+         id="path111" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6011 1649V1629L6020 1647ZM6011 1629 6020 1647V1627Z"
+         id="path112" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6021 1864V1836L6027 1868ZM6021 1836 6027 1868V1841Z"
+         id="path113" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6021 1864V1836L6027 1868ZM6021 1836 6027 1868V1841Z"
+         id="path114" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6027 1868V1841L6029 1869ZM6027 1841 6029 1869 6028 1843Z"
+         id="path115" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6027 1868V1841L6029 1869ZM6027 1841 6029 1869 6028 1843Z"
+         id="path116" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6020 1647V1627L6035 1643ZM6020 1627 6035 1643V1624Z"
+         id="path117" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6020 1647V1627L6035 1643ZM6020 1627 6035 1643V1624Z"
+         id="path118" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6029 1869 6028 1843 6037 1872ZM6028 1843 6037 1872V1848Z"
+         id="path119" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6029 1869 6028 1843 6037 1872ZM6028 1843 6037 1872V1848Z"
+         id="path120" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6037 1872V1848L6040 1873ZM6037 1848 6040 1873V1849Z"
+         id="path121" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6037 1872V1848L6040 1873ZM6037 1848 6040 1873V1849Z"
+         id="path122" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6040 1873V1849L6046 1874ZM6040 1849 6046 1874V1852Z"
+         id="path123" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6040 1873V1849L6046 1874ZM6040 1849 6046 1874V1852Z"
+         id="path124" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6035 1643V1624L6047 1642ZM6035 1624 6047 1642 6046 1622Z"
+         id="path125" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6035 1643V1624L6047 1642ZM6035 1624 6047 1642 6046 1622Z"
+         id="path126" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6046 1874V1852L6054 1876ZM6046 1852 6054 1876V1853Z"
+         id="path127" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6046 1874V1852L6054 1876ZM6046 1852 6054 1876V1853Z"
+         id="path128" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6054 1876V1853L6056 1875ZM6054 1853 6056 1875V1853Z"
+         id="path129" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6054 1876V1853L6056 1875ZM6054 1853 6056 1875V1853Z"
+         id="path130" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6047 1642 6046 1622 6060 1641ZM6046 1622 6060 1641V1622Z"
+         id="path131" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6047 1642 6046 1622 6060 1641ZM6046 1622 6060 1641V1622Z"
+         id="path132" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6056 1875V1853L6066 1875ZM6056 1853 6066 1875V1853Z"
+         id="path133" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6056 1875V1853L6066 1875ZM6056 1853 6066 1875V1853Z"
+         id="path134" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6066 1875V1853L6068 1875ZM6066 1853 6068 1875V1853Z"
+         id="path135" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6066 1875V1853L6068 1875ZM6066 1853 6068 1875V1853Z"
+         id="path136" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6060 1641V1622L6073 1642ZM6060 1622 6073 1642V1622Z"
+         id="path137" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6060 1641V1622L6073 1642ZM6060 1622 6073 1642V1622Z"
+         id="path138" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6068 1875V1853L6076 1874ZM6068 1853 6076 1874V1851Z"
+         id="path139" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6068 1875V1853L6076 1874ZM6068 1853 6076 1874V1851Z"
+         id="path140" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6076 1874V1851L6082 1873ZM6076 1851 6082 1873V1849Z"
+         id="path141" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6076 1874V1851L6082 1873ZM6076 1851 6082 1873V1849Z"
+         id="path142" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6082 1873V1849L6085 1872ZM6082 1849 6085 1872V1848Z"
+         id="path143" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6082 1873V1849L6085 1872ZM6082 1849 6085 1872V1848Z"
+         id="path144" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6073 1642V1622L6085 1643ZM6073 1622 6085 1643V1624Z"
+         id="path145" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6073 1642V1622L6085 1643ZM6073 1622 6085 1643V1624Z"
+         id="path146" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6085 1872V1848L6093 1868ZM6085 1848 6093 1868V1842Z"
+         id="path147" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6085 1872V1848L6093 1868ZM6085 1848 6093 1868V1842Z"
+         id="path148" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6093 1868V1842L6095 1868ZM6093 1842 6095 1868V1841Z"
+         id="path149" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6093 1868V1842L6095 1868ZM6093 1842 6095 1868V1841Z"
+         id="path150" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6085 1643V1624L6099 1647ZM6085 1624 6099 1647V1626Z"
+         id="path151" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6085 1643V1624L6099 1647ZM6085 1624 6099 1647V1626Z"
+         id="path152" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6095 1868V1841L6101 1864ZM6095 1841 6101 1864V1836Z"
+         id="path153" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6095 1868V1841L6101 1864ZM6095 1841 6101 1864V1836Z"
+         id="path154" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6101 1864V1836L6107 1860ZM6101 1836 6107 1860 6106 1828ZM6107 1860 6106 1828H6107Z"
+         id="path155" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6101 1864V1836L6107 1860ZM6101 1836 6107 1860 6106 1828ZM6107 1860 6106 1828H6107Z"
+         id="path156" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6106 1828 6107 1860Z"
+         id="path157" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6106 1828 6107 1860Z"
+         id="path158" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6099 1647V1626L6109 1649ZM6099 1626 6109 1649V1629Z"
+         id="path159" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6099 1647V1626L6109 1649ZM6099 1626 6109 1649V1629Z"
+         id="path160" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6107 1860V1828L6111 1856ZM6107 1828 6111 1856V1819Z"
+         id="path161" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6107 1860V1828L6111 1856ZM6107 1828 6111 1856V1819Z"
+         id="path162" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6111 1856V1819L6114 1854ZM6111 1819 6114 1854V1809Z"
+         id="path163" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6111 1856V1819L6114 1854ZM6111 1819 6114 1854V1809Z"
+         id="path164" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6114 1854V1809L6115 1853ZM6114 1809 6115 1853 6114 1799Z"
+         id="path165" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6114 1854V1809L6115 1853ZM6114 1809 6115 1853 6114 1799Z"
+         id="path166" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6115 1853 6114 1799 6117 1851ZM6114 1799 6117 1851V1799Z"
+         id="path167" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6115 1853 6114 1799 6117 1851ZM6114 1799 6117 1851V1799Z"
+         id="path168" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6117 1851V1799L6125 1839ZM6117 1799 6125 1839V1799Z"
+         id="path169" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6117 1851V1799L6125 1839ZM6117 1799 6125 1839V1799Z"
+         id="path170" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6109 1649V1629L6125 1655ZM6109 1629 6125 1655V1634Z"
+         id="path171" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6109 1649V1629L6125 1655ZM6109 1629 6125 1655V1634Z"
+         id="path172" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6125 1839V1799L6132 1827ZM6125 1799 6132 1827V1799Z"
+         id="path173" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6125 1839V1799L6132 1827ZM6125 1799 6132 1827V1799Z"
+         id="path174" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6125 1655V1634L6132 1658ZM6125 1634 6132 1658V1637Z"
+         id="path175" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6125 1655V1634L6132 1658ZM6125 1634 6132 1658V1637Z"
+         id="path176" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6132 1799H6135V1813ZM6135 1799V1813L6137 1799Z"
+         id="path177" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6132 1799H6135V1813ZM6135 1799V1813L6137 1799Z"
+         id="path178" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6132 1799V1827L6135 1813Z"
+         id="path179" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6132 1799V1827L6135 1813Z"
+         id="path180" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6132 1658V1637L6149 1669ZM6132 1637 6149 1669V1645Z"
+         id="path181" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6132 1658V1637L6149 1669ZM6132 1637 6149 1669V1645Z"
+         id="path182" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6149 1669V1645L6153 1671ZM6149 1645 6153 1671V1648Z"
+         id="path183" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6149 1669V1645L6153 1671ZM6149 1645 6153 1671V1648Z"
+         id="path184" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6153 1671V1648L6171 1686ZM6153 1648 6171 1686V1660Z"
+         id="path185" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6153 1671V1648L6171 1686ZM6153 1648 6171 1686V1660Z"
+         id="path186" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6171 1686V1660L6172 1687ZM6171 1660 6172 1687V1661Z"
+         id="path187" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6171 1686V1660L6172 1687ZM6171 1660 6172 1687V1661Z"
+         id="path188" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6172 1687V1661L6188 1706ZM6172 1661 6188 1706V1676Z"
+         id="path189" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6172 1687V1661L6188 1706ZM6172 1661 6188 1706V1676Z"
+         id="path190" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6188 1706V1676L6191 1710ZM6188 1676 6191 1710 6190 1678Z"
+         id="path191" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6188 1706V1676L6191 1710ZM6188 1676 6191 1710 6190 1678Z"
+         id="path192" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6191 1710 6190 1678 6201 1727ZM6190 1678 6201 1727V1692Z"
+         id="path193" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6191 1710 6190 1678 6201 1727ZM6190 1678 6201 1727V1692Z"
+         id="path194" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6201 1727V1692L6207 1741ZM6201 1692 6207 1741V1699Z"
+         id="path195" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6201 1727V1692L6207 1741ZM6201 1692 6207 1741V1699Z"
+         id="path196" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6207 1741V1699L6211 1750ZM6207 1699 6211 1750V1705Z"
+         id="path197" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6207 1741V1699L6211 1750ZM6207 1699 6211 1750V1705Z"
+         id="path198" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6211 1750V1705L6217 1774ZM6211 1705 6217 1774V1715Z"
+         id="path199" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6211 1750V1705L6217 1774ZM6211 1705 6217 1774V1715Z"
+         id="path200" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6217 1774V1715L6219 1799ZM6217 1715 6219 1799V1719Z"
+         id="path201" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6217 1774V1715L6219 1799ZM6217 1715 6219 1799V1719Z"
+         id="path202" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6219 1799V1719L6221 1799ZM6219 1719 6221 1799V1722Z"
+         id="path203" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6219 1799V1719L6221 1799ZM6219 1719 6221 1799V1722Z"
+         id="path204" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6221 1799V1722L6231 1799ZM6221 1722 6231 1799 6230 1746Z"
+         id="path205" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6221 1799V1722L6231 1799ZM6221 1722 6231 1799 6230 1746Z"
+         id="path206" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6230 1746 6236 1772 6237 1799ZM6236 1772 6237 1799H6239Z"
+         id="path207" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6230 1746 6236 1772 6237 1799ZM6236 1772 6237 1799H6239Z"
+         id="path208" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6230 1746 6231 1799H6237Z"
+         id="path209" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6230 1746 6231 1799H6237Z"
+         id="path210" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6186 1673 6212 1647"
+         id="path211" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6060 1622V1584"
+         id="path212" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6060 1641 6035 1667H6085Z"
+         id="path213" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6060 1641 6035 1667H6085Z"
+         id="path214" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6072 1591 6060 1584 6059 1546ZM6060 1584 6059 1546 6047 1591Z"
+         id="path215" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6072 1591 6060 1584 6059 1546ZM6060 1584 6059 1546 6047 1591Z"
+         id="path216" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5934 1675 5908 1648"
+         id="path217" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5883 1801H5845"
+         id="path218" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5852 1813 5845 1801H5807ZM5845 1801H5807L5851 1788Z"
+         id="path219" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5852 1813 5845 1801H5807ZM5845 1801H5807L5851 1788Z"
+         id="path220" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6239 1799H6219"
+         id="path221" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6114 1799H6137"
+         id="path222" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6168 1806 6187 1805 6168 1793H6187"
+         id="path223" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6124 1888 6138 1902 6133 1879 6147 1893"
+         id="path224" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6151 1889 6140 1872 6157 1882 6147 1866 6163 1876"
+         id="path225" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6219 1799 6194 1774V1824Z"
+         id="path226" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6219 1799 6194 1774V1824Z"
+         id="path227" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6061 1854 6060 1746 6061 1854"
+         id="path228" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6007 1800H5985"
+         id="path229" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5970 1884H5967L5965 1883 5962 1881 5961 1878V1875L5962 1874H5964 5965 5967L5972 1877H5974 5976 5977L5979 1875V1872L5978 1870 5976 1867 5973 1866H5970"
+         id="path230" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5971 1890 5988 1879 5978 1896 5994 1886 5984 1902"
+         id="path231" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6023 1838 6098 1762"
+         id="path232" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6007 1800 6114 1799"
+         id="path233" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6022 1762 6099 1838"
+         id="path234" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6098 1762 6023 1838"
+         id="path235" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6114 1799 6007 1800"
+         id="path236" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6099 1838 6022 1762"
+         id="path237" />
+      <path
+         transform="matrix(-.1199988,-.0006096,-.0006096,.1199988,943.94,98.619998)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M76.5 0C76.5 42.24979 42.24979 76.5 0 76.5-42.24979 76.5-76.5 42.24979-76.5 0-76.5-42.24979-42.24979-76.5 0-76.5 42.24979-76.5 76.5-42.24979 76.5 0"
+         id="path238" />
+      <path
+         transform="matrix(-.1199988,-.0006096,-.0006096,.1199988,943.94,98.619998)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M53.5 0C53.5 29.54724 29.54724 53.5 0 53.5-29.54724 53.5-53.5 29.54724-53.5 0-53.5-29.54724-29.54724-53.5 0-53.5 29.54724-53.5 53.5-29.54724 53.5 0"
+         id="path239" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6148 1734 6161 1721 6139 1726 6152 1712"
+         id="path240" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6133 1720 6147 1707 6138 1699"
+         id="path241" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6140 1713 6135 1708"
+         id="path242" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6133 1720 6125 1712"
+         id="path243" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5975 1711V1708L5976 1706 5978 1703 5981 1702H5983L5985 1703V1705 1706 1708L5982 1713V1715 1716 1718L5984 1720H5987L5989 1719 5992 1716 5993 1714V1711"
+         id="path244" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5982 1727 5968 1713 5960 1722"
+         id="path245" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5975 1720 5969 1725"
+         id="path246" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5982 1727 5973 1735"
+         id="path247" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5948 1688V1724L5984 1688Z"
+         id="path248" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5948 1688V1724L5984 1688Z"
+         id="path249" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6172 1687H6136L6172 1723Z"
+         id="path250" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6172 1687H6136L6172 1723Z"
+         id="path251" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5883 1801H5902"
+         id="path252" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M5902 1801 5928 1826 5927 1775Z"
+         id="path253" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M5902 1801 5928 1826 5927 1775Z"
+         id="path254" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5950 1794 5952 1796 5953 1798V1802L5952 1805 5950 1807H5948L5947 1806 5946 1805 5945 1803 5943 1798 5942 1796 5941 1795 5939 1794H5937L5935 1796 5934 1799V1802L5935 1805 5937 1807"
+         id="path255" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6447 1829 6435 1798 6536 1797ZM6435 1798 6536 1797 6447 1766Z"
+         id="path256" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6447 1829 6435 1798 6536 1797ZM6435 1798 6536 1797 6447 1766Z"
+         id="path257" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6304 1769V1785L6352 1817H6304L6305 1833H6384V1817L6336 1785H6384V1769H6304"
+         id="path258" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6390 1798H6435"
+         id="path259" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6062 1978V2015"
+         id="path260" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6061 1958 6087 1933H6036Z"
+         id="path261" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6061 1958 6087 1933H6036Z"
+         id="path262" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         d="M6074 2009 6062 2015V2053ZM6062 2015V2053L6049 2009Z"
+         id="path263" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         stroke-linejoin="miter"
+         fill="none"
+         stroke="#000000"
+         d="M6074 2009 6062 2015V2053ZM6062 2015V2053L6049 2009Z"
+         id="path264" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6052 1927 6057 1908 6061 1926 6066 1907 6070 1926"
+         id="path265" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M6187 1925 6214 1951"
+         id="path266" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M5935 1926 5909 1953"
+         id="path267" />
+    </g>
+    <g
+       id="g270">
+      <text
+         fill="#00ffff"
+         xml:space="preserve"
+         transform="matrix(.12 0 0 .12 1160 826)"
+         font-size="173.921"
+         font-family="Arial"
+         font-weight="bold"
+         id="text267"><tspan
+           y="-820"
+           x="-7725 -7618.7346 -7493.1638 -7377.158 -7328.808 -7280.458 -7145.1477 -7019.5769 -6913.311 -6864.961 -6739.39 -6623.385 -6517.119 -6391.5485 -6265.9777 -6217.6276 -6169.2775 -6063.0119 -5927.701 -5802.1306 -5753.7805 -5705.43 -5579.8596 -5463.854 -5347.8488 -5299.4987 -5173.9279 -5057.9226 -4932.3518 -4826.086 -4777.736 -4652.165 -4545.8996 -4497.5495 -4381.544 -4275.2785 -4139.968 -4033.7022 -3917.6968 -3869.3468 -3820.9967"
+           id="tspan267">LAY  OUT CPLAN  FOR  RESIDENTIAL PLOTS IN</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(.12 0 0 .12 1160 826)"
+         font-size="173.921"
+         font-family="Arial"
+         font-weight="bold"
+         id="text268"><tspan
+           y="-611"
+           x="-7718 -7601.9948 -7476.424 -7350.853 -7234.8479 -7118.8425 -7002.837 -6954.487 -6906.1369 -6780.566 -6645.2556 -6587.34 -6529.4245 -6481.074 -6384.374 -6287.674 -6190.9738 -6142.6237 -6045.9235 -5997.573 -5862.2629 -5755.997 -5707.647 -5659.297 -5533.726 -5408.1555 -5282.5847 -5166.579 -5050.5739 -4992.658 -4934.7429 -4886.3928 -4789.6926 -4741.3425 -4644.642 -4547.942 -4499.592 -4364.2814"
+           id="tspan268">SURVEY  NO:- 361/1 OF  ACRES:- 1.50 OF</tspan></text>
+      <text
+         fill="#ffff00"
+         xml:space="preserve"
+         transform="matrix(.12 0 0 .12 1160 826)"
+         font-size="173.921"
+         font-family="Arial"
+         font-weight="bold"
+         id="text269"><tspan
+           y="-401"
+           x="-7725 -7608.9948 -7492.9895 -7367.4187 -7261.153 -7135.582 -7010.011 -6884.4406 -6758.8698 -6652.604 -6604.254 -6555.904 -6507.5539 -6391.5485 -6343.198 -6236.9328 -6130.667 -6005.096 -5869.7858 -5753.7805 -5705.43 -5579.8596 -5444.549 -5318.978 -5193.407 -5048.5314 -4922.9606 -4797.3898 -4749.0397 -4700.6896 -4555.8137 -4430.2429 -4304.672 -4179.101 -4053.53"
+           id="tspan269">PYALAKURTI  VILLAGE,KODUMAR  MANDAL</tspan></text>
+      <text
+         fill="#ff0000"
+         xml:space="preserve"
+         transform="matrix(.12 0 0 .12 1160 826)"
+         font-size="173.921"
+         font-family="Arial"
+         font-weight="bold"
+         id="text270"><tspan
+           y="-191"
+           x="-7712 -7586.429 -7460.8586 -7335.2878 -7209.717 -7074.4064 -6939.0959 -6832.83 -6784.48 -6726.5646 -6678.2145 -6552.6437 -6504.2937 -6388.288 -6282.0227 -6224.107"
+           id="tspan270">KURNOOL ( DIST);</tspan></text>
+    </g>
+    <g
+       id="g282">
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M1872 5482V6338"
+         id="path270" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M1872 6727V7739"
+         id="path271" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M2261 4222V6338"
+         id="path272" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M2261 6727V7739"
+         id="path273" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M2650 4111V6338"
+         id="path274" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M2650 6727V7739"
+         id="path275" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M3039 4001V6338"
+         id="path276" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M3039 6727V7739"
+         id="path277" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M3428 3891V6338"
+         id="path278" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M3428 6727V7739"
+         id="path279" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M4361 3626V6338"
+         id="path280" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M4828 3485V4689"
+         id="path281" />
+      <path
+         transform="matrix(0,-.12,-.12,-0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M4828 4844V6338"
+         id="path282" />
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip_4)"
+     id="g285">
+    <g
+       id="g284">
+      <text
+         xml:space="preserve"
+         transform="matrix(.12 0 0 .12 1160 826)"
+         font-size="86.96"
+         font-family="Arial"
+         id="text283"><tspan
+           y="-1798"
+           x="-7234 -7185.6506 -7137.301"
+           id="tspan283">65'</tspan></text>
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip_5)"
+     id="g523">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.12,0,0,0.12,1160,826)"
+       font-size="86.96px"
+       font-family="Arial"
+       id="text285"><tspan
+         y="-3346"
+         x="-5964 -5915.6504 -5867.3008"
+         id="tspan285">55'</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.12,0,0,0.12,1160,826)"
+       font-size="86.96px"
+       font-family="Arial"
+       id="text286"><tspan
+         y="-3354"
+         x="-4790 -4741.6504 -4693.3008 -4644.9512 -4628.3418 -4579.9922"
+         id="tspan286">102'9&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.12,0,0,0.12,1160,826)"
+       font-size="86.96px"
+       font-family="Arial"
+       id="text287"><tspan
+         y="-3045"
+         x="-4819 -4770.6504 -4722.3008 -4705.6914 -4657.3418"
+         id="tspan287">95'6&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.12,0,0,0.12,1160,826)"
+       font-size="86.96px"
+       font-family="Arial"
+       id="text288"><tspan
+         y="-2661"
+         x="-4825 -4776.6504 -4728.3008 -4711.6914 -4663.3418"
+         id="tspan288">88'6&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.12,0,0,0.12,1160,826)"
+       font-size="86.96px"
+       font-family="Arial"
+       id="text289"><tspan
+         y="-2274"
+         x="-4934 -4885.6504 -4837.3008"
+         id="tspan289">81'</tspan></text>
+    <g
+       id="g289">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 4361,5910 H 3428"
+         id="path289" />
+    </g>
+    <g
+       id="g300">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text290"><tspan
+           y="-3437"
+           x="-6188 -6139.6504 -6091.3008 -6074.6914 -6026.3418"
+           id="tspan290">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text291"><tspan
+           y="-3443"
+           x="-5782 -5733.6504 -5685.3008 -5668.6914 -5620.3418"
+           id="tspan291">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text292"><tspan
+           y="-3437"
+           x="-5332 -5283.6504 -5235.3008 -5218.6914 -5170.3418"
+           id="tspan292">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text293"><tspan
+           y="-3443"
+           x="-4926 -4877.6504 -4829.3008 -4812.6914 -4764.3418"
+           id="tspan293">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text294"><tspan
+           y="-4290"
+           x="-6188 -6139.6504 -6091.3008 -6074.6914 -6026.3418"
+           id="tspan294">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text295"><tspan
+           y="-4295"
+           x="-5782 -5733.6504 -5685.3008 -5668.6914 -5620.3418"
+           id="tspan295">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text296"><tspan
+           y="-4290"
+           x="-5332 -5283.6504 -5235.3008 -5218.6914 -5170.3418"
+           id="tspan296">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text297"><tspan
+           y="-4295"
+           x="-4926 -4877.6504 -4829.3008 -4812.6914 -4764.3418"
+           id="tspan297">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text298"><tspan
+           y="-4838"
+           x="-6188 -6139.6504 -6091.3008 -6074.6914 -6026.3418"
+           id="tspan298">27'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text299"><tspan
+           y="-3438"
+           x="-4313 -4264.6504 -4216.3008 -4199.6914 -4151.3418"
+           id="tspan299">47'9&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text300"><tspan
+           y="-4283"
+           x="-4235 -4186.6504 -4138.3008 -4121.6914 -4073.3416"
+           id="tspan300">65'3&quot;</tspan></text>
+    </g>
+    <g
+       id="g302">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 4828,6727 V 7739"
+         id="path300" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 4361,6727 V 7739"
+         id="path301" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 3895,6727 V 7739"
+         id="path302" />
+    </g>
+    <g
+       id="g356">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text302"><tspan
+           y="-1886"
+           x="-5964 -5915.6504 -5867.3008"
+           id="tspan302">55'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text303"><tspan
+           y="-7662"
+           x="1995 2043.3497 2091.6995"
+           id="tspan303">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text304"><tspan
+           y="-6734"
+           x="1995 2043.3497 2091.6995"
+           id="tspan304">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text305"><tspan
+           y="-7662"
+           x="2384 2432.3499 2480.6997"
+           id="tspan305">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text306"><tspan
+           y="-6734"
+           x="2384 2432.3499 2480.6997"
+           id="tspan306">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text307"><tspan
+           y="-7662"
+           x="2773 2821.3499 2869.6997"
+           id="tspan307">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text308"><tspan
+           y="-6734"
+           x="2773 2821.3499 2869.6997"
+           id="tspan308">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text309"><tspan
+           y="-7662"
+           x="3162 3210.3499 3258.6997"
+           id="tspan309">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text310"><tspan
+           y="-6734"
+           x="3162 3210.3499 3258.6997"
+           id="tspan310">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text311"><tspan
+           y="-7662"
+           x="3576 3624.3499 3672.6997"
+           id="tspan311">30'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text312"><tspan
+           y="-6734"
+           x="3576 3624.3499 3672.6997"
+           id="tspan312">30'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text313"><tspan
+           y="-7662"
+           x="4043 4091.3499 4139.6997"
+           id="tspan313">30'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text314"><tspan
+           y="-6734"
+           x="4043 4091.3499 4139.6997"
+           id="tspan314">30'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text315"><tspan
+           y="-7662"
+           x="4510 4558.3496 4606.6992"
+           id="tspan315">30'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text316"><tspan
+           y="-6734"
+           x="4510 4558.3496 4606.6992"
+           id="tspan316">30'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text317"><tspan
+           y="-7658"
+           x="4966 5014.3496 5062.6992"
+           id="tspan317">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text318"><tspan
+           y="-6734"
+           x="5061 5109.3496 5157.6992"
+           id="tspan318">36'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text319"><tspan
+           y="-6262"
+           x="5090 5138.3496 5186.6992"
+           id="tspan319">41'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text320"><tspan
+           y="-5926"
+           x="5082 5130.3496 5178.6992 5195.3086 5243.6582"
+           id="tspan320">46'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text321"><tspan
+           y="-6261"
+           x="1995 2043.3497 2091.6995"
+           id="tspan321">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text322"><tspan
+           y="-6261"
+           x="2384 2432.3499 2480.6997"
+           id="tspan322">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text323"><tspan
+           y="-6261"
+           x="2773 2821.3499 2869.6997"
+           id="tspan323">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text324"><tspan
+           y="-6261"
+           x="3162 3210.3499 3258.6997"
+           id="tspan324">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text325"><tspan
+           y="-5489"
+           x="1995 2043.3497 2091.6995"
+           id="tspan325">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text326"><tspan
+           y="-5489"
+           x="2384 2432.3499 2480.6997"
+           id="tspan326">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text327"><tspan
+           y="-5489"
+           x="2773 2821.3499 2869.6997"
+           id="tspan327">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text328"><tspan
+           y="-5489"
+           x="3162 3210.3499 3258.6997"
+           id="tspan328">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text329"><tspan
+           y="-5396"
+           x="1906 1954.3497 2002.6995"
+           id="tspan329">41'</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0.11999893,5.0640056e-4,-5.0640056e-4,0.11999893,1160,826)"
+         font-size="152.18px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text344"><tspan
+           y="-4518.707"
+           x="-6240.1245"
+           id="tspan330"> </tspan><tspan
+           y="-4518.7065"
+           x="-6197.8188 -6096.3145 -5986.4404 -5868.0449"
+           id="tspan331">PROP</tspan><tspan
+           y="-4518.707"
+           x="-5766.5405"
+           id="tspan332"> </tspan><tspan
+           y="-4518.7065"
+           x="-5724.2349 -5681.9287"
+           id="tspan333">  </tspan><tspan
+           y="-4518.7061"
+           x="-5639.623 -5597.3169 -5555.0103"
+           id="tspan334">   </tspan><tspan
+           y="-4518.7056"
+           x="-5512.7046"
+           id="tspan335">3</tspan><tspan
+           y="-4518.7061"
+           x="-5428.0928 -5343.4805 -5307.2617"
+           id="tspan336">0' </tspan><tspan
+           y="-4518.7056"
+           x="-5264.9561 -5222.6494 -5180.3438"
+           id="tspan337">   </tspan><tspan
+           y="-4518.7051"
+           x="-5138.0376 -5095.7319 -5053.4253"
+           id="tspan338">   </tspan><tspan
+           y="-4518.7046"
+           x="-5011.1196 -4867.4619"
+           id="tspan339">WI</tspan><tspan
+           y="-4518.7041"
+           x="-4825.1562 -4715.2822 -4613.7778 -4571.4722 -4529.166"
+           id="tspan340">DE   </tspan><tspan
+           y="-4518.7036"
+           x="-4486.8604 -4444.5542"
+           id="tspan341">  </tspan><tspan
+           y="-4518.7031"
+           x="-4402.2476 -4359.9419 -4317.6357"
+           id="tspan342">  R</tspan><tspan
+           y="-4518.7026"
+           x="-4207.7617 -4089.366"
+           id="tspan343">OA</tspan><tspan
+           y="-4518.7031"
+           x="-3979.4922"
+           id="tspan344">D</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(4.944008e-4,-0.11999899,0.11999899,4.944008e-4,1160,826)"
+         font-size="152.18px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text348"><tspan
+           y="-6478.5332"
+           x="1815.3236 1857.6298"
+           id="tspan345"> P</tspan><tspan
+           y="-6478.5337"
+           x="1959.1335 2069.0073 2187.4031 2288.9072 2331.2131 2373.5193 2415.8252 2458.1313 2500.4373 2585.0493 2669.6614 2705.8801 2748.186 2790.4922 2832.7981"
+           id="tspan346">ROP     25'    </tspan><tspan
+           y="-6478.5332"
+           x="2875.1042 2917.4102"
+           id="tspan347"> W</tspan><tspan
+           y="-6478.5337"
+           x="3061.0679 3103.374 3213.2478 3314.752 3357.0579 3399.3638 3441.6697 3483.9758 3526.2817 3568.5879 3678.4617 3796.8574 3906.7312"
+           id="tspan348">IDE      ROAD</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text349"><tspan
+           y="-3354"
+           x="-7234 -7185.6504 -7137.3008"
+           id="tspan349">65'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text350"><tspan
+           y="-4288"
+           x="-7234 -7185.6504 -7137.3008"
+           id="tspan350">65'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text351"><tspan
+           y="-4755"
+           x="-7234 -7185.6504 -7137.3008"
+           id="tspan351">65'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text352"><tspan
+           y="-6262"
+           x="3838 3886.3499 3934.6997"
+           id="tspan352">60'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text353"><tspan
+           y="-5834"
+           x="3838 3886.3499 3934.6997"
+           id="tspan353">60'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text354"><tspan
+           y="-5406"
+           x="3838 3886.3499 3934.6997"
+           id="tspan354">60'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text355"><tspan
+           y="-4978"
+           x="3838 3886.3499 3934.6997"
+           id="tspan355">60'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text356"><tspan
+           y="-4550"
+           x="3838 3886.3499 3934.6997"
+           id="tspan356">60'</tspan></text>
+    </g>
+    <g
+       id="g362">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="M 1514,7739 1675,4388"
+         id="path356" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="M 1428,4458 4361,3626"
+         id="path357" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="M 1279,3934 4261,3089"
+         id="path358" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="M 4828,3485 6272,3049"
+         id="path359" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="M 4261,3088 6115,2527"
+         id="path360" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="m 5466,6338 86,-428 93,-428 74,-428 86,-428 218,-1502"
+         id="path361" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ff0000"
+         d="m 5217,7739 172,-1012 77,-389"
+         id="path362" />
+    </g>
+    <g
+       id="g459">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.03379791,-0.11514208,0.11514208,0.03379791,1160,826)"
+         font-size="86.9602px"
+         font-family="Arial"
+         id="text362"><tspan
+           y="-4730.3584"
+           x="2602.0354 2650.3853 2698.7354"
+           id="tspan362">62'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text363"><tspan
+           y="-1663"
+           x="-4942 -4893.6504 -4845.3008 -4828.6914 -4780.3418"
+           id="tspan363">70'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.03379791,-0.11514208,0.11514208,0.03379791,1160,826)"
+         font-size="86.9602px"
+         font-family="Arial"
+         id="text364"><tspan
+           y="-4693.2861"
+           x="604.61597 652.96582 701.3158"
+           id="tspan364">39'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text365"><tspan
+           y="-5493"
+           x="1678 1726.3497 1774.6995"
+           id="tspan365">16'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text366"><tspan
+           y="-6259"
+           x="1625 1673.3497 1721.6995 1738.3088 1786.6586"
+           id="tspan366">18'3&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text367"><tspan
+           y="-6741"
+           x="1606 1654.3497 1702.6995 1719.3088 1767.6586"
+           id="tspan367">19'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text368"><tspan
+           y="-7669"
+           x="1630 1678.3497 1726.6995"
+           id="tspan368">23'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.03282482,-0.11542326,0.11542326,0.03282482,1160,826)"
+         font-size="86.9599px"
+         font-family="Arial"
+         id="text369"><tspan
+           y="-4695.208"
+           x="1163.0294 1211.3792 1259.7288"
+           id="tspan369">26'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.03379791,-0.11514208,0.11514208,0.03379791,1160,826)"
+         font-size="86.9602px"
+         font-family="Arial"
+         id="text370"><tspan
+           y="-4702.4995"
+           x="1520.0815 1568.4314 1616.7815"
+           id="tspan370">26'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.03379791,-0.11514208,0.11514208,0.03379791,1160,826)"
+         font-size="86.9602px"
+         font-family="Arial"
+         id="text371"><tspan
+           y="-4713.1685"
+           x="1932.7838 1981.1339 2029.4836"
+           id="tspan371">26'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11801463,-0.02173812,0.02173812,0.11801463,1160,826)"
+         font-size="86.9595px"
+         font-family="Arial"
+         id="text373"><tspan
+           y="-6453.541"
+           x="-5110.4858"
+           id="tspan372">2</tspan><tspan
+           y="-6453.542"
+           x="-5062.1367 -5013.7866 -4997.1772 -4948.8271"
+           id="tspan373">8'0&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11813153,-0.02109359,0.02109359,0.11813153,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text374"><tspan
+           y="-6422.7241"
+           x="-6239.1606 -6190.811 -6142.4609"
+           id="tspan374">66'</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text375"><tspan
+           y="-5020"
+           x="-7252"
+           id="tspan375">1</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text376"><tspan
+           y="-4539"
+           x="-7247"
+           id="tspan376">2</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text377"><tspan
+           y="-4064"
+           x="-7248"
+           id="tspan377">3</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text378"><tspan
+           y="-3620"
+           x="-7246"
+           id="tspan378">4</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text379"><tspan
+           y="-3173"
+           x="-7249"
+           id="tspan379">5</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text380"><tspan
+           y="-2777"
+           x="-7248"
+           id="tspan380">6</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text381"><tspan
+           y="-2400"
+           x="-7248"
+           id="tspan381">7</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text382"><tspan
+           y="-2028"
+           x="-7248"
+           id="tspan382">8</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text383"><tspan
+           y="-1631"
+           x="-7247"
+           id="tspan383">9</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text384"><tspan
+           y="-2028"
+           x="-5948 -5887.563"
+           id="tspan384">11</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text385"><tspan
+           y="-1690"
+           x="-5948 -5887.563"
+           id="tspan385">10</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text386"><tspan
+           y="-2417"
+           x="-5948 -5887.563"
+           id="tspan386">12</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text387"><tspan
+           y="-2806"
+           x="-5948 -5887.563"
+           id="tspan387">13</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text388"><tspan
+           y="-3175"
+           x="-5948 -5887.563"
+           id="tspan388">14</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text389"><tspan
+           y="-3859"
+           x="-6182 -6121.563"
+           id="tspan389">15</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text390"><tspan
+           y="-3856"
+           x="-5745 -5684.563"
+           id="tspan390">16</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text391"><tspan
+           y="-3856"
+           x="-5309 -5248.563"
+           id="tspan391">17</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text392"><tspan
+           y="-3856"
+           x="-4878 -4817.563"
+           id="tspan392">18</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text393"><tspan
+           y="-3199"
+           x="-4792 -4731.563"
+           id="tspan393">19</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text394"><tspan
+           y="-2813"
+           x="-4831 -4770.563"
+           id="tspan394">20</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text395"><tspan
+           y="-2441"
+           x="-4841 -4780.563"
+           id="tspan395">21</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text396"><tspan
+           y="-1915"
+           x="-4916 -4855.563"
+           id="tspan396">22</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text397"><tspan
+           y="-3908"
+           x="-4244 -4183.563"
+           id="tspan397">23</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text398"><tspan
+           y="-5163"
+           x="-6161 -6100.563"
+           id="tspan398">24</tspan></text>
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 5360,2517 H 3234"
+         id="path398" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 5360,1468 H 4130"
+         id="path399" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="m 5360,2517 h -87"
+         id="path400" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 5080,2517 V 1468"
+         id="path401" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 5360,2517 V 1468"
+         id="path402" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ffff00"
+         d="M 5360,2216 H 4130"
+         id="path403" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 5360,1795 H 4130"
+         id="path404" />
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text404"><tspan
+           y="-5243"
+           x="-2464 -2408.9431 -2358.5088 -2294.2896"
+           id="tspan404">PLOT</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text405"><tspan
+           y="-5147"
+           x="-2465 -2405.4033 -2341.1841 -2295.2896 -2267.8025"
+           id="tspan405">NOs:-</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text406"><tspan
+           y="-5204"
+           x="-2148 -2092.9431 -2042.5088 -2019.5615 -1969.1272 -1914.0703 -1859.0134"
+           id="tspan406">Sq FEET</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text407"><tspan
+           y="-5195"
+           x="-1764 -1704.4032 -1649.3463 -1589.7495 -1539.3152"
+           id="tspan407">CENTS</tspan></text>
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 4605,2517 V 1468"
+         id="path407" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 4446,2517 V 1468"
+         id="path408" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 4130,2517 V 1468"
+         id="path409" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 4921,2517 V 1468"
+         id="path410" />
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text410"><tspan
+           y="-4265"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan410">1625</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text411"><tspan
+           y="-4265"
+           x="-1738 -1692.1056 -1669.1583 -1623.2639"
+           id="tspan411">3.73</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text412"><tspan
+           y="-4979"
+           x="-2437"
+           id="tspan412">1</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text413"><tspan
+           y="-4976"
+           x="-2111 -2065.1055 -2019.2111 -1973.3167"
+           id="tspan413">1983</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text414"><tspan
+           y="-4975"
+           x="-1729 -1683.1056 -1660.1583 -1614.2639"
+           id="tspan414">4.55</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text415"><tspan
+           y="-4821"
+           x="-2432"
+           id="tspan415">2</tspan></text>
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#ffff00"
+         d="M 4130,2216 H 1438"
+         id="path415" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 4130,1795 H 1438"
+         id="path416" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 4130,1468 H 1438"
+         id="path417" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 4130,2517 H 1438"
+         id="path418" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 3971,2517 V 1468"
+         id="path419" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 3813,2517 V 1468"
+         id="path420" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 3496,2517 V 1468"
+         id="path421" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 3180,2517 V 1468"
+         id="path422" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 3022,2517 V 1468"
+         id="path423" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 2863,2517 V 1468"
+         id="path424" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 2705,2517 V 1468"
+         id="path425" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 2547,2517 V 1468"
+         id="path426" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 2388,2517 V 1468"
+         id="path427" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 2230,2517 V 1468"
+         id="path428" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 2072,2517 V 1468"
+         id="path429" />
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text429"><tspan
+           y="-4023"
+           x="-2420"
+           id="tspan429">9</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text430"><tspan
+           y="-4023"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan430">1381</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text431"><tspan
+           y="-4023"
+           x="-1738 -1692.1056 -1669.1583 -1623.2639"
+           id="tspan431">3.17</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text432"><tspan
+           y="-3865"
+           x="-2424 -2378.1055"
+           id="tspan432">10</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text433"><tspan
+           y="-3865"
+           x="-2123 -2100.0527 -2054.1582 -2008.2638"
+           id="tspan433"> 942</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text434"><tspan
+           y="-3865"
+           x="-1737 -1691.1056 -1668.1583 -1622.2639"
+           id="tspan434">2.16</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text435"><tspan
+           y="-3707"
+           x="-2424 -2378.1055"
+           id="tspan435">11</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text436"><tspan
+           y="-3611"
+           x="-2420 -2369.5657"
+           id="tspan436">TO</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text437"><tspan
+           y="-3516"
+           x="-2424 -2378.1055"
+           id="tspan437">14</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text438"><tspan
+           y="-3390"
+           x="-2424 -2378.1055"
+           id="tspan438">15</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text439"><tspan
+           y="-3294"
+           x="-2420 -2369.5657"
+           id="tspan439">TO</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text440"><tspan
+           y="-3200"
+           x="-2424 -2378.1055"
+           id="tspan440">18</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text441"><tspan
+           y="-3073"
+           x="-2424 -2378.1055"
+           id="tspan441">19</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text442"><tspan
+           y="-3073"
+           x="-2125 -2079.1055 -2033.2111 -1987.3167"
+           id="tspan442">2478</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text443"><tspan
+           y="-3073"
+           x="-1739 -1693.1056 -1670.1583 -1624.2639"
+           id="tspan443">5.69</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text444"><tspan
+           y="-2915"
+           x="-2420 -2374.1055"
+           id="tspan444">20</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text445"><tspan
+           y="-2915"
+           x="-2125 -2079.1055 -2033.2111 -1987.3167"
+           id="tspan445">2300</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text446"><tspan
+           y="-2915"
+           x="-1739 -1693.1056 -1670.1583 -1624.2639"
+           id="tspan446">5.28</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text447"><tspan
+           y="-2757"
+           x="-2420 -2374.1055"
+           id="tspan447">21</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text448"><tspan
+           y="-2757"
+           x="-2125 -2079.1055 -2033.2111 -1987.3167"
+           id="tspan448">2119</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text449"><tspan
+           y="-2757"
+           x="-1737 -1691.1056 -1668.1583 -1622.2639"
+           id="tspan449">4.86</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text450"><tspan
+           y="-2598"
+           x="-2420 -2374.1055"
+           id="tspan450">22</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text451"><tspan
+           y="-2598"
+           x="-2125 -2079.1055 -2033.2111 -1987.3167"
+           id="tspan451">2964</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text452"><tspan
+           y="-2598"
+           x="-1739 -1693.1056 -1670.1583 -1624.2639"
+           id="tspan452">6.80</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text453"><tspan
+           y="-2440"
+           x="-2420 -2374.1055"
+           id="tspan453">23</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text454"><tspan
+           y="-2440"
+           x="-2126 -2080.1055 -2034.2111 -1988.3167"
+           id="tspan454">3390</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text455"><tspan
+           y="-2440"
+           x="-1739 -1693.1056 -1670.1583 -1624.2639"
+           id="tspan455">7.78</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text456"><tspan
+           y="-2282"
+           x="-2420 -2374.1055"
+           id="tspan456">24</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text457"><tspan
+           y="-2282"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan457">1203</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text458"><tspan
+           y="-2282"
+           x="-1737 -1691.1056 -1668.1583 -1622.2639"
+           id="tspan458">2.76</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text459"><tspan
+           y="-2123"
+           x="-2420 -2374.1055"
+           id="tspan459">25</tspan></text>
+    </g>
+    <g
+       id="g460">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="M 6741,1278 V 8132 H 0 V 1278 h 6741"
+         id="path459" />
+    </g>
+    <g
+       id="g486">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 4763,2517 V 1468"
+         id="path460" />
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text460"><tspan
+           y="-4818"
+           x="-2111 -2065.1055 -2019.2111 -1973.3167"
+           id="tspan460">1950</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text461"><tspan
+           y="-4817"
+           x="-1729 -1683.1056 -1660.1583 -1614.2639"
+           id="tspan461">4.48</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text462"><tspan
+           y="-4663"
+           x="-2433"
+           id="tspan462">3</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text463"><tspan
+           y="-4659"
+           x="-2111 -2065.1055 -2019.2111 -1973.3167"
+           id="tspan463">1950</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text464"><tspan
+           y="-4659"
+           x="-1729 -1683.1056 -1660.1583 -1614.2639"
+           id="tspan464">4.48</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text465"><tspan
+           y="-4504"
+           x="-2432"
+           id="tspan465">4</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text466"><tspan
+           y="-4501"
+           x="-2111 -2065.1055 -2019.2111 -1973.3167"
+           id="tspan466">1950</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text467"><tspan
+           y="-4500"
+           x="-1729 -1683.1056 -1660.1583 -1614.2639"
+           id="tspan467">4.48</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text468"><tspan
+           y="-4346"
+           x="-2434"
+           id="tspan468">5</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text469"><tspan
+           y="-4251"
+           x="-2432 -2381.5657"
+           id="tspan469">TO</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text470"><tspan
+           y="-4156"
+           x="-2433"
+           id="tspan470">8</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text471"><tspan
+           y="-3632"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan471">1375</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text472"><tspan
+           y="-3632"
+           x="-1738 -1692.1056 -1669.1583 -1623.2639"
+           id="tspan472">3.15</tspan></text>
+      <text
+         fill="#2776bb"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text473"><tspan
+           y="-3315"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan473">1650</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text474"><tspan
+           y="-3315"
+           x="-1738 -1692.1056 -1669.1583 -1623.2639"
+           id="tspan474">3.79</tspan></text>
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 1913,2517 V 1468"
+         id="path474" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 1755,2517 V 1468"
+         id="path475" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ffff"
+         d="M 1597,2517 V 1468"
+         id="path476" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 1438,2517 V 1468"
+         id="path477" />
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text477"><tspan
+           y="-1965"
+           x="-2420 -2374.1055"
+           id="tspan477">26</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text478"><tspan
+           y="-1807"
+           x="-2420 -2374.1055"
+           id="tspan478">27</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text479"><tspan
+           y="-1649"
+           x="-2420 -2374.1055"
+           id="tspan479">28</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text480"><tspan
+           y="-1490"
+           x="-2420 -2374.1055"
+           id="tspan480">29</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11886768,-0.01644607,0.01644607,0.11886768,1160,826)"
+         font-size="152.179px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text484"><tspan
+           y="-6626.3848"
+           x="-5281.688"
+           id="tspan481">H</tspan><tspan
+           y="-6626.3843"
+           x="-5171.8145 -5053.4189"
+           id="tspan482">OU</tspan><tspan
+           y="-6626.3838"
+           x="-4943.5449"
+           id="tspan483">S</tspan><tspan
+           y="-6626.3843"
+           x="-4842.041 -4740.5381"
+           id="tspan484">ES</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11999907,4.7160113e-4,-4.7160113e-4,0.11999907,1160,826)"
+         font-size="152.18px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text486"><tspan
+           y="-1279.2877"
+           x="-6545.0781 -6443.5747"
+           id="tspan485">PL</tspan><tspan
+           y="-1279.2876"
+           x="-6350.5928 -6232.1973 -6139.2153"
+           id="tspan486">OTS</tspan></text>
+    </g>
+    <g
+       id="g487">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="m 5326,3335 v 809"
+         id="path486" />
+    </g>
+    <g
+       id="g494">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text487"><tspan
+           y="-4842"
+           x="-4446 -4397.6504 -4349.3008"
+           id="tspan487">35'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text488"><tspan
+           y="-5346"
+           x="-3783 -3734.6501 -3686.3003"
+           id="tspan488">52'</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text489"><tspan
+           y="-5035"
+           x="-3808 -3747.5627"
+           id="tspan489">28</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11862589,-0.01810799,0.01810799,0.11862589,1160,826)"
+         font-size="86.9601px"
+         font-family="Arial"
+         id="text491"><tspan
+           y="-6347.8521"
+           x="-2863.9043 -2815.5547"
+           id="tspan490">66</tspan><tspan
+           y="-6347.8516"
+           x="-2767.2048 -2750.5955 -2702.2456"
+           id="tspan491">'3&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.03362152,-0.11519373,0.11519373,0.03362152,1160,826)"
+         font-size="86.9602px"
+         font-family="Arial"
+         id="text493"><tspan
+           y="-4701.8643"
+           x="4413.4019 4461.752 4510.1016"
+           id="tspan492">46'</tspan><tspan
+           y="-4701.8647"
+           x="4526.7114 4575.061"
+           id="tspan493">9&quot;</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text494"><tspan
+           y="-5630"
+           x="-3755 -3694.5627"
+           id="tspan494">29</tspan></text>
+    </g>
+    <g
+       id="g496">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 4828,4844 H 6151"
+         id="path494" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#f26722"
+         d="M 4828,4689 H 6151"
+         id="path495" />
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 4828,4144 H 5875"
+         id="path496" />
+    </g>
+    <g
+       id="g497">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text496"><tspan
+           y="-4834"
+           x="-5474 -5425.6504 -5377.3008 -5360.6914 -5312.3418"
+           id="tspan496">68'6&quot;</tspan></text>
+    </g>
+    <g
+       id="g498">
+      <path
+         transform="matrix(0,-0.12,-0.12,0,1160,826)"
+         stroke-width="6"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#00ff00"
+         d="M 5217,5910 V 4844"
+         id="path497" />
+    </g>
+    <g
+       id="g522">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text498"><tspan
+           y="-5224"
+           x="-5451 -5402.6504 -5354.3008 -5337.6914 -5289.3418"
+           id="tspan498">68'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11822938,-0.0205381,0.0205381,0.11822938,1160,826)"
+         font-size="86.9596px"
+         font-family="Arial"
+         id="text499"><tspan
+           y="-6412.7871"
+           x="-4429.8091 -4381.459 -4333.1099 -4316.5 -4268.1509"
+           id="tspan499">69'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text500"><tspan
+           y="-5839"
+           x="4976 5024.3496 5072.6992"
+           id="tspan500">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text501"><tspan
+           y="-5840"
+           x="5293 5341.3496 5389.6992 5406.3086 5454.6582"
+           id="tspan501">21'6&quot;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text502"><tspan
+           y="-4853"
+           x="4976 5024.3496 5072.6992"
+           id="tspan502">25'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text503"><tspan
+           y="-4854"
+           x="5416 5464.3496 5512.6992"
+           id="tspan503">35'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text504"><tspan
+           y="-4608"
+           x="5297 5345.3496 5393.6992"
+           id="tspan504">62'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text505"><tspan
+           y="-4151"
+           x="5279 5327.3496 5375.6992"
+           id="tspan505">67'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text506"><tspan
+           y="-4064"
+           x="5051 5099.3496 5147.6992"
+           id="tspan506">32'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="86.96px"
+         font-family="Arial"
+         id="text507"><tspan
+           y="-4838"
+           x="-3866 -3817.6501 -3769.3003"
+           id="tspan507">42'</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.11898437,-0.01557954,0.01557954,0.11898437,1160,826)"
+         font-size="86.9603px"
+         font-family="Arial"
+         id="text508"><tspan
+           y="-6290.4653"
+           x="-3683.4875 -3635.1375 -3586.7874 -3570.1777 -3521.8276"
+           id="tspan508">35'6&quot;</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0,-0.12,0.12,0,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text509"><tspan
+           y="-4714"
+           x="5025 5085.437 5145.874 5171.7446 5201.9634 5232.1821 5262.4009 5340.8823 5425.4512 5503.9326"
+           id="tspan509">10'   ROAD</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text510"><tspan
+           y="-4998"
+           x="-5441 -5380.563"
+           id="tspan510">25</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text511"><tspan
+           y="-5415"
+           x="-5407 -5346.563"
+           id="tspan511">26</tspan></text>
+      <text
+         fill="#ff00ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="108.7px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text512"><tspan
+           y="-5313"
+           x="-4462 -4401.563"
+           id="tspan512">27</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text513"><tspan
+           y="-2123"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan513">1712</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text514"><tspan
+           y="-2123"
+           x="-1738 -1692.1056 -1669.1583 -1623.2639"
+           id="tspan514">3.93</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text515"><tspan
+           y="-1965"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan515">1935</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text516"><tspan
+           y="-1965"
+           x="-1737 -1691.1056 -1668.1583 -1622.2639"
+           id="tspan516">4.44</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text517"><tspan
+           y="-1807"
+           x="-2125 -2079.1055 -2033.2111 -1987.3167"
+           id="tspan517">2258</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text518"><tspan
+           y="-1807"
+           x="-1739 -1693.1056 -1670.1583 -1624.2639"
+           id="tspan518">5.18</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text519"><tspan
+           y="-1649"
+           x="-2130 -2084.1055 -2038.2111 -1992.3167"
+           id="tspan519">1504</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text520"><tspan
+           y="-1649"
+           x="-1738 -1692.1056 -1669.1583 -1623.2639"
+           id="tspan520">3.45</tspan></text>
+      <text
+         fill="#0000ff"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text521"><tspan
+           y="-1490"
+           x="-2125 -2079.1055 -2033.2111 -1987.3167"
+           id="tspan521">2305</tspan></text>
+      <text
+         fill="#f26722"
+         xml:space="preserve"
+         transform="matrix(0.12,0,0,0.12,1160,826)"
+         font-size="82.544px"
+         font-family="Arial"
+         font-weight="bold"
+         id="text522"><tspan
+           y="-1490"
+           x="-1739 -1693.1056 -1670.1583 -1624.2639"
+           id="tspan522">5.29</tspan></text>
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip_6)"
+     id="g524" />
+  <g
+     clip-path="url(#clip_7)"
+     id="g525" />
+  <g
+     clip-path="url(#clip_8)"
+     id="g526" />
+  <g
+     clip-path="url(#clip_9)"
+     id="g527" />
+  <g
+     clip-path="url(#clip_10)"
+     id="g528" />
+  <g
+     clip-path="url(#clip_11)"
+     id="g529" />
+  <g
+     clip-path="url(#clip_12)"
+     id="g530" />
+  <g
+     clip-path="url(#clip_13)"
+     id="g531" />
+  <g
+     id="layer1">
+    <path
+       id="plot-1"
+       style="opacity:0.1;fill:#749f8b;fill-opacity:1"
+       d="m 352.37695,179.72852 -120.9082,19.0625 -0.4043,47.42968 122.12891,0.49805 c 0,0 -0.81641,-0.54521 -0.81641,-66.99023 z" />
+    <path
+       id="plot-2"
+       style="opacity:0.1;fill:#74a084"
+       d="M 231.45312,246.47266 V 302.3125 H 352.37891 V 246.47266 Z" />
+    <path
+       id="plot-3"
+       style="opacity:0.1;fill:#74a084"
+       d="m 232.01367,302.5918 v 55.84179 H 352.9375 V 302.5918 Z" />
+    <path
+       id="plot-4"
+       style="opacity:0.1;fill:#74a084"
+       d="m 231.66406,359.30664 v 55.8418 h 120.92383 v -55.8418 z" />
+    <path
+       id="plot-5"
+       style="opacity:0.1;fill:#74a084"
+       d="m 231.27148,414.71484 v 47.36914 h 121.31055 v -47.36914 z" />
+    <path
+       id="plot-6"
+       style="opacity:0.1;fill:#74a084"
+       d="m 231.91211,461.31055 v 46.59961 h 121.31055 v -46.59961 z" />
+    <path
+       id="plot-7"
+       style="opacity:0.1;fill:#74a084"
+       d="m 230.84375,507.84375 v 47.36914 H 352.1543 v -47.36914 z" />
+    <path
+       id="plot-8"
+       style="opacity:0.1;fill:#74a084"
+       d="m 231.2793,554.61523 v 46.21289 h 122.08008 v -46.21289 z" />
+    <path
+       id="plot-9"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 352.37891,600.77539 c 0,0 0.76975,0.38477 -120.92579,0.38477 l -0.38476,42.74804 121.31055,-5.39258 z" />
+    <path
+       id="plot-15"
+       style="opacity:0.1;fill:#74a084"
+       d="m 399.16211,554.4668 v 47.36718 h 103.5957 V 554.4668 Z" />
+    <path
+       id="plot-16"
+       style="opacity:0.1;fill:#74a084"
+       d="m 399.07422,508 v 46.21289 h 103.5957 V 508 Z" />
+    <path
+       id="plot-17"
+       style="opacity:0.1;fill:#74a084"
+       d="m 399.30469,462 v 45.82812 H 502.51367 V 462 Z" />
+    <path
+       id="plot-18"
+       style="opacity:0.1;fill:#74a084"
+       d="m 399.68945,415.23047 v 45.44336 h 102.82422 v -45.44336 z" />
+    <path
+       id="plot-14"
+       style="opacity:0.1;fill:#73a084"
+       d="m 399.36133,302.69922 v 112.0664 h 50.83594 v -112.0664 z" />
+    <path
+       id="plot-13"
+       style="opacity:0.1;fill:#73a084"
+       d="m 451.67383,302.52148 v 112.06641 h 50.83398 V 302.52148 Z" />
+    <path
+       id="plot-12"
+       style="opacity:0.1;fill:#73a084"
+       d="m 501.60938,303.08008 v 112.06836 h 52.375 V 303.08008 Z" />
+    <path
+       id="plot-11"
+       style="opacity:0.1;fill:#73a084"
+       d="m 553.36523,302.89258 v 112.06836 h 50.83594 V 302.89258 Z" />
+    <path
+       id="plot-25"
+       style="opacity:0.1;fill:#74a084"
+       d="m 450.70508,199.36523 v 47.12891 h 128.55078 v -47.12891 z" />
+    <path
+       id="plot-24"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 450.41016,159.57617 -51.19532,10.34961 -0.54492,76.79297 h 52.28516 z" />
+    <path
+       id="plot-26"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 578.39844,134.52344 -77.88282,14.16015 -49.01562,10.89258 -0.54492,40.30274 127.44336,-0.54297 z" />
+    <path
+       id="plot-27"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 663.36133,120.36328 -55.55274,9.25977 -10.34765,1.08789 0.54492,115.46289 h 64.81055 z" />
+    <path
+       id="plot-29"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 785.35742,102.93555 -121.99609,17.42773 v 65.90039 h 95.85547 c 0,0 25.05136,-80.60497 26.14062,-83.32812 z" />
+    <path
+       id="plot-28"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 759.75977,186.80859 -97.48829,0.54493 1.63477,58.27539 77.88086,1.08984 z" />
+    <path
+       id="plot-23"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 604.54102,302.26953 -0.54493,111.65039 89.32032,0.54492 31.04297,-111.10546 z" />
+    <path
+       id="plot-10"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 399.75977,601.81836 -0.54493,33.76562 102.39063,-4.90039 0.54492,-28.86523 z" />
+    <path
+       id="plot-22"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 502.15039,553.89062 -0.54492,77.3379 131.25586,-5.99219 20.15234,-71.34571 z" />
+    <path
+       id="plot-21"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 502.15039,508.14062 v 46.29493 h 151.95117 l 12.52735,-46.29493 z" />
+    <path
+       id="plot-20"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 501.60547,460.75781 -0.54492,47.38281 165.56836,0.54493 13.07031,-47.38282 z" />
+    <path
+       id="plot-19"
+       style="opacity:0.1;fill:#73a084;fill-opacity:1"
+       d="m 502.15039,413.91992 -1.63477,47.92774 h 179.72852 l 13.07227,-47.38282 z" />
+  </g>
+</svg>

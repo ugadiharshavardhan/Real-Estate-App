@@ -1,0 +1,234 @@
+[
+    {
+        "id": "plot-1",
+        "number": "1",
+        "areaSqFt": 1983,
+        "areaCents": 4.55,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-2",
+        "number": "2",
+        "areaSqFt": 1950,
+        "areaCents": 4.48,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-3",
+        "number": "3",
+        "areaSqFt": 1950,
+        "areaCents": 4.48,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-4",
+        "number": "4",
+        "areaSqFt": 1950,
+        "areaCents": 4.48,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-5",
+        "number": "5",
+        "areaSqFt": 1625,
+        "areaCents": 3.73,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-6",
+        "number": "6",
+        "areaSqFt": 1625,
+        "areaCents": 3.73,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-7",
+        "number": "7",
+        "areaSqFt": 1625,
+        "areaCents": 3.73,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-8",
+        "number": "8",
+        "areaSqFt": 1625,
+        "areaCents": 3.73,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-9",
+        "number": "9",
+        "areaSqFt": 1381,
+        "areaCents": 3.17,
+        "facing": "East Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-10",
+        "number": "10",
+        "areaSqFt": 942,
+        "areaCents": 2.16,
+        "facing": "West Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-11",
+        "number": "11",
+        "areaSqFt": 1375,
+        "areaCents": 3.15,
+        "facing": "West Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-12",
+        "number": "12",
+        "areaSqFt": 1375,
+        "areaCents": 3.15,
+        "facing": "West Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-13",
+        "number": "13",
+        "areaSqFt": 1375,
+        "areaCents": 3.15,
+        "facing": "West Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-14",
+        "number": "14",
+        "areaSqFt": 1375,
+        "areaCents": 3.15,
+        "facing": "West Facing",
+        "road": "25' Wide Road"
+    },
+    {
+        "id": "plot-15",
+        "number": "15",
+        "areaSqFt": 1650,
+        "areaCents": 3.79,
+        "facing": "North-West Corner",
+        "road": "30' & 25' Wide Roads"
+    },
+    {
+        "id": "plot-16",
+        "number": "16",
+        "areaSqFt": 1650,
+        "areaCents": 3.79,
+        "facing": "North Facing",
+        "road": "30' Wide Road"
+    },
+    {
+        "id": "plot-17",
+        "number": "17",
+        "areaSqFt": 1650,
+        "areaCents": 3.79,
+        "facing": "North Facing",
+        "road": "30' Wide Road"
+    },
+    {
+        "id": "plot-18",
+        "number": "18",
+        "areaSqFt": 1650,
+        "areaCents": 3.79,
+        "facing": "North Facing",
+        "road": "30' Wide Road"
+    },
+    {
+        "id": "plot-19",
+        "number": "19",
+        "areaSqFt": 2478,
+        "areaCents": 5.69,
+        "facing": "East Facing",
+        "road": "Kodumar Road"
+    },
+    {
+        "id": "plot-20",
+        "number": "20",
+        "areaSqFt": 2300,
+        "areaCents": 5.28,
+        "facing": "East Facing",
+        "road": "Kodumar Road"
+    },
+    {
+        "id": "plot-21",
+        "number": "21",
+        "areaSqFt": 2119,
+        "areaCents": 4.86,
+        "facing": "East Facing",
+        "road": "Kodumar Road"
+    },
+    {
+        "id": "plot-22",
+        "number": "22",
+        "areaSqFt": 2964,
+        "areaCents": 6.80,
+        "facing": "East Facing",
+        "road": "Kodumar Road"
+    },
+    {
+        "id": "plot-23",
+        "number": "23",
+        "areaSqFt": 3390,
+        "areaCents": 7.78,
+        "facing": "North-East Corner",
+        "road": "30' Road & Kodumar Road"
+    },
+    {
+        "id": "plot-24",
+        "number": "24",
+        "areaSqFt": 1203,
+        "areaCents": 2.76,
+        "facing": "South Facing",
+        "road": "30' Wide Road"
+    },
+    {
+        "id": "plot-25",
+        "number": "25",
+        "areaSqFt": 1712,
+        "areaCents": 3.93,
+        "facing": "South Facing",
+        "road": "30' Wide Road"
+    },
+    {
+        "id": "plot-26",
+        "number": "26",
+        "areaSqFt": 1935,
+        "areaCents": 4.44,
+        "facing": "East Facing",
+        "road": "10' Road"
+    },
+    {
+        "id": "plot-27",
+        "number": "27",
+        "areaSqFt": 2258,
+        "areaCents": 5.18,
+        "facing": "South-West Corner",
+        "road": "30' & 10' Roads"
+    },
+    {
+        "id": "plot-28",
+        "number": "28",
+        "areaSqFt": 1504,
+        "areaCents": 3.45,
+        "facing": "South-East Corner",
+        "road": "30' Road & Pyalakurthi Road"
+    },
+    {
+        "id": "plot-29",
+        "number": "29",
+        "areaSqFt": 2305,
+        "areaCents": 5.29,
+        "facing": "East Facing",
+        "road": "Pyalakurthi Road"
+    }
+]
