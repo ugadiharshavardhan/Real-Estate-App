@@ -1,18 +1,14 @@
 ﻿"use client";
 
 import { useState, useEffect } from "react";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
-import { Search, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Menu, X,ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar({ isAbsolute = false }) {
   const [hidden, setHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
 
   const navLinks = [
     "Our Story",
@@ -24,7 +20,6 @@ export default function Navbar({ isAbsolute = false }) {
 
   return (
     <motion.nav
-
       style={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
       className={`${isAbsolute ? "absolute" : "fixed"} top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 mx-auto max-w-7xl backdrop-blur-md rounded-b-xl md:rounded-full md:mt-4 shadow-[0_2px_20px_rgb(0,0,0,0.04)] transition-colors duration-300`}
     >
@@ -36,16 +31,28 @@ export default function Navbar({ isAbsolute = false }) {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8">
-        {navLinks.map((link) => (
-          <a
-            key={link}
-            href={`/#${link.replace(/\s+/g, "-").toLowerCase()}`}
-            className="text-sm font-medium text-gray-800 hover:text-[#C5A059] transition-colors relative group"
-          >
-            {link}
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#C5A059] transition-all group-hover:w-full"></span>
-          </a>
-        ))}
+        {navLinks.map((link) => {
+          const isCareer = link === "Career";
+          return isCareer ? (
+            <Link
+              key={link}
+              href="/careers"
+              className="text-sm font-medium text-gray-800 hover:text-[#C5A059] transition-colors relative group"
+            >
+              {link}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#C5A059] transition-all group-hover:w-full"></span>
+            </Link>
+          ) : (
+            <a
+              key={link}
+              href={`/#${link.replace(/\s+/g, "-").toLowerCase()}`}
+              className="text-sm font-medium text-gray-800 hover:text-[#C5A059] transition-colors relative group"
+            >
+              {link}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#C5A059] transition-all group-hover:w-full"></span>
+            </a>
+          );
+        })}
       </div>
 
       {/* Actions */}
@@ -98,16 +105,32 @@ export default function Navbar({ isAbsolute = false }) {
               </button>
             </div>
             <div className="flex flex-col space-y-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link}
-                  href={`/#${link.replace(/\s+/g, "-").toLowerCase()}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-xl font-playfair text-gray-900 border-b border-gray-100 pb-2"
-                >
-                  {link}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isCareer = link === "Career";
+                return isCareer ? (
+                  <Link
+                    key={link}
+                    href="/careers"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-xl font-playfair text-gray-900 border-b border-gray-100 pb-2 flex items-center justify-between group"
+                  >
+                    {link}
+                    <ArrowRight
+                      size={18}
+                      className="text-gray-300 group-hover:text-[#C5A059] transition-colors"
+                    />
+                  </Link>
+                ) : (
+                  <Link
+                    key={link}
+                    href={`/#${link.replace(/\s+/g, "-").toLowerCase()}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-xl font-playfair text-gray-900 border-b border-gray-100 pb-2"
+                  >
+                    {link}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         )}

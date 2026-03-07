@@ -46,17 +46,21 @@ function Counter({ from, to, duration, suffix = "" }) {
   );
 }
 
-export default function Recognitions() {
+export default function Recognitions({ projectsCount = 25 }) {
   const stats = [
-    { value: 25, suffix: "+", label: "Projects Delivered" },
-    { value: 10000, suffix: "+", label: "Happy Customers" },
-    { value: 1, suffix: "M+", label: "Sq Ft Developed" },
-    { value: 5, suffix: "", label: "Cities Presence" },
+    {
+      value: projectsCount > 0 ? projectsCount +1 : 25,
+      suffix: "+",
+      label: "Projects Delivered",
+    },
+    { value: 100, suffix: "+", label: "Happy Customers" },
+    { value: 1000, suffix: "+", label: "Sq Ft Developed" },
+    { value: 2, suffix: "", label: "Cities Experience" },
   ];
 
   const awards = [
-    "â€œBest Emerging Developer 2024â€ â€“ Realty Excellence Awards",
-    "â€œTop 10 Plotted Development Brandâ€ â€“ South India Realty Summit",
+    "“Best Emerging Developer 2024” – Realty Excellence Awards",
+    "“Top 10 Plotted Development Brand” – South India Realty Summit",
     "ISO 9001:2015 Certified Company",
     "15+ Years of Excellence in Real Estate",
   ];
