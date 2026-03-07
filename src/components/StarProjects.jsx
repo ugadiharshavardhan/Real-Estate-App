@@ -2,11 +2,21 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { mockProjects } from "../data/projects";
 import { ChevronLeft, ChevronRight, mapPin } from "lucide-react";
 import Link from "next/link";
 
-export default function StarProjects() {
+export default function StarProjects({ projects = [] }) {
+  // Map DB fields to component expectations if needed
+  const displayProjects = projects.map(p => ({
+    id: p._id,
+    slug: p.slug,
+    name: p.name,
+    location: p.location,
+    priceInfo: p.priceInfo || "Contact for Pricing",
+    status: p.status || "Ongoing",
+    images: [p.heroImage, ...(p.gallery || [])].filter(Boolean)
+  }));
+
   const carouselRef = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -81,7 +91,7 @@ export default function StarProjects() {
             dragConstraints={{ right: 0, left: -width }}
             className="flex gap-8"
           >
-            {mockProjects.map((project, idx) => (
+            {displayProjects.map((project, idx) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}

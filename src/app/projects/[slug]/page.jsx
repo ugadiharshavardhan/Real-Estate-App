@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getProjectBySlug, getProjectPlots } from "@/utils/data/projects";
+import { getProjectBySlug } from "@/utils/data/projects";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,9 +7,11 @@ import ProjectHero from "@/components/project/ProjectHero";
 import ProjectOverview from "@/components/project/ProjectOverview";
 import ProjectAmenities from "@/components/project/ProjectAmenities";
 import LocationHighlights from "@/components/project/LocationHighlights";
-import InteractiveMap from "@/components/project/InteractiveMap";
 import VentureMapWrapper from "@/components/project/VentureMapWrapper";
 import ProjectGallery from "@/components/project/ProjectGallery";
+import ProjectNavbar from "@/components/project/ProjectNavbar";
+import PaymentOption from "@/components/project/PaymentOption";
+import ProjectDevelopment from "@/components/project/ProjectDevelopment";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -30,26 +32,34 @@ export default async function ProjectPage({ params }) {
   const project = await getProjectBySlug(slug);
   if (!project) notFound();
 
-  const plots = await getProjectPlots(slug);
-
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
+      <Navbar isAbsolute={true} />
 
       <ProjectHero project={project} />
 
-      <ProjectOverview project={project} />
+      <ProjectNavbar layoutSvg={project.layoutSvg} />
 
-      <ProjectAmenities amenities={project.amenities} />
-
-      {/* Interactive Map */}
-      {slug === "ugadi-ventures" ? (
+      {/* Interactive Map - Plot Availability */}
+      <div id="plot-availability">
         <VentureMapWrapper projectSlug={slug} />
-      ) : (
-        <InteractiveMap plots={plots} layoutSvg={project.layoutSvg} />
-      )}
+      </div>
 
-      <LocationHighlights highlights={project.locationHighlights} />
+      <div id="project-info">
+        <ProjectOverview project={project} />
+      </div>
+
+      <PaymentOption />
+
+      <div id="amenities">
+        <ProjectAmenities amenities={project.amenities} />
+      </div>
+
+      <ProjectDevelopment />
+
+      <div id="location-highlights">
+        <LocationHighlights highlights={project.locationHighlights} />
+      </div>
 
       <ProjectGallery project={project} />
 

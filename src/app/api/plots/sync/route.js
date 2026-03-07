@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongodb";
 import Plot from "@/models/Plot";
 import Project from "@/models/Project";
+import MapData from "@/models/MapData";
 import fs from "fs";
 import path from "path";
 
@@ -19,52 +20,74 @@ export async function POST(request) {
             );
         }
 
-        // Try reading Plots.json mapped to plots.json
-        let filePath = path.join(process.cwd(), "public", "maps", "Plots.json");
-        if (!fs.existsSync(filePath)) {
-            filePath = path.join(process.cwd(), "public", "maps", "plots.json");
-            if (!fs.existsSync(filePath)) {
-                return NextResponse.json(
-                    { success: false, error: "GeoJSON properties file not found" },
-                    { status: 404 }
-                );
-            }
+        // 1. Fetch GeoJSON from MongoDB MapData instead of local files
+        const mapDataRecord = await MapData.findOne({ projectSlug, layerType: "plots" });
+        if (!mapDataRecord || !mapDataRecord.geoJson || !mapDataRecord.geoJson.features) {
+            return NextResponse.json(
+                { success: false, error: "Plot GeoJSON not found in database for this project" },
+                { status: 404 }
+            );
         }
 
-        const geojsonData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-        if (!geojsonData.features) {
-            return NextResponse.json(
-                { success: false, error: "Invalid GeoJSON format" },
-                { status: 400 }
-            );
+        const geojsonData = mapDataRecord.geoJson;
+
+        // 2. Load enriched metadata from plotData.json if available
+        let enrichedMetadata = {};
+        try {
+            const metadataPath = path.join(process.cwd(), "src", "data", "plotData.json");
+            if (fs.existsSync(metadataPath)) {
+                const raw = fs.readFileSync(metadataPath, "utf-8");
+                const list = JSON.parse(raw);
+                list.forEach(item => {
+                    enrichedMetadata[item.number] = item;
+                });
+            }
+        } catch (err) {
+            console.warn("Failed to load plotData.json enrichment:", err.message);
         }
 
         const ops = [];
         for (const feature of geojsonData.features) {
             const { properties } = feature;
 
-            // Look for plot_no or name in properties (from Plots.json we saw name like "plot-26")
             let plotNumberRaw = properties.plot_no || properties.name || properties.plot_id || properties.id;
             if (!plotNumberRaw) continue;
 
-            // Extract number from "plot-X" if necessary
             const plotStr = String(plotNumberRaw);
             const plotNumber = plotStr.replace(/[^0-9]/g, '');
 
             if (!plotNumber) continue;
 
-            const plotData = {
-                projectId: project._id,
-                plotId: `plot-${plotNumber}`,
-                plotNumber: plotNumber,
-                areaSqFt: properties.area || 0,
-                status: "available", // default status
+            // Merge GeoJSON properties with enriched metadata
+            const metadata = enrichedMetadata[plotNumber] || {};
+
+            // Construct update object - only set fields that have valid data
+            // Use $set for identifying fields and $setOnInsert or conditional for metadata
+            const updateDoc = {
+                $set: {
+                    projectId: project._id,
+                    plotId: metadata.id || `plot-${plotNumber}`,
+                    plotNumber: plotNumber,
+                    status: properties.status || "available",
+                }
             };
+
+            // Only update metadata if it's explicitly provided from the enrichment source
+            // This prevents overwriting existing DB data with "0" or "Unknown"
+            const metadataUpdates = {};
+            if (metadata.areaSqFt) metadataUpdates.areaSqFt = metadata.areaSqFt;
+            if (metadata.areaCents) metadataUpdates.areaCents = metadata.areaCents;
+            if (metadata.facing) metadataUpdates.facing = metadata.facing;
+            if (metadata.road) metadataUpdates.road = metadata.road;
+
+            if (Object.keys(metadataUpdates).length > 0) {
+                updateDoc.$set = { ...updateDoc.$set, ...metadataUpdates };
+            }
 
             ops.push({
                 updateOne: {
                     filter: { plotNumber: plotNumber, projectId: project._id },
-                    update: { $set: plotData },
+                    update: updateDoc,
                     upsert: true,
                 },
             });
@@ -76,7 +99,7 @@ export async function POST(request) {
 
         return NextResponse.json({
             success: true,
-            message: `Successfully synchronized ${ops.length} plots with the database.`,
+            message: `Successfully synchronized ${ops.length} plots using database GeoJSON and metadata.`,
         });
     } catch (error) {
         return NextResponse.json(

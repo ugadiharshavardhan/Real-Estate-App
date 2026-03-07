@@ -7,6 +7,7 @@ import Blogs from "../components/Blogs";
 import Testimonials from "../components/Testimonials";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { getProjects } from "@/utils/data/projects";
 
 export const metadata = {
   title: "LuxEstate | Modern Luxury Real Estate",
@@ -16,13 +17,15 @@ export const metadata = {
     "luxury real estate, villas, plots, high-rise apartments, investment, modern living",
 };
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getProjects();
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
       <HeroCarousel />
       <Recognitions />
-      <StarProjects />
+      <StarProjects projects={projects} />
       <OurStory />
       <Blogs />
       <Testimonials />

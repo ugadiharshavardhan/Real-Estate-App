@@ -1,14 +1,27 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongodb";
 import Plot from "@/models/Plot";
+import Project from "@/models/Project";
 
 export async function GET(request, { params }) {
     try {
         const { plotNo } = await params;
+        const { searchParams } = new URL(request.url);
+        const projectSlug = searchParams.get("projectSlug");
+
         await dbConnect();
 
-        // Find by plotNumber to match GeoJSON plot_no
-        const plot = await Plot.findOne({ plotNumber: plotNo });
+        let query = { plotNumber: plotNo };
+
+        // Scope by project if slug provided
+        if (projectSlug) {
+            const project = await Project.findOne({ slug: projectSlug });
+            if (project) {
+                query.projectId = project._id;
+            }
+        }
+
+        const plot = await Plot.findOne(query);
         if (!plot) {
             return NextResponse.json(
                 { success: false, error: "Plot not found" },

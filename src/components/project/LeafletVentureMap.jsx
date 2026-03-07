@@ -26,6 +26,33 @@ function FitBounds({ bounds }) {
     return null;
 }
 
+// Home Button Component
+function HomeButton({ bounds }) {
+    const map = useMap();
+    const handleHome = () => {
+        if (bounds) {
+            map.fitBounds(bounds, { animate: true, padding: [20, 20] });
+        }
+    };
+    return (
+        <div className="leaflet-top leaflet-left !mt-20">
+            <div className="leaflet-control leaflet-bar">
+                <button
+                    onClick={handleHome}
+                    className="bg-white w-[34px] h-[34px] flex items-center justify-center hover:bg-gray-100 transition-colors border-none cursor-pointer"
+                    title="Center to Venture"
+                    type="button"
+                >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    );
+}
+
 export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
     const [geoData, setGeoData] = useState({
         plots: null,
@@ -54,30 +81,20 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
                     setPlotsDB(dbJson.data);
                 }
 
-                // Fetch GeoJSONs
-                const [plotsRes, roadsRes, compoundsRes, footpathsRes] = await Promise.all([
-                    fetch("/maps/Plots.json"),
-                    fetch("/maps/Roads.json"),
-                    fetch("/maps/compound.json"),
-                    fetch("/maps/footpaths.json")
-                ]);
+                // Fetch GeoJSONs from MongoDB
+                const mapRes = await fetch(`/api/map-data?projectSlug=${projectSlug}`);
+                const mapJson = await mapRes.json();
 
-                const plotsJson = await plotsRes.json();
-                const roadsJson = await roadsRes.json();
-                const compoundsJson = await compoundsRes.json();
-                const footpathsJson = await footpathsRes.json();
+                if (mapJson.success) {
+                    setGeoData(mapJson.data);
 
-                setGeoData({
-                    plots: plotsJson,
-                    roads: roadsJson,
-                    compounds: compoundsJson,
-                    footpaths: footpathsJson,
-                });
-
-                // Calculate bounds based on Plots
-                if (plotsJson.features && plotsJson.features.length > 0) {
-                    const layer = L.geoJSON(plotsJson);
-                    setMapBounds(layer.getBounds());
+                    // Calculate bounds based on Plots
+                    if (mapJson.data.plots && mapJson.data.plots.features && mapJson.data.plots.features.length > 0) {
+                        const layer = L.geoJSON(mapJson.data.plots);
+                        setMapBounds(layer.getBounds());
+                    }
+                } else {
+                    console.warn("No map data found in DB, falling back to static files could be implemented here.");
                 }
 
             } catch (err) {
@@ -134,8 +151,8 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
         return {
             fillColor: fillColor,
             color: isSelected ? "#ffffff" : strokeColor,
-            weight: isSelected ? 4 : strokeWeight,
-            fillOpacity: isSelected ? 0.9 : fillOpacity,
+            weight: isSelected ? 4 : strokeWeight, // Increased from 3
+            fillOpacity: isSelected ? 1.0 : fillOpacity, // Fully thick color when selected
         };
     };
 
@@ -154,13 +171,20 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
             });
         }
 
+        // Ensure selected plot stays on top after render
+        if (selectedPlotNo === plotNumber) {
+            setTimeout(() => {
+                if (layer.bringToFront) layer.bringToFront();
+            }, 0);
+        }
+
         // Hover Effects
         layer.on({
             mouseover: (e) => {
                 const target = e.target;
                 const originalStyle = stylePlots(feature);
                 target.setStyle({
-                    weight: 6,
+                    weight: 3,
                     fillOpacity: 0.9,
                     color: "#ffffff", // Bright white border on hover
                 });
@@ -179,6 +203,7 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
 
                 // Set selected plot for exclusive highlight
                 setSelectedPlotNo(plotNumber);
+                target.bringToFront(); // Immediate highlight z-index fix
 
                 // Calculate center for Popup
                 const center = target.getBounds().getCenter();
@@ -194,7 +219,7 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
 
                 // Backend API Fetching as per requirements
                 try {
-                    const res = await fetch(`/api/plots/${plotNumber}`);
+                    const res = await fetch(`/api/plots/${plotNumber}?projectSlug=${projectSlug}`);
                     const json = await res.json();
                     if (json.success) {
                         setPopupInfo({
@@ -237,7 +262,7 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
 
     if (!geoData.plots) {
         return (
-            <div className="w-full h-[600px] bg-gray-50 flex items-center justify-center animate-pulse rounded-2xl border border-gray-200">
+            <div className="w-full h-[500px] bg-gray-50 flex items-center justify-center animate-pulse rounded-2xl border border-gray-200">
                 <div className="text-gray-400 font-medium">Loading Map Data...</div>
             </div>
         );
@@ -245,13 +270,14 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
 
     return (
         <div className="relative w-full shadow-2xl rounded-2xl overflow-hidden border border-gray-200 mt-12 bg-white p-2">
-            <div className="w-full h-[600px] rounded-xl overflow-hidden relative">
+            <div className="w-full h-[500px] rounded-xl overflow-hidden relative">
                 <MapContainer
                     center={[15.724, 77.813]} // Default fallback center
                     zoom={16}
                     style={{ width: "100%", height: "100%" }}
                 >
                     {mapBounds && <FitBounds bounds={mapBounds} />}
+                    {mapBounds && <HomeButton bounds={mapBounds} />}
 
                     <LayersControl position="topright">
                         {/* Base Tile Layers */}

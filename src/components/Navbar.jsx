@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 import { Search, Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ isAbsolute = false }) {
   const [hidden, setHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
     <motion.nav
 
       style={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 mx-auto max-w-7xl backdrop-blur-md rounded-b-xl md:rounded-full md:mt-4 shadow-[0_2px_20px_rgb(0,0,0,0.04)] transition-colors duration-300"
+      className={`${isAbsolute ? "absolute" : "fixed"} top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 mx-auto max-w-7xl backdrop-blur-md rounded-b-xl md:rounded-full md:mt-4 shadow-[0_2px_20px_rgb(0,0,0,0.04)] transition-colors duration-300`}
     >
       <div className="flex items-center space-x-2 cursor-pointer">
         <span className="text-2xl font-bold font-playfair tracking-tight text-gray-500">
@@ -38,7 +38,7 @@ export default function Navbar() {
         {navLinks.map((link) => (
           <a
             key={link}
-            href={`#${link.replace(/\s+/g, "-").toLowerCase()}`}
+            href={`/#${link.replace(/\s+/g, "-").toLowerCase()}`}
             className="text-sm font-medium text-gray-800 hover:text-[#C5A059] transition-colors relative group"
           >
             {link}
@@ -98,14 +98,14 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link}
-                  href={`#${link.replace(/\s+/g, "-").toLowerCase()}`}
+                  href={`/#${link.replace(/\s+/g, "-").toLowerCase()}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-xl font-playfair text-gray-900 border-b border-gray-100 pb-2"
                 >
                   {link}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
