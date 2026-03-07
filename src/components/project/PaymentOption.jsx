@@ -1,80 +1,77 @@
 "use client";
 
-import { CreditCard, Wallet, Banknote, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export default function PaymentOption() {
     const plans = [
         {
-            title: "Booking Amount",
-            amount: "₹1,00,000",
-            description: "Initial booking amount to block your preferred plot.",
-            icon: <Wallet className="w-8 h-8 text-green-700" />,
+            title: "Option-A",
+            description: "100% spot payment",
+            amount: "Rs. 1,50,000",
+            unit: "PER SQUARE YARD",
         },
         {
-            title: "Immediate Payment",
-            amount: "100% in 15 Days",
-            description: "Special discount of ₹100 per sq. yard for full payment.",
-            icon: <Banknote className="w-8 h-8 text-green-700" />,
+            title: "Option-B",
+            description: "50% advance 50% within a month",
+            amount: "Rs. 1,75,000",
+            unit: "PER SQUARE YARD",
         },
         {
-            title: "Standard Plan",
-            amount: "25% in 30 Days",
-            description: "Remaining balance within 45 days with interest-free period.",
-            icon: <CreditCard className="w-8 h-8 text-green-700" />,
+            title: "Option-C",
+            description: "plot allotment advance balance within 3 months",
+            amount: "Rs. 1,90,000",
+            unit: "PER SQUARE YARD",
         },
     ];
 
     return (
-        <section id="payment-option" className="py-20 bg-gray-50">
+        <section id="payment-option" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-4">
+                    <h2 className="text-3xl md:text-5xl font-inter font-medium text-green-800 mb-6">
                         Payment Options
                     </h2>
-                    <div className="w-24 h-1 bg-green-800 mx-auto mb-6"></div>
-                    <p className="text-gray-600 max-w-2xl mx-auto font-inter">
-                        We offer flexible and transparent payment plans to help you secure
-                        your dream investment with ease.
-                    </p>
+                    <div className="flex justify-center mb-10">
+                        <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 6C7.5 6 7.5 1 15 1C22.5 1 22.5 6 30 6C37.5 6 37.5 11 45 11C52.5 11 52.5 6 60 6" stroke="#166534" strokeWidth="2" />
+                        </svg>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     {plans.map((plan) => (
                         <div
                             key={plan.title}
-                            className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+                            className="bg-[#f2f8f6] p-12 lg:p-16 rounded-sm flex flex-col items-center justify-center text-center shadow-sm border border-[#e2ecea] group hover:shadow-md transition-all duration-300"
                         >
-                            <div className="bg-green-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-800 transition-colors">
-                                <div className="group-hover:text-white transition-colors">
-                                    {plan.icon}
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold font-playfair text-gray-900 mb-2">
+                            <h3 className="text-3xl font-normal text-[#5c6976] mb-8 font-inter">
                                 {plan.title}
                             </h3>
-                            <p className="text-2xl font-bold text-green-800 mb-4 font-inter">
-                                {plan.amount}
-                            </p>
-                            <p className="text-gray-600 font-inter leading-relaxed">
+                            <p className="text-[#8e99a3] font-inter text-sm mb-12 max-w-[200px] leading-relaxed">
                                 {plan.description}
+                            </p>
+                            <div className="mb-2">
+                                <span className="text-4xl font-bold text-[#c49a3e] font-inter">
+                                    {plan.amount}
+                                </span>
+                            </div>
+                            <p className="text-[#8e99a3] font-inter text-xs tracking-widest mt-4 uppercase">
+                                {plan.unit}
                             </p>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-12 bg-green-800 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-white shadow-lg">
-                    <div className="flex items-center gap-4">
-                        <div className="bg-white/20 p-3 rounded-full">
-                            <ShieldCheck size={32} />
+                <div className="mt-20 bg-green-900 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-white shadow-xl">
+                    <div className="flex items-center gap-6">
+                        <div className="bg-white/10 p-4 rounded-full">
+                            <ShieldCheck size={40} className="text-white" />
                         </div>
                         <div>
-                            <p className="font-bold text-xl font-playfair">Safe & Secure Transactions</p>
-                            <p className="text-white/80 font-inter">All payments are bank-verified and RERA compliant.</p>
+                            <p className="font-bold text-2xl font-playfair mb-1">Safe & Secure Transactions</p>
+                            <p className="text-white/70 font-inter text-base">All payments are bank-verified and RERA compliant for your peace of mind.</p>
                         </div>
                     </div>
-                    <button className="bg-white text-green-800 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-md whitespace-nowrap font-playfair">
-                        Download Pricing PDF
-                    </button>
                 </div>
             </div>
         </section>

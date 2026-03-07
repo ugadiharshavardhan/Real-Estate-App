@@ -28,6 +28,8 @@ const ProjectSchema = new mongoose.Schema(
     locationHighlights: [
       { title: String, description: String, image: String, distance: String },
     ],
+    latitude: Number,
+    longitude: Number,
   },
   { timestamps: true },
 );
@@ -44,7 +46,7 @@ const PlotSchema = new mongoose.Schema(
     price: Number,
     status: {
       type: String,
-      enum: ["available", "reserved", "sold"],
+      enum: ["available", "reserved", "sold", "mortgaged", "registered", "booked"],
       default: "available",
     },
   },
@@ -64,9 +66,9 @@ async function seed() {
     const projectData = {
       name: "Ugadi Ventures",
       slug: "ugadi-ventures",
-      location: "Kurnool, Andhra Pradesh",
+      location: "Pyalakurti, Kodumur Mandal, Kurnool District, AP",
       description:
-        "A premium residential venture offering well-planned plots with modern amenities and excellent connectivity. Located in the heart of Kurnool, Ugadi Ventures is designed for those seeking a peaceful and comfortable lifestyle. Our project stands out for its strategic positioning near major landmarks and transport hubs.",
+        "A premium residential venture offering well-planned plots with modern amenities and excellent connectivity. Located at Pyalakurti, Kodumur Mandal, Kurnool, Ugadi Ventures is designed for those seeking a peaceful and comfortable lifestyle.",
       heroImage:
         "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2000&auto=format&fit=crop", // Real Estate Hero
       gallery: [
@@ -154,6 +156,8 @@ async function seed() {
           distance: "10 km",
         },
       ],
+      latitude: 15.724,
+      longitude: 77.813,
     };
 
     // Clear existing data for this project
@@ -205,7 +209,10 @@ async function seed() {
       facing: plot.facing,
       road: plot.road,
       price: Math.floor(2500000 + Math.random() * 1000000), // Dummy price between 2.5MB and 3.5M
-      status: "available",
+      status: plot.number % 7 === 0 ? "mortgaged" :
+        plot.number % 9 === 0 ? "registered" :
+          plot.number % 11 === 0 ? "booked" :
+            plot.number % 13 === 0 ? "sold" : "available",
     }));
 
     // Clear existing plots for this project

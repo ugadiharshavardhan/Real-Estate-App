@@ -6,6 +6,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { Search, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar({ isAbsolute = false }) {
   const [hidden, setHidden] = useState(false);

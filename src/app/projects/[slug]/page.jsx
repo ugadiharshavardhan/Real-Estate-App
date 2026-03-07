@@ -12,6 +12,7 @@ import ProjectGallery from "@/components/project/ProjectGallery";
 import ProjectNavbar from "@/components/project/ProjectNavbar";
 import PaymentOption from "@/components/project/PaymentOption";
 import ProjectDevelopment from "@/components/project/ProjectDevelopment";
+import RouteSection from "@/components/project/RouteSection";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -39,6 +40,14 @@ export default async function ProjectPage({ params }) {
       <ProjectHero project={project} />
 
       <ProjectNavbar layoutSvg={project.layoutSvg} />
+
+      {/* Get Route Feature */}
+      <div id="get-route">
+        <RouteSection
+          ventureCoords={{ lat: project.latitude, lng: project.longitude }}
+          ventureName={project.name}
+        />
+      </div>
 
       {/* Interactive Map - Plot Availability */}
       <div id="plot-availability">

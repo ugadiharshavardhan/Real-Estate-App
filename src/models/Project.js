@@ -26,6 +26,8 @@ const ProjectSchema = new mongoose.Schema(
     totalAcres: { type: Number, required: true },
     amenities: [AmenitySchema],
     locationHighlights: [LocationHighlightSchema],
+    latitude: { type: Number },
+    longitude: { type: Number },
   },
   { timestamps: true },
 );
