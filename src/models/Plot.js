@@ -20,8 +20,14 @@ const PlotSchema = new mongoose.Schema(
     price: { type: Number },
     status: {
       type: String,
-      enum: ["available", "reserved", "sold", "mortgaged", "registered", "booked"],
+      enum: ["available", "reserved", "mortgaged", "registered", "booked"],
       default: "available",
+    },
+    customer: {
+      name: String,
+      email: String,
+      phone: String,
+      address: String,
     },
   },
   { timestamps: true },
