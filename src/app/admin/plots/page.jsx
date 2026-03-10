@@ -15,17 +15,24 @@ import {
 } from "lucide-react";
 import PlotStatusToggle from "@/components/admin/PlotStatusToggle";
 import PlotActions from "@/components/admin/PlotActions";
-
+import PlotSearch from "@/components/admin/PlotSearch";
 import ProjectSelector from "@/components/admin/ProjectSelector";
 
 export default async function AdminPlots({ searchParams }) {
-  const { project: slug } = await searchParams;
+  const { project: slug, q } = await searchParams;
   const projects = await getProjects();
 
   // Default to first project if none selected
   const activeSlug = slug || (projects.length > 0 ? projects[0].slug : "");
   const activeProject = projects.find((p) => p.slug === activeSlug);
-  const plots = activeSlug ? await getProjectPlots(activeSlug) : [];
+  let plots = activeSlug ? await getProjectPlots(activeSlug) : [];
+
+  // Filter plots if search query exists
+  if (q) {
+    plots = plots.filter((plot) =>
+      plot.plotNumber.toString().toLowerCase().includes(q.toLowerCase())
+    );
+  }
 
   return (
     <div className="space-y-10">
@@ -50,17 +57,7 @@ export default async function AdminPlots({ searchParams }) {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-          <div className="relative">
-            <Search
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-              size={18}
-            />
-            <input
-              type="text"
-              placeholder="Search plot number..."
-              className="pl-12 pr-6 py-3 bg-white border border-gray-100 rounded-2xl text-sm font-inter w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#1B4332]/5 shadow-sm"
-            />
-          </div>
+          <PlotSearch />
           <ProjectSelector projects={projects} currentSlug={activeSlug} />
         </div>
       </div>
@@ -163,8 +160,14 @@ export default async function AdminPlots({ searchParams }) {
                     <div className="space-y-1">
                       <p className="text-sm font-bold text-gray-900 flex items-center gap-1.5 font-inter">
                         <Maximize2 size={14} className="text-gray-300" />
-                        {plot.areaSqFt} Sq.Ft
+                        {plot.areaSqFt} Sq.Ft / {plot.areaCents} Cents
                       </p>
+                      <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                        <span>E: {plot.east || 0}</span>
+                        <span>W: {plot.west || 0}</span>
+                        <span>N: {plot.north || 0}</span>
+                        <span>S: {plot.south || 0}</span>
+                      </div>
                       <p className="text-xs text-gray-500 flex items-center gap-1.5 font-inter">
                         <Navigation size={14} className="text-gray-300" />
                         {plot.facing}

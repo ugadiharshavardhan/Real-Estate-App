@@ -1,19 +1,67 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import { updatePlotStatus } from "@/utils/actions/admin";
 import { Loader2, Check, X, User, Mail, Phone, MapPin } from "lucide-react";
 
 export default function PlotStatusToggle({ plot }) {
   const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
+
+  // Use a helper to extract and normalize customers
+  const getCustomersFromPlot = (p) => {
+    const rawData = p?.customer || p?.customers;
+    if (!rawData) return [];
+
+    // Normalize to array
+    const normalized = Array.isArray(rawData) ? rawData : [rawData];
+
+    // Map and ensure all fields are initialized to empty strings (to prevent uncontrolled/controlled error)
+    return normalized
+      .filter((c) => c && typeof c === "object")
+      .map((c) => ({
+        name: c.name || "",
+        aadharNumber: c.aadharNumber || "",
+        phone: c.phone || "",
+        address: c.address || "",
+      }))
+      .filter((c) => c.name || c.aadharNumber || c.phone || c.address); // Only return if it has some data
+  };
+
   const [selectedStatus, setSelectedStatus] = useState(plot.status);
-  const [customerData, setCustomerData] = useState({
-    name: plot.customer?.name || "",
-    email: plot.customer?.email || "",
-    phone: plot.customer?.phone || "",
-    address: plot.customer?.address || "",
+  const [customersData, setCustomersData] = useState(() => {
+    const existing = getCustomersFromPlot(plot);
+    console.log(`[Diagnostic] Initializing Customer Status Modal for Plot ${plot.plotNumber}. Found existing data:`, existing);
+    return existing.length > 0
+      ? JSON.parse(JSON.stringify(existing))
+      : [{ name: "", aadharNumber: "", phone: "", address: "" }];
   });
+
+  const [existingCustomers, setExistingCustomers] = useState(() => getCustomersFromPlot(plot));
+
+  // Re-sync with plot data whenever modal opens or plot prop changes
+  useEffect(() => {
+    const current = getCustomersFromPlot(plot);
+
+    // Always update the summary
+    setExistingCustomers(current);
+
+    if (isOpen) {
+      console.log(`[Diagnostic] Syncing Plot ${plot.plotNumber}. Modal Open. Data:`, current);
+      setSelectedStatus(plot.status);
+
+      if (current.length > 0) {
+        setCustomersData(JSON.parse(JSON.stringify(current)));
+      } else {
+        // Only reset to empty if it doesn't already have some unsaved changes
+        setCustomersData(prev =>
+          prev.length === 1 && !prev[0].name
+            ? prev
+            : [{ name: "", aadharNumber: "", phone: "", address: "" }]
+        );
+      }
+    }
+  }, [isOpen, plot]);
 
   const statuses = [
     {
@@ -53,12 +101,48 @@ export default function PlotStatusToggle({ plot }) {
     selectedStatus,
   );
 
+  const handleAddCustomer = () => {
+    setCustomersData([
+      ...customersData,
+      { name: "", aadharNumber: "", phone: "", address: "" },
+    ]);
+  };
+
+  const handleRemoveCustomer = (index) => {
+    if (customersData.length === 1) return;
+    setCustomersData(customersData.filter((_, i) => i !== index));
+  };
+
+  const handleCustomerChange = (index, field, value) => {
+    const updated = [...customersData];
+    updated[index][field] = value;
+    setCustomersData(updated);
+  };
+
   const handleSave = async () => {
+    // Validation
+    if (showCustomerFields) {
+      for (const [index, customer] of customersData.entries()) {
+        const { name, aadharNumber, phone, address } = customer;
+        if (!name || !aadharNumber || !phone || !address) {
+          alert(`Please fill in all details for Customer #${index + 1}: Name, Aadhar Number, Phone, and Address.`);
+          return;
+        }
+
+        // Basic Aadhar validation (12 digits)
+        const aadharRegex = /^\d{12}$/;
+        if (!aadharRegex.test(aadharNumber.replace(/\s/g, ""))) {
+          alert(`Please enter a valid 12-digit Aadhar Number for Customer #${index + 1}.`);
+          return;
+        }
+      }
+    }
+
     startTransition(async () => {
       const res = await updatePlotStatus(
         plot._id,
         selectedStatus,
-        showCustomerFields ? customerData : null,
+        showCustomerFields ? customersData : null,
       );
       if (res.success) {
         setIsOpen(false);
@@ -113,6 +197,26 @@ export default function PlotStatusToggle({ plot }) {
 
             {/* Scrollable Content */}
             <div className="p-8 space-y-10 overflow-y-auto">
+              {/* Existing Customer Visibility (Always show if data exists) */}
+              {existingCustomers.length > 0 && (
+                <div className="p-6 bg-[#1B4332]/5 rounded-3xl border border-[#1B4332]/10 space-y-3">
+                  <div className="flex items-center gap-2 mb-1">
+                    <User size={16} className="text-[#1B4332]" />
+                    <span className="text-[11px] font-black uppercase tracking-widest text-[#1B4332]">
+                      Current Registration
+                    </span>
+                  </div>
+                  <div className="space-y-2">
+                    {existingCustomers.map((c, idx) => (
+                      <div key={idx} className="flex flex-col border-l-2 border-[#1B4332]/20 pl-4 py-1">
+                        <p className="text-sm font-bold text-gray-900">{c.name}</p>
+                        <p className="text-[10px] text-gray-500 font-medium">Aadhar: {c.aadharNumber}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Status Selection */}
               <div className="space-y-4">
                 <label className="text-[11px] font-black uppercase tracking-[0.2em] text-[#1B4332] flex items-center gap-2">
@@ -124,19 +228,17 @@ export default function PlotStatusToggle({ plot }) {
                     <button
                       key={s.id}
                       onClick={() => setSelectedStatus(s.id)}
-                      className={`group p-4 rounded-2xl border-2 text-left transition-all ${
-                        selectedStatus === s.id
-                          ? "border-[#1B4332] bg-[#1B4332]/5 ring-4 ring-[#1B4332]/5"
-                          : "border-gray-50 bg-white hover:border-gray-200"
-                      }`}
+                      className={`group p-4 rounded-2xl border-2 text-left transition-all ${selectedStatus === s.id
+                        ? "border-[#1B4332] bg-[#1B4332]/5 ring-4 ring-[#1B4332]/5"
+                        : "border-gray-50 bg-white hover:border-gray-200"
+                        }`}
                     >
                       <div className="flex items-center justify-between mb-1">
                         <span
-                          className={`text-[10px] font-black uppercase tracking-widest ${
-                            selectedStatus === s.id
-                              ? "text-[#1B4332]"
-                              : "text-gray-400"
-                          }`}
+                          className={`text-[10px] font-black uppercase tracking-widest ${selectedStatus === s.id
+                            ? "text-[#1B4332]"
+                            : "text-gray-400"
+                            }`}
                         >
                           {s.label}
                         </span>
@@ -154,101 +256,103 @@ export default function PlotStatusToggle({ plot }) {
 
               {/* Conditional Customer Information */}
               {showCustomerFields && (
-                <div className="space-y-6 pt-10 border-t border-gray-100 animate-in slide-in-from-top-4 duration-500">
+                <div className="space-y-8 pt-10 border-t border-gray-100 animate-in slide-in-from-top-4 duration-500">
                   <div className="flex items-center justify-between">
                     <label className="text-[11px] font-black uppercase tracking-[0.2em] text-[#1B4332] flex items-center gap-2">
                       <div className="w-1.5 h-1.5 bg-[#1B4332] rounded-full" />
-                      Customer Details
+                      Joint Customer Details
                     </label>
-                    <span className="text-[10px] font-bold text-gray-400 italic">
-                      Required for {selectedStatus} plots
-                    </span>
+                    <button
+                      type="button"
+                      onClick={handleAddCustomer}
+                      className="px-4 py-2 bg-[#1B4332]/5 text-[#1B4332] rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-[#1B4332]/10 transition-all border border-[#1B4332]/10"
+                    >
+                      + Add Customer
+                    </button>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2 md:col-span-2">
-                      <div className="relative group">
-                        <User
-                          className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[#1B4332] transition-colors"
-                          size={18}
-                        />
-                        <input
-                          required
-                          value={customerData.name}
-                          onChange={(e) =>
-                            setCustomerData({
-                              ...customerData,
-                              name: e.target.value,
-                            })
-                          }
-                          placeholder="Customer Full Name"
-                          className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-gray-50/50 focus:bg-white"
-                        />
+                  {customersData.map((customer, index) => (
+                    <div key={index} className="p-6 bg-gray-50/50 rounded-[2rem] border border-gray-100 space-y-6 relative group/card">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[10px] font-black uppercase tracking-widest text-[#1B4332]/40">
+                          Customer #{index + 1}
+                        </span>
+                        {customersData.length > 1 && (
+                          <button
+                            type="button"
+                            onClick={() => handleRemoveCustomer(index)}
+                            className="text-red-400 hover:text-red-500 transition-colors p-1"
+                            title="Remove Customer"
+                          >
+                            <X size={16} />
+                          </button>
+                        )}
                       </div>
-                    </div>
 
-                    <div className="space-y-2">
-                      <div className="relative group">
-                        <Mail
-                          className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[#1B4332] transition-colors"
-                          size={18}
-                        />
-                        <input
-                          type="email"
-                          value={customerData.email}
-                          onChange={(e) =>
-                            setCustomerData({
-                              ...customerData,
-                              email: e.target.value,
-                            })
-                          }
-                          placeholder="Email Address"
-                          className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-gray-50/50 focus:bg-white"
-                        />
-                      </div>
-                    </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2 md:col-span-2">
+                          <div className="relative group/input">
+                            <User
+                              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within/input:text-[#1B4332] transition-colors"
+                              size={18}
+                            />
+                            <input
+                              required
+                              value={customer.name}
+                              onChange={(e) => handleCustomerChange(index, 'name', e.target.value)}
+                              placeholder="Full Name"
+                              className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-white"
+                            />
+                          </div>
+                        </div>
 
-                    <div className="space-y-2">
-                      <div className="relative group">
-                        <Phone
-                          className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[#1B4332] transition-colors"
-                          size={18}
-                        />
-                        <input
-                          value={customerData.phone}
-                          onChange={(e) =>
-                            setCustomerData({
-                              ...customerData,
-                              phone: e.target.value,
-                            })
-                          }
-                          placeholder="Phone Number"
-                          className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-gray-50/50 focus:bg-white"
-                        />
-                      </div>
-                    </div>
+                        <div className="space-y-2">
+                          <div className="relative group/input">
+                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within/input:text-[#1B4332] transition-colors font-bold text-[10px]">
+                              Aadhar
+                            </div>
+                            <input
+                              value={customer.aadharNumber}
+                              onChange={(e) => handleCustomerChange(index, 'aadharNumber', e.target.value)}
+                              placeholder="12 Digit No"
+                              className="w-full pl-16 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-white"
+                            />
+                          </div>
+                        </div>
 
-                    <div className="space-y-2 md:col-span-2">
-                      <div className="relative group">
-                        <MapPin
-                          className="absolute left-4 top-6 text-gray-300 group-focus-within:text-[#1B4332] transition-colors"
-                          size={18}
-                        />
-                        <textarea
-                          rows={3}
-                          value={customerData.address}
-                          onChange={(e) =>
-                            setCustomerData({
-                              ...customerData,
-                              address: e.target.value,
-                            })
-                          }
-                          placeholder="Complete Address"
-                          className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-gray-50/50 focus:bg-white resize-none"
-                        />
+                        <div className="space-y-2">
+                          <div className="relative group/input">
+                            <Phone
+                              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within/input:text-[#1B4332] transition-colors"
+                              size={18}
+                            />
+                            <input
+                              value={customer.phone}
+                              onChange={(e) => handleCustomerChange(index, 'phone', e.target.value)}
+                              placeholder="Phone Number"
+                              className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-white"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="space-y-2 md:col-span-2">
+                          <div className="relative group/input">
+                            <MapPin
+                              className="absolute left-4 top-6 text-gray-300 group-focus-within/input:text-[#1B4332] transition-colors"
+                              size={18}
+                            />
+                            <textarea
+                              rows={2}
+                              value={customer.address}
+                              onChange={(e) => handleCustomerChange(index, 'address', e.target.value)}
+                              placeholder="Address"
+                              className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-white resize-none"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
               )}
             </div>

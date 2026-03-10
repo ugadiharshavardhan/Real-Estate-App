@@ -15,6 +15,10 @@ const PlotSchema = new mongoose.Schema(
     plotNumber: { type: String, required: true },
     areaSqFt: { type: Number },
     areaCents: { type: Number },
+    east: { type: Number },
+    west: { type: Number },
+    north: { type: Number },
+    south: { type: Number },
     facing: { type: String },
     road: { type: String },
     price: { type: Number },
@@ -23,14 +27,21 @@ const PlotSchema = new mongoose.Schema(
       enum: ["available", "reserved", "mortgaged", "registered", "booked"],
       default: "available",
     },
-    customer: {
-      name: String,
-      email: String,
-      phone: String,
-      address: String,
-    },
+    customer: [
+      {
+        name: String,
+        aadharNumber: String,
+        phone: String,
+        address: String,
+      },
+    ],
   },
   { timestamps: true },
 );
+
+// Force recreate model if it already exists to ensure schema updates are picked up in dev
+if (process.env.NODE_ENV === "development" && mongoose.models.Plot) {
+  delete mongoose.models.Plot;
+}
 
 export default mongoose.models.Plot || mongoose.model("Plot", PlotSchema);

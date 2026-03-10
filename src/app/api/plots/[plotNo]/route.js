@@ -44,7 +44,7 @@ export async function PATCH(request, { params }) {
 
         await dbConnect();
         const updatedPlot = await Plot.findOneAndUpdate({ plotNumber: plotNo }, body, {
-            new: true,
+            returnDocument: 'after',
             runValidators: true,
         });
 

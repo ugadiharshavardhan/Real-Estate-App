@@ -112,17 +112,22 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
         // Sync DB first
         await fetch(`/api/plots/sync?projectSlug=${projectSlug}`, {
           method: "POST",
+          cache: "no-store",
         });
 
         // Fetch Plots from DB for Dynamic Styling
-        const dbRes = await fetch(`/api/plots?projectSlug=${projectSlug}`);
+        const dbRes = await fetch(`/api/plots?projectSlug=${projectSlug}`, {
+          cache: "no-store",
+        });
         const dbJson = await dbRes.json();
         if (dbJson.success) {
           setPlotsDB(dbJson.data);
         }
 
         // Fetch GeoJSONs from MongoDB
-        const mapRes = await fetch(`/api/map-data?projectSlug=${projectSlug}`);
+        const mapRes = await fetch(`/api/map-data?projectSlug=${projectSlug}`, {
+          cache: "no-store",
+        });
         const mapJson = await mapRes.json();
 
         if (mapJson.success) {
@@ -279,10 +284,29 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
         const dbRecord = plotsDB.find(
           (p) => String(p.plotNumber) === plotNumber,
         );
+
+        // Extract names from customer array (handle both singular and plural for migration)
+        const customerArray = Array.isArray(dbRecord?.customer)
+          ? dbRecord.customer
+          : Array.isArray(dbRecord?.customers)
+            ? dbRecord.customers
+            : [];
+        const customerNames = customerArray.map(c => c.name).filter(Boolean).join(" & ");
+
         setPopupInfo({
           loading: true,
           plotNumber: plotNumber,
-          area: feature.properties.area || dbRecord?.areaSqFt || "Unknown",
+          area: dbRecord?.areaSqFt || feature.properties.area || "Unknown",
+          areaCents: dbRecord?.areaCents || "Unknown",
+          east: dbRecord?.east || 0,
+          west: dbRecord?.west || 0,
+          north: dbRecord?.north || 0,
+          south: dbRecord?.south || 0,
+          status: dbRecord?.status || "available",
+          facing: dbRecord?.facing || "Unknown",
+          road: dbRecord?.road || "N/A",
+          price: dbRecord?.price || 0,
+          customerName: customerNames || null,
         });
 
         // Backend API Fetching as per requirements
@@ -293,16 +317,27 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
           );
           const json = await res.json();
           if (json.success) {
+            const freshCustomerArray = Array.isArray(json.data.customer)
+              ? json.data.customer
+              : Array.isArray(json.data.customers)
+                ? json.data.customers
+                : [];
+            const freshNames = freshCustomerArray.map(c => c.name).filter(Boolean).join(" & ");
+
             setPopupInfo({
               loading: false,
               plotNumber: json.data.plotNumber,
               area: json.data.areaSqFt,
               areaCents: json.data.areaCents,
+              east: json.data.east,
+              west: json.data.west,
+              north: json.data.north,
+              south: json.data.south,
               status: json.data.status,
               facing: json.data.facing || "Unknown",
               road: json.data.road || "N/A",
               price: json.data.price,
-              customerName: json.data.customer?.name || null,
+              customerName: freshNames || null,
             });
           } else {
             // Fallback local DB state
@@ -311,10 +346,14 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
               plotNumber: plotNumber,
               area: dbRecord?.areaSqFt || "Unknown",
               areaCents: dbRecord?.areaCents || "Unknown",
+              east: dbRecord?.east,
+              west: dbRecord?.west,
+              north: dbRecord?.north,
+              south: dbRecord?.south,
               status: dbRecord?.status || "Unknown",
               facing: dbRecord?.facing || "Unknown",
               road: dbRecord?.road || "N/A",
-              customerName: dbRecord?.customer?.name || null,
+              customerName: customerNames || null,
             });
           }
         } catch (error) {
@@ -474,7 +513,7 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
 
           {/* Custom Overlay Popup */}
           {popupInfo && popupPosition && (
-            <div className="absolute top-4 right-4 z-[1000] bg-white rounded-xl shadow-2xl p-5 border border-gray-100 max-w-sm w-[280px] animate-in fade-in slide-in-from-right-8 duration-300">
+            <div className="absolute top-3 right-3 z-[1000] bg-white rounded-xl shadow-2xl p-4 border border-gray-100 w-[345px] animate-in fade-in slide-in-from-right-4 duration-300">
               <button
                 onClick={closePopup}
                 className="absolute top-3 right-3 text-gray-400 hover:bg-gray-100 p-1 rounded-full transition-colors"
@@ -493,9 +532,9 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
               </button>
-              <div className="mb-3 border-b border-gray-100 pb-3">
-                <h3 className="font-playfair text-xl font-bold text-gray-900">
-                  Plot Number: {popupInfo.plotNumber}
+              <div className="mb-2 border-b border-gray-100 pb-2">
+                <h3 className="font-playfair text-lg font-bold text-gray-900">
+                  Plot: {popupInfo.plotNumber}
                 </h3>
               </div>
               {popupInfo.loading ? (
@@ -508,8 +547,12 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
                     <div className="flex justify-between items-center py-2 bg-gray-50/50 -mx-2 px-2 rounded-xl border border-gray-100/50 shadow-sm mb-2 scale-[1.02] transition-transform">
                       <span className="text-gray-500 capitalize text-[11px] font-black tracking-widest">
                         {popupInfo.status === "registered"
-                          ? "Owned by:"
-                          : `${popupInfo.status} by:`}
+                          ? "Registered By:"
+                          : popupInfo.status === "booked"
+                            ? "Booked By:"
+                            : popupInfo.status === "reserved"
+                              ? "Reserved By:"
+                              : `${popupInfo.status} By:`}
                       </span>
                       <span className="font-extrabold text-[#1B4332] capitalize text-base">
                         {popupInfo.customerName}
@@ -520,10 +563,30 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
                   <div className="flex justify-between items-center py-1">
                     <span className="text-gray-500 text-xs">Plot Area:</span>
                     <span className="font-bold text-gray-900">
-                      {popupInfo.area} Sq.Ft{" "}
-                      {popupInfo.areaCents && `(${popupInfo.areaCents} Cents)`}
+                      {popupInfo.area} Sq.Ft & {popupInfo.areaCents} Cents
                     </span>
                   </div>
+
+                  {/* Dimensions Grid */}
+                  <div className="grid grid-cols-2 gap-2 py-2 border-y border-gray-50 my-1">
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-gray-400 uppercase font-bold">East</span>
+                      <span className="font-bold text-gray-900">{popupInfo.east || 0} ft</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-gray-400 uppercase font-bold">West</span>
+                      <span className="font-bold text-gray-900">{popupInfo.west || 0} ft</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-gray-400 uppercase font-bold">North</span>
+                      <span className="font-bold text-gray-900">{popupInfo.north || 0} ft</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-gray-400 uppercase font-bold">South</span>
+                      <span className="font-bold text-gray-900">{popupInfo.south || 0} ft</span>
+                    </div>
+                  </div>
+
                   {popupInfo.road && (
                     <div className="flex justify-between items-center py-1">
                       <span className="text-gray-500 text-xs">
@@ -534,14 +597,7 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
                       </span>
                     </div>
                   )}
-                  {popupInfo.price && (
-                    <div className="flex justify-between items-center py-1">
-                      <span className="text-gray-500 text-xs">Price:</span>
-                      <span className="font-extrabold text-[#1B4332] text-sm">
-                        ₹{popupInfo.price.toLocaleString()}
-                      </span>
-                    </div>
-                  )}
+                  {/* Price removed as per user request */}
                   <div className="flex justify-between items-center py-1">
                     <span className="text-gray-500 text-xs">
                       Facing Direction:
@@ -557,19 +613,18 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
                     </span>
                     <span
                       className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest
-                    ${
-                      popupInfo.status === "available"
-                        ? "bg-green-100 text-green-800 border-green-200"
-                        : popupInfo.status === "booked"
-                          ? "bg-red-100 text-red-800 border-red-200"
-                          : popupInfo.status === "mortgaged"
-                            ? "bg-purple-100 text-purple-800 border-purple-200"
-                            : popupInfo.status === "registered"
-                              ? "bg-amber-100 text-amber-800 border-amber-200"
-                              : popupInfo.status === "reserved"
-                                ? "bg-yellow-100 text-yellow-800 border-yellow-200"
-                                : "bg-gray-100 text-gray-800 border-gray-200"
-                    } border shadow-sm`}
+                    ${popupInfo.status === "available"
+                          ? "bg-green-100 text-green-800 border-green-200"
+                          : popupInfo.status === "booked"
+                            ? "bg-red-100 text-red-800 border-red-200"
+                            : popupInfo.status === "mortgaged"
+                              ? "bg-purple-100 text-purple-800 border-purple-200"
+                              : popupInfo.status === "registered"
+                                ? "bg-amber-100 text-amber-800 border-amber-200"
+                                : popupInfo.status === "reserved"
+                                  ? "bg-yellow-100 text-yellow-800 border-yellow-200"
+                                  : "bg-gray-100 text-gray-800 border-gray-200"
+                        } border shadow-sm`}
                     >
                       {popupInfo.status || "Unknown"}
                     </span>

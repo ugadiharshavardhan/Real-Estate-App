@@ -11,28 +11,38 @@ export async function updatePlotStatus(plotId, status, customerData = null) {
     await dbConnect();
     // Defer model import to prevent client-side bundling issues
     const Plot = (await import("@/models/Plot")).default;
+    const Project = (await import("@/models/Project")).default;
 
     const updateFields = { status };
     if (customerData) {
-      updateFields.customer = customerData;
+      // Ensure it's an array for the joint registration schema
+      updateFields.customer = Array.isArray(customerData) ? customerData : [customerData];
     } else if (status === "available" || status === "mortgaged") {
-      // Clear customer data for these statuses
-      updateFields.customer = {
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-      };
+      updateFields.customer = [];
     }
 
+    console.log("Updating Plot Status for", plotId, "to", status, "with data:", updateFields.customer);
+
     const plot = await Plot.findByIdAndUpdate(plotId, updateFields, {
-      new: true,
+      returnDocument: "after",
+      runValidators: true,
     });
 
     if (!plot) throw new Error("Plot not found");
 
+    console.log("Successfully updated plot in DB:", {
+      id: plot._id,
+      status: plot.status,
+      customerCount: plot.customer?.length
+    });
+
+    // Fetch project to get slug for revalidation
+    const project = await Project.findById(plot.projectId).select("slug");
+
     revalidatePath("/admin/plots");
-    revalidatePath(`/projects/${plot.projectId}`);
+    if (project) {
+      revalidatePath(`/projects/${project.slug}`);
+    }
 
     return { success: true, data: JSON.parse(JSON.stringify(plot)) };
   } catch (error) {
@@ -179,16 +189,64 @@ export async function updatePlot(plotId, data) {
   try {
     await dbConnect();
     const Plot = (await import("@/models/Plot")).default;
+    const Project = (await import("@/models/Project")).default;
 
-    const plot = await Plot.findByIdAndUpdate(plotId, data, {
-      new: true,
+    const existingPlot = await Plot.findById(plotId);
+    console.log("Current Data in DB for", plotId, ":", {
+      east: existingPlot?.east,
+      west: existingPlot?.west,
+      north: existingPlot?.north,
+      south: existingPlot?.south,
     });
+
+    console.log("Attempting to save with $set:", {
+      areaSqFt: data.areaSqFt,
+      areaCents: data.areaCents,
+      east: data.east,
+      west: data.west,
+      north: data.north,
+      south: data.south,
+    });
+
+    const plot = await Plot.findByIdAndUpdate(
+      plotId,
+      {
+        $set: {
+          areaSqFt: data.areaSqFt,
+          areaCents: data.areaCents,
+          east: data.east,
+          west: data.west,
+          north: data.north,
+          south: data.south,
+          facing: data.facing,
+          road: data.road,
+          price: data.price,
+        },
+      },
+      {
+        returnDocument: "after",
+        runValidators: true,
+      },
+    );
 
     if (!plot) throw new Error("Plot not found");
 
+    console.log("Freshly Saved Result in DB:", {
+      id: plot._id,
+      east: plot.east,
+      west: plot.west,
+      north: plot.north,
+      south: plot.south,
+    });
+
+    // Fetch project to get slug for revalidation
+    const project = await Project.findById(plot.projectId).select("slug");
+
     revalidatePath("/admin/plots");
     // Also revalidate the project page where this plot might be displayed
-    revalidatePath(`/projects/${plot.projectId}`);
+    if (project) {
+      revalidatePath(`/projects/${project.slug}`);
+    }
 
     return { success: true, data: JSON.parse(JSON.stringify(plot)) };
   } catch (error) {
