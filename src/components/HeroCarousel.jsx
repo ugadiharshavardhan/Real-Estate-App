@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -34,7 +34,7 @@ export default function HeroCarousel({ projects = [] }) {
   ];
 
   // Map real database projects to slides if they exist
-  const projectSlides = projects.slice(0, 5).map((p) => ({
+  const projectSlides = useMemo(() => projects.slice(0, 5).map((p) => ({
     id: p._id,
     image: p.heroImage,
     headline: p.name,
@@ -43,9 +43,9 @@ export default function HeroCarousel({ projects = [] }) {
       p.description?.substring(0, 100) + "..." ||
       "Premium development.",
     link: `/projects/${p.slug}`,
-  }));
+  })), [projects]);
 
-  const slides = projectSlides.length > 0 ? projectSlides : staticSlides;
+  const slides = useMemo(() => projectSlides.length > 0 ? projectSlides : staticSlides, [projectSlides, staticSlides]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -131,11 +131,10 @@ export default function HeroCarousel({ projects = [] }) {
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              idx === currentIndex
-                ? "bg-[#1B4332] w-8"
-                : "bg-white/50 hover:bg-white/80"
-            }`}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === currentIndex
+              ? "bg-[#1B4332] w-8"
+              : "bg-white/50 hover:bg-white/80"
+              }`}
           />
         ))}
       </div>

@@ -18,7 +18,7 @@ export default function EnquiryStatusToggle({ enquiryId, currentStatus }) {
     {
       id: "contacted",
       label: "Contacted",
-      color: "text-blue-600 bg-blue-50 border-blue-100",
+      color: "text-teal-600 bg-teal-50 border-teal-100",
     },
     {
       id: "closed",
@@ -66,7 +66,7 @@ export default function EnquiryStatusToggle({ enquiryId, currentStatus }) {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 z-40"
+            className="fixed inset-0 z-40 cursor-pointer"
             onClick={() => setIsOpen(false)}
           />
           <div className="absolute top-full left-0 mt-2 w-36 bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
@@ -74,9 +74,8 @@ export default function EnquiryStatusToggle({ enquiryId, currentStatus }) {
               <button
                 key={s.id}
                 onClick={() => handleUpdate(s.id)}
-                className={`w-full flex items-center justify-between px-4 py-2 text-[10px] font-bold uppercase tracking-wider hover:bg-gray-50 transition-colors ${
-                  status === s.id ? s.color.split(" ")[0] : "text-gray-400"
-                }`}
+                className={`w-full flex items-center justify-between px-4 py-2 text-[10px] font-bold uppercase tracking-wider hover:bg-gray-50 transition-colors ${status === s.id ? s.color.split(" ")[0] : "text-gray-400"
+                  }`}
               >
                 {s.label}
                 {status === s.id && <Check size={12} />}

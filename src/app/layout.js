@@ -1,7 +1,9 @@
-﻿import { Playfair_Display, Inter } from "next/font/google";
+﻿import { Suspense } from "react";
+import { Playfair_Display, Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
+import ProgressBar from "@/components/ProgressBar";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -27,6 +29,9 @@ export default function RootLayout({ children }) {
         <body
           className={`${playfair.variable} ${inter.variable} font-inter antialiased`}
         >
+          <Suspense fallback={null}>
+            <ProgressBar />
+          </Suspense>
           {children}
           <ScrollToTop />
         </body>

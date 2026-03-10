@@ -49,6 +49,16 @@ const nextConfig = {
         hostname: "i.pravatar.cc",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "5.imimg.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "**.imimg.com",
+        pathname: "/**",
+      },
     ],
   },
 };

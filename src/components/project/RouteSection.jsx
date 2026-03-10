@@ -146,8 +146,9 @@ export default function RouteSection({ ventureCoords, ventureName }) {
 
                                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                                     <button
-                                        type="submit"
-                                        className="whitespace-nowrap bg-[#1B4332] hover:bg-[#2d5a44] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
+                                        type="button"
+                                        onClick={handleUseMyLocation}
+                                        className="whitespace-nowrap bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
                                         disabled={loading}
                                     >
                                         {loading ? (
@@ -155,13 +156,26 @@ export default function RouteSection({ ventureCoords, ventureName }) {
                                                 <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
                                                 Locating...
                                             </>
-                                        ) : "Show Route"}
+                                        ) : (
+                                            <>
+                                                <Navigation size={20} />
+                                                Auto-Route from My Location
+                                            </>
+                                        )}
+                                    </button>
+
+                                    <button
+                                        type="submit"
+                                        className="whitespace-nowrap bg-[#1B4332] hover:bg-[#2d5a44] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
+                                        disabled={loading}
+                                    >
+                                        Show Route
                                     </button>
 
                                     <button
                                         type="button"
                                         onClick={openInGoogleMaps}
-                                        className="whitespace-nowrap border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-xl transition-all active:scale-[0.98] font-inter"
+                                        className="whitespace-nowrap border-2 border-gray-200 text-gray-600 hover:bg-gray-50 font-bold py-4 px-8 rounded-xl transition-all active:scale-[0.98] font-inter"
                                     >
                                         Google Maps
                                     </button>

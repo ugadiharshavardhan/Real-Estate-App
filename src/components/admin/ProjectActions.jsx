@@ -4,13 +4,14 @@ import { useState, useTransition } from "react";
 import { deleteProject } from "@/utils/actions/admin";
 import { Edit3, Trash2, Plus, Loader2 } from "lucide-react";
 import ProjectForm from "./ProjectForm";
+import ConfirmModal from "./ConfirmModal";
 
 export function ProjectHeader() {
   const [showForm, setShowForm] = useState(false);
 
   return (
     <>
-      <div className="flex justify-between items-end">
+      <div className="flex justify-between items-center mb-10">
         <div>
           <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-2">
             Projects
@@ -31,22 +32,17 @@ export function ProjectHeader() {
     </>
   );
 }
-
 export function ProjectActions({ project }) {
   const [showEditForm, setShowEditForm] = useState(false);
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const [isDeleting, startTransition] = useTransition();
 
   const handleDelete = async () => {
-    if (
-      confirm(
-        `Are you sure you want to delete "${project.name}"? This will also delete all associated plots.`,
-      )
-    ) {
-      startTransition(async () => {
-        const res = await deleteProject(project._id);
-        if (!res.success) alert("Failed to delete: " + res.error);
-      });
-    }
+    startTransition(async () => {
+      const res = await deleteProject(project._id);
+      if (!res.success) alert("Failed to delete: " + res.error);
+      setShowConfirmDelete(false);
+    });
   };
 
   return (
@@ -59,7 +55,7 @@ export function ProjectActions({ project }) {
           <Edit3 size={18} />
         </button>
         <button
-          onClick={handleDelete}
+          onClick={() => setShowConfirmDelete(true)}
           disabled={isDeleting}
           className="p-2.5 bg-red-50 text-red-200 rounded-xl hover:bg-red-100 hover:text-red-600 transition-colors disabled:opacity-50"
         >
@@ -73,6 +69,16 @@ export function ProjectActions({ project }) {
       {showEditForm && (
         <ProjectForm project={project} onClose={() => setShowEditForm(false)} />
       )}
+      <ConfirmModal
+        isOpen={showConfirmDelete}
+        onClose={() => setShowConfirmDelete(false)}
+        onConfirm={handleDelete}
+        title="Delete Project"
+        message={`Are you sure you want to delete "${project.name}"? This action cannot be undone and will delete all associated plots.`}
+        confirmText="Delete Project"
+        isDestructive={true}
+        isLoading={isDeleting}
+      />
     </>
   );
 }

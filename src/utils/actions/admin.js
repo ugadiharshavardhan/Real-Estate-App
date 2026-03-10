@@ -3,6 +3,7 @@
 import dbConnect from "@/lib/mongodb";
 import { revalidatePath } from "next/cache";
 import { auth, clerkClient } from "@clerk/nextjs/server";
+import { serialize } from "../serialization";
 
 /**
  * Helper to verify admin role
@@ -71,7 +72,7 @@ export async function updatePlotStatus(plotId, status, customerData = null) {
       revalidatePath(`/projects/${project.slug}`);
     }
 
-    return { success: true, data: JSON.parse(JSON.stringify(plot)) };
+    return { success: true, data: serialize(plot) };
   } catch (error) {
     console.error("Error updating plot status:", error);
     return { success: false, error: error.message };
@@ -133,7 +134,7 @@ export async function updateProject(projectId, data) {
     revalidatePath("/admin/projects");
     revalidatePath(`/projects/${project.slug}`);
 
-    return { success: true, data: JSON.parse(JSON.stringify(project)) };
+    return { success: true, data: serialize(project) };
   } catch (error) {
     console.error("Error updating project:", error);
     return { success: false, error: error.message };
@@ -154,7 +155,7 @@ export async function createProject(data) {
     revalidatePath("/admin/projects");
     revalidatePath("/");
 
-    return { success: true, data: JSON.parse(JSON.stringify(project)) };
+    return { success: true, data: serialize(project) };
   } catch (error) {
     console.error("Error creating project:", error);
     return { success: false, error: error.message };
@@ -207,7 +208,7 @@ export async function updateEnquiryStatus(enquiryId, status) {
     revalidatePath("/admin/enquiries");
     revalidatePath("/admin");
 
-    return { success: true, data: JSON.parse(JSON.stringify(enquiry)) };
+    return { success: true, data: serialize(enquiry) };
   } catch (error) {
     console.error("Error updating enquiry status:", error);
     return { success: false, error: error.message };

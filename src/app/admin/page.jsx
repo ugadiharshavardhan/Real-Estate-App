@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getAdminStats } from "@/utils/actions/admin";
 import { getEnquiries } from "@/utils/data/enquiries";
 import {
@@ -12,26 +13,24 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default async function AdminDashboard() {
+async function DashboardStats() {
   const statsRes = await getAdminStats();
   const stats = statsRes.success
     ? statsRes.data
     : {
-        totalProjects: 0,
-        totalPlots: 0,
-        soldPlots: 0,
-        pendingEnquiries: 0,
-        availablePlots: 0,
-      };
-
-  const enquiries = (await getEnquiries()).slice(0, 3);
+      totalProjects: 0,
+      totalPlots: 0,
+      soldPlots: 0,
+      pendingEnquiries: 0,
+      availablePlots: 0,
+    };
 
   const statCards = [
     {
       name: "Total Projects",
       value: stats.totalProjects,
       icon: Building2,
-      color: "bg-blue-50 text-blue-600",
+      color: "bg-teal-50 text-teal-600",
       trend: "+2 this month",
     },
     {
@@ -57,6 +56,125 @@ export default async function AdminDashboard() {
     },
   ];
 
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {statCards.map((card, index) => (
+        <div
+          key={index}
+          className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div className="flex justify-between items-start mb-4">
+            <div className={`p-3 rounded-2xl ${card.color}`}>
+              <card.icon size={24} />
+            </div>
+            <ArrowUpRight size={20} className="text-gray-300" />
+          </div>
+          <p className="text-gray-500 text-sm font-medium mb-1 font-inter uppercase tracking-wider">
+            {card.name}
+          </p>
+          <h3 className="text-3xl font-bold text-gray-900 font-inter mb-2">
+            {card.value}
+          </h3>
+          <p className="text-xs text-gray-400 font-medium font-inter">
+            {card.trend}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function DashboardStatsSkeleton() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {[1, 2, 3, 4].map((i) => (
+        <div key={i} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm animate-pulse">
+          <div className="flex justify-between items-start mb-4">
+            <div className="w-12 h-12 bg-gray-50 rounded-2xl" />
+            <div className="w-5 h-5 bg-gray-50 rounded-md" />
+          </div>
+          <div className="h-3 bg-gray-50 rounded w-24 mb-3" />
+          <div className="h-8 bg-gray-100 rounded-lg w-16 mb-2" />
+          <div className="h-3 bg-gray-50 rounded w-20" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+async function RecentEnquiriesList() {
+  const enquiries = (await getEnquiries()).slice(0, 3);
+
+  return (
+    <div className="divide-y divide-gray-50">
+      {enquiries.length === 0 ? (
+        <div className="p-10 text-center text-gray-400 text-sm">
+          No recent enquiries
+        </div>
+      ) : (
+        enquiries.map((enquiry) => (
+          <div
+            key={enquiry._id}
+            className="p-6 flex items-center justify-between hover:bg-gray-50/50 transition-colors"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-[#1B4332]/5 rounded-2xl flex items-center justify-center font-bold text-[#1B4332]">
+                {enquiry.name?.charAt(0) || "U"}
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">
+                  {enquiry.name}
+                </h4>
+                <p className="text-xs text-gray-500">
+                  {enquiry.projectId?.name || "General Inquiry"}
+                  {enquiry.plotId &&
+                    ` • Plot ${enquiry.plotId.replace("plot-", "#")}`}
+                </p>
+              </div>
+            </div>
+            <div className="text-right">
+              <span
+                className={`text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider ${enquiry.status === "pending" || !enquiry.status
+                  ? "bg-orange-50 text-orange-600"
+                  : "bg-green-50 text-green-600"
+                  }`}
+              >
+                {enquiry.status || "New"}
+              </span>
+              <p className="text-[10px] text-gray-400 mt-1 uppercase font-bold tracking-tighter">
+                {new Date(enquiry.createdAt).toLocaleDateString()}
+              </p>
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+  );
+}
+
+function RecentEnquiriesSkeleton() {
+  return (
+    <div className="divide-y divide-gray-50 animate-pulse">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="p-6 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-gray-50 rounded-2xl" />
+            <div className="space-y-2">
+              <div className="h-4 bg-gray-100 rounded w-32" />
+              <div className="h-3 bg-gray-50 rounded w-20" />
+            </div>
+          </div>
+          <div className="space-y-2 text-right">
+            <div className="h-4 bg-gray-50 rounded w-16 ml-auto" />
+            <div className="h-2 bg-gray-50 rounded w-12 ml-auto" />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function AdminDashboard() {
   return (
     <div className="space-y-10">
       {/* Header Section */}
@@ -84,30 +202,9 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {statCards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <div className="flex justify-between items-start mb-4">
-              <div className={`p-3 rounded-2xl ${card.color}`}>
-                <card.icon size={24} />
-              </div>
-              <ArrowUpRight size={20} className="text-gray-300" />
-            </div>
-            <p className="text-gray-500 text-sm font-medium mb-1 font-inter uppercase tracking-wider">
-              {card.name}
-            </p>
-            <h3 className="text-3xl font-bold text-gray-900 font-inter mb-2">
-              {card.value}
-            </h3>
-            <p className="text-xs text-gray-400 font-medium font-inter">
-              {card.trend}
-            </p>
-          </div>
-        ))}
-      </div>
+      <Suspense fallback={<DashboardStatsSkeleton />}>
+        <DashboardStats />
+      </Suspense>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
         {/* Recent Enquiries Section */}
@@ -124,50 +221,9 @@ export default async function AdminDashboard() {
             </Link>
           </div>
           <div className="p-0 flex-1">
-            <div className="divide-y divide-gray-50">
-              {enquiries.length === 0 ? (
-                <div className="p-10 text-center text-gray-400 text-sm">
-                  No recent enquiries
-                </div>
-              ) : (
-                enquiries.map((enquiry) => (
-                  <div
-                    key={enquiry._id}
-                    className="p-6 flex items-center justify-between hover:bg-gray-50/50 transition-colors"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[#1B4332]/5 rounded-2xl flex items-center justify-center font-bold text-[#1B4332]">
-                        {enquiry.name?.charAt(0) || "U"}
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900 text-sm">
-                          {enquiry.name}
-                        </h4>
-                        <p className="text-xs text-gray-500">
-                          {enquiry.projectId?.name || "General Inquiry"}
-                          {enquiry.plotId &&
-                            ` • Plot ${enquiry.plotId.replace("plot-", "#")}`}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span
-                        className={`text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider ${
-                          enquiry.status === "pending" || !enquiry.status
-                            ? "bg-orange-50 text-orange-600"
-                            : "bg-green-50 text-green-600"
-                        }`}
-                      >
-                        {enquiry.status || "New"}
-                      </span>
-                      <p className="text-[10px] text-gray-400 mt-1 uppercase font-bold tracking-tighter">
-                        {new Date(enquiry.createdAt).toLocaleDateString()}
-                      </p>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
+            <Suspense fallback={<RecentEnquiriesSkeleton />}>
+              <RecentEnquiriesList />
+            </Suspense>
           </div>
         </div>
 

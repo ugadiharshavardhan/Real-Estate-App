@@ -1,4 +1,5 @@
 import AdminSidebar from "@/components/admin/AdminSidebar";
+import PageWrapper from "@/components/PageWrapper";
 
 export const metadata = {
   title: "Admin Dashboard | Ventrivo",
@@ -37,7 +38,11 @@ export default function AdminLayout({ children }) {
         </header>
 
         {/* Dynamic Page Content */}
-        <div className="p-10">{children}</div>
+        <div className="p-10">
+          <PageWrapper>
+            {children}
+          </PageWrapper>
+        </div>
       </main>
     </div>
   );

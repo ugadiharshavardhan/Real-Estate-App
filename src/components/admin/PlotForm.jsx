@@ -5,6 +5,7 @@ import { updatePlot } from "@/utils/actions/admin";
 import { Loader2, X } from "lucide-react";
 
 export default function PlotForm({ plot, onClose }) {
+  const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
   const [formData, setFormData] = useState({
     plotNumber: plot?.plotNumber || "",
@@ -23,8 +24,9 @@ export default function PlotForm({ plot, onClose }) {
     e.preventDefault();
 
     // Validation: make areaSqFt and areaCents compulsory
+    setError(null);
     if (!formData.areaSqFt || !formData.areaCents) {
-      alert("Both Area (Sq.Ft) and Area (Cents) are compulsory.");
+      setError("Both Area (Sq.Ft) and Area (Cents) are compulsory.");
       return;
     }
 
@@ -45,7 +47,7 @@ export default function PlotForm({ plot, onClose }) {
       if (res.success) {
         onClose();
       } else {
-        alert("Failed to update plot: " + res.error);
+        setError("Failed to update plot: " + res.error);
       }
     });
   };
@@ -53,7 +55,7 @@ export default function PlotForm({ plot, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm cursor-pointer"
         onClick={onClose}
       />
       <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden flex flex-col font-inter">
@@ -78,6 +80,11 @@ export default function PlotForm({ plot, onClose }) {
 
         {/* Form Body */}
         <form onSubmit={handleSubmit} className="p-8 space-y-8 overflow-y-auto">
+          {error && (
+            <div className="p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-xs font-bold animate-in fade-in slide-in-from-top-2 duration-300">
+              {error}
+            </div>
+          )}
           {/* Status Note */}
           <div className="p-4 bg-orange-50 border border-orange-100 rounded-2xl flex items-start gap-4">
             <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">

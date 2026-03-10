@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { getProjects, getProjectPlots } from "@/utils/data/projects";
 import {
@@ -18,14 +19,8 @@ import PlotActions from "@/components/admin/PlotActions";
 import PlotSearch from "@/components/admin/PlotSearch";
 import ProjectSelector from "@/components/admin/ProjectSelector";
 
-export default async function AdminPlots({ searchParams }) {
-  const { project: slug, q } = await searchParams;
-  const projects = await getProjects();
-
-  // Default to first project if none selected
-  const activeSlug = slug || (projects.length > 0 ? projects[0].slug : "");
-  const activeProject = projects.find((p) => p.slug === activeSlug);
-  let plots = activeSlug ? await getProjectPlots(activeSlug) : [];
+async function PlotsInventory({ slug, q, activeProject }) {
+  let plots = slug ? await getProjectPlots(slug) : [];
 
   // Filter plots if search query exists
   if (q) {
@@ -35,33 +30,7 @@ export default async function AdminPlots({ searchParams }) {
   }
 
   return (
-    <div className="space-y-10">
-      {/* Header & Project Selector */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-        <div>
-          <div className="flex items-center gap-2 text-gray-400 mb-2">
-            <Link
-              href="/admin/projects"
-              className="hover:text-gray-600 transition-colors"
-            >
-              Projects
-            </Link>
-            <span className="text-gray-300">/</span>
-            <span className="text-gray-900 font-bold">
-              {activeProject?.name || "Inventory"}
-            </span>
-          </div>
-          <h1 className="text-4xl font-playfair font-bold text-gray-900">
-            Plot Management
-          </h1>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-          <PlotSearch />
-          <ProjectSelector projects={projects} currentSlug={activeSlug} />
-        </div>
-      </div>
-
+    <>
       {/* Stats Summary */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         <div className="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm">
@@ -106,7 +75,7 @@ export default async function AdminPlots({ searchParams }) {
           </div>
         </div>
         <div className="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm">
-          <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1 font-inter border-l-4 border-blue-500 pl-2">
+          <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1 font-inter border-l-4 border-amber-600 pl-2">
             Registered
           </p>
           <div className="flex items-center gap-2">
@@ -211,6 +180,76 @@ export default async function AdminPlots({ searchParams }) {
           </tbody>
         </table>
       </div>
+    </>
+  );
+}
+
+function PlotsInventorySkeleton() {
+  return (
+    <>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 animate-pulse">
+        {[1, 2, 3, 4, 5].map((i) => (
+          <div key={i} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-3">
+            <div className="h-3 bg-gray-50 rounded w-16" />
+            <div className="h-8 bg-gray-100 rounded-lg w-20" />
+          </div>
+        ))}
+      </div>
+      <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden p-8 animate-pulse">
+        <div className="space-y-4">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
+              <div className="h-5 bg-gray-200 rounded w-12" />
+              <div className="h-5 bg-gray-200 rounded flex-1" />
+              <div className="h-5 bg-gray-200 rounded w-24" />
+              <div className="h-5 bg-gray-200 rounded w-20" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default async function AdminPlots({ searchParams }) {
+  const { project: slug, q } = searchParams; // searchParams is already an object, no need for await
+  const projects = await getProjects();
+
+  // Default to first project if none selected
+  const activeSlug = slug || (projects.length > 0 ? projects[0].slug : "");
+  const activeProject = projects.find((p) => p.slug === activeSlug);
+
+  return (
+    <div className="space-y-10">
+      {/* Header & Project Selector */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <div>
+          <div className="flex items-center gap-2 text-gray-400 mb-2">
+            <Link
+              href="/admin/projects"
+              className="hover:text-gray-600 transition-colors"
+            >
+              Projects
+            </Link>
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-900 font-bold">
+              {activeProject?.name || "Inventory"}
+            </span>
+          </div>
+          <h1 className="text-4xl font-playfair font-bold text-gray-900">
+            Plot Management
+          </h1>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+          <PlotSearch />
+          <ProjectSelector projects={projects} currentSlug={activeSlug} />
+        </div>
+      </div>
+
+      <Suspense fallback={<PlotsInventorySkeleton />}>
+        <PlotsInventory slug={activeSlug} q={q} activeProject={activeProject} />
+      </Suspense>
     </div>
   );
 }

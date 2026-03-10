@@ -104,6 +104,7 @@ export default function PlotStatusToggle({ plot }) {
 }
 
 function StatusModal({ plot, isPending, onClose, onSave }) {
+  const [error, setError] = useState(null);
   const [selectedStatus, setSelectedStatus] = useState(plot.status);
   const [customersData, setCustomersData] = useState(() => {
     const existing = getCustomersFromPlot(plot);
@@ -163,17 +164,18 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
   };
 
   const validateAndSave = () => {
+    setError(null);
     if (showCustomerFields) {
       for (const [index, customer] of customersData.entries()) {
         const { name, aadharNumber, phone, address } = customer;
         if (!name || !aadharNumber || !phone || !address) {
-          alert(`Please fill in all details for Customer #${index + 1}: Name, Aadhar Number, Phone, and Address.`);
+          setError(`Please fill in all details for Customer #${index + 1}: Name, Aadhar Number, Phone, and Address.`);
           return;
         }
 
         const aadharRegex = /^\d{12}$/;
         if (!aadharRegex.test(aadharNumber.replace(/\s/g, ""))) {
-          alert(`Please enter a valid 12-digit Aadhar Number for Customer #${index + 1}.`);
+          setError(`Please enter a valid 12-digit Aadhar Number for Customer #${index + 1}.`);
           return;
         }
       }
@@ -184,7 +186,7 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
   return (
     <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
       <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-md"
+        className="fixed inset-0 bg-black/60 backdrop-blur-md cursor-pointer"
         onClick={onClose}
       />
       <div className="relative bg-white rounded-4xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-hidden flex flex-col font-inter animate-in fade-in zoom-in-95 duration-300">
@@ -206,6 +208,12 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
         </div>
 
         <div className="p-8 space-y-10 overflow-y-auto">
+          {error && (
+            <div className="p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-xs font-bold animate-in fade-in slide-in-from-top-2 duration-300">
+              {error}
+            </div>
+          )}
+
           {existingCustomers.length > 0 && (
             <div className="p-6 bg-[#1B4332]/5 rounded-3xl border border-[#1B4332]/10 space-y-3">
               <div className="flex items-center gap-2 mb-1">
