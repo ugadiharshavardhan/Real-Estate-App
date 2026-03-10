@@ -2,12 +2,39 @@
 
 import dbConnect from "@/lib/mongodb";
 import { revalidatePath } from "next/cache";
+import { auth, clerkClient } from "@clerk/nextjs/server";
+
+/**
+ * Helper to verify admin role
+ */
+async function verifyAdmin() {
+  const authObj = await auth();
+
+  // Try to get role from session claims first
+  let role = authObj.sessionClaims?.metadata?.role || authObj.sessionClaims?.publicMetadata?.role;
+
+  // Fallback to fetching directly from Clerk if necessary
+  if (!role && authObj.userId) {
+    try {
+      const client = await clerkClient();
+      const user = await client.users.getUser(authObj.userId);
+      role = user.publicMetadata?.role;
+    } catch (error) {
+      console.error("Error verifying admin status:", error);
+    }
+  }
+
+  if (role !== "admin") {
+    throw new Error("Unauthorized: Admin access required");
+  }
+}
 
 /**
  * Update plot status (Available, Reserved, Sold)
  */
 export async function updatePlotStatus(plotId, status, customerData = null) {
   try {
+    await verifyAdmin();
     await dbConnect();
     // Defer model import to prevent client-side bundling issues
     const Plot = (await import("@/models/Plot")).default;
@@ -56,6 +83,7 @@ export async function updatePlotStatus(plotId, status, customerData = null) {
  */
 export async function getAdminStats() {
   try {
+    await verifyAdmin();
     await dbConnect();
     // Defer model imports to prevent client-side bundling issues
     const Project = (await import("@/models/Project")).default;
@@ -91,6 +119,7 @@ export async function getAdminStats() {
  */
 export async function updateProject(projectId, data) {
   try {
+    await verifyAdmin();
     await dbConnect();
     // Defer model import to prevent client-side bundling issues
     const Project = (await import("@/models/Project")).default;
@@ -116,6 +145,7 @@ export async function updateProject(projectId, data) {
  */
 export async function createProject(data) {
   try {
+    await verifyAdmin();
     await dbConnect();
     const Project = (await import("@/models/Project")).default;
 
@@ -136,6 +166,7 @@ export async function createProject(data) {
  */
 export async function deleteProject(projectId) {
   try {
+    await verifyAdmin();
     await dbConnect();
     const Project = (await import("@/models/Project")).default;
     const Plot = (await import("@/models/Plot")).default;
@@ -161,6 +192,7 @@ export async function deleteProject(projectId) {
  */
 export async function updateEnquiryStatus(enquiryId, status) {
   try {
+    await verifyAdmin();
     await dbConnect();
     const Enquiry = (await import("@/models/Enquiry")).default;
 
@@ -187,6 +219,7 @@ export async function updateEnquiryStatus(enquiryId, status) {
  */
 export async function updatePlot(plotId, data) {
   try {
+    await verifyAdmin();
     await dbConnect();
     const Plot = (await import("@/models/Plot")).default;
     const Project = (await import("@/models/Project")).default;

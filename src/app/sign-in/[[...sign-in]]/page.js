@@ -4,6 +4,7 @@ export default function Page() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50">
       <SignIn
+        fallbackRedirectUrl="/admin"
         appearance={{
           elements: {
             formButtonPrimary: "bg-[#1B4332] hover:bg-[#133024] text-sm",
