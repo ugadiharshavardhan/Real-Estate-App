@@ -41,17 +41,17 @@ export default async function ProjectPage({ params }) {
 
       <ProjectNavbar layoutSvg={project.layoutSvg} />
 
+      {/* Interactive Map - Plot Availability */}
+      <div id="plot-availability">
+        <VentureMapWrapper projectSlug={slug} />
+      </div>
+
       {/* Get Route Feature */}
       <div id="get-route">
         <RouteSection
           ventureCoords={{ lat: project.latitude, lng: project.longitude }}
           ventureName={project.name}
         />
-      </div>
-
-      {/* Interactive Map - Plot Availability */}
-      <div id="plot-availability">
-        <VentureMapWrapper projectSlug={slug} />
       </div>
 
       <div id="project-info">

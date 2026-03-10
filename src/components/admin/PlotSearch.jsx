@@ -11,6 +11,10 @@ export default function PlotSearch() {
 
     // Debounced navigation
     useEffect(() => {
+        // Only push if the query differs from the current URL to prevent loops
+        const currentQ = searchParams.get("q") || "";
+        if (query === currentQ) return;
+
         const timer = setTimeout(() => {
             const params = new URLSearchParams(searchParams);
             if (query) {
@@ -19,7 +23,6 @@ export default function PlotSearch() {
                 params.delete("q");
             }
 
-            // Keep existing project if present
             const currentUrl = `?${params.toString()}`;
             router.push(currentUrl, { scroll: false });
         }, 400);

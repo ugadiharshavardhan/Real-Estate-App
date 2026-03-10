@@ -6,14 +6,17 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import "leaflet-routing-machine";
 
-// Marker icon fix for Leaflet in Next.js
-const DefaultIcon = L.icon({
-    iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-    shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-});
-L.Marker.prototype.options.icon = DefaultIcon;
+// Marker icon fix for Leaflet in Next.js (Idempotent check)
+if (L.Marker.prototype.options.icon && !L.Marker.prototype.options._isFixed) {
+    const DefaultIcon = L.icon({
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+    });
+    L.Marker.prototype.options.icon = DefaultIcon;
+    L.Marker.prototype.options._isFixed = true;
+}
 
 export default function RouteMap({ startCoords, endCoords, ventureName }) {
     const mapRef = useRef(null);
@@ -25,19 +28,20 @@ export default function RouteMap({ startCoords, endCoords, ventureName }) {
     const safeDetach = (map, control) => {
         if (!map || !control) return;
         try {
-            // 1. Detach all engine listeners to stop background calculations
-            const router = control.getRouter?.();
-            const plan = control.getPlan?.();
-
-            if (plan) {
-                // Remove map from plan to stop marker/waypoint updates
-                plan.onRemove?.(map);
+            // 1. Force clear waypoints first while map is still valid. 
+            // This prevents internal Leaflet Routing Machine listeners from 
+            // firing after the control is removed.
+            if (control.setWaypoints) {
+                control.setWaypoints([]);
             }
 
-            // 2. Remove the control itself
-            map.removeControl(control);
+            // 2. Stricter check: Only attempt removal if both map and control are still linked
+            if (map.removeControl && (control._map === map || map.hasLayer?.(control))) {
+                map.removeControl(control);
+            }
         } catch (e) {
-            console.warn("Non-fatal cleanup warning:", e);
+            // Silent catch for non-critical cleanup issues
+            console.debug("Cleanup notice:", e.message);
         }
     };
 
