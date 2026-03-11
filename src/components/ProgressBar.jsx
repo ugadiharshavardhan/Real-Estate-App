@@ -10,8 +10,9 @@ export default function ProgressBar() {
 
     useEffect(() => {
         // When the route or params change, we consider the transition finished
-        // This is a common pattern for Next.js App Router progress bars
-        setLoading(false);
+        // We use a small timeout to avoid synchronous setState during render/effect cycle
+        const timer = setTimeout(() => setLoading(false), 0);
+        return () => clearTimeout(timer);
     }, [pathname, searchParams]);
 
     useEffect(() => {
@@ -41,16 +42,17 @@ export default function ProgressBar() {
     if (!loading) return null;
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-[9999]">
-            <div className="h-1 bg-[#1B4332] w-full animate-progress-bar origin-left" />
+        <div className="fixed top-0 left-0 right-0 z-9999">
+            <div className="h-[3px] bg-linear-to-r from-[#1B4332] via-[#C5A059] to-[#1B4332] w-full animate-progress-bar origin-left shadow-[0_1px_10px_rgba(197,160,89,0.5)]" />
             <style jsx>{`
         @keyframes progress {
           0% { transform: scaleX(0); }
-          50% { transform: scaleX(0.7); }
-          100% { transform: scaleX(0.9); }
+          30% { transform: scaleX(0.5); }
+          60% { transform: scaleX(0.8); }
+          100% { transform: scaleX(0.95); }
         }
         .animate-progress-bar {
-          animation: progress 3s ease-out forwards;
+          animation: progress 2.5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
         }
       `}</style>
         </div>

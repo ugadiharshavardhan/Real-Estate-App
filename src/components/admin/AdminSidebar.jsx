@@ -10,11 +10,14 @@ import {
   Settings,
   Building2,
   ChevronRight,
+  X,
 } from "lucide-react";
 import { UserButton, useUser } from "@clerk/nextjs";
+import { motion, AnimatePresence } from "framer-motion";
 
-export default function AdminSidebar() {
+export default function AdminSidebar({ isOpen, onClose }) {
   const pathname = usePathname();
+  const { user } = useUser();
 
   const menuItems = [
     { name: "Overview", icon: LayoutDashboard, href: "/admin" },
@@ -24,17 +27,18 @@ export default function AdminSidebar() {
     { name: "Settings", icon: Settings, href: "/admin/settings" },
   ];
 
-  const { user } = useUser();
-
-  return (
-    <aside className="w-64 bg-[#1B4332] text-white flex flex-col h-screen sticky top-0 overflow-y-auto">
-      <div className="p-8 border-b border-white/10">
+  const sidebarContent = (
+    <div className="flex flex-col h-full overflow-y-auto">
+      <div className="p-8 border-b border-white/10 flex justify-between items-center">
         <h1 className="text-2xl font-playfair font-bold tracking-wider">
           VENTRIVO{" "}
           <span className="text-xs block text-white/60 font-inter font-normal mt-1 tracking-widest uppercase">
             Admin Portal
           </span>
         </h1>
+        <button onClick={onClose} className="lg:hidden p-2 text-white/60 hover:text-white transition-colors">
+          <X size={20} />
+        </button>
       </div>
 
       <nav className="flex-1 p-6 space-y-2">
@@ -44,6 +48,9 @@ export default function AdminSidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => {
+                if (window.innerWidth < 1024) onClose();
+              }}
               className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all group ${
                 isActive
                   ? "bg-white text-[#1B4332] shadow-lg"
@@ -59,7 +66,7 @@ export default function AdminSidebar() {
                       : "text-white/40 group-hover:text-white"
                   }
                 />
-                <span className="font-medium">{item.name}</span>
+                <span className="font-medium text-sm md:text-base">{item.name}</span>
               </div>
               {isActive && <ChevronRight size={16} />}
             </Link>
@@ -90,6 +97,39 @@ export default function AdminSidebar() {
           </div>
         </div>
       </div>
-    </aside>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Desktop Sidebar */}
+      <aside className="hidden lg:flex w-64 bg-[#1B4332] text-white flex-col fixed left-0 top-0 bottom-0 z-50">
+        {sidebarContent}
+      </aside>
+
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={onClose}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-100 lg:hidden"
+            />
+            <motion.aside
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed left-0 top-0 bottom-0 w-72 bg-[#1B4332] text-white z-101 lg:hidden shadow-2xl"
+            >
+              {sidebarContent}
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

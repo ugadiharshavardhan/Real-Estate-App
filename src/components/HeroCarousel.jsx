@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -83,7 +83,7 @@ export default function HeroCarousel({ projects = [] }) {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 1, ease: "easeInOut" }}
-                className="text-4xl md:text-6xl lg:text-7xl font-playfair text-white font-bold leading-tight mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair text-white font-bold leading-tight mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
               >
                 {slides[currentIndex].headline}
               </motion.h1>
@@ -92,7 +92,7 @@ export default function HeroCarousel({ projects = [] }) {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-                className="text-lg md:text-xl text-gray-200 font-inter mb-10 max-w-[600px]"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 font-inter mb-10 max-w-[600px]"
               >
                 {slides[currentIndex].sub}
               </motion.p>
@@ -105,7 +105,7 @@ export default function HeroCarousel({ projects = [] }) {
               >
                 <Link
                   href={slides[currentIndex].link}
-                  className="px-8 py-3 bg-[#1B4332] text-white font-medium rounded-full hover:bg-green-900 transition-colors flex items-center justify-center gap-2 group"
+                  className="px-6 py-3 sm:px-8 text-sm sm:text-base bg-[#1B4332] text-white font-medium rounded-full hover:bg-green-900 transition-colors flex items-center justify-center gap-2 group"
                 >
                   Explore Projects
                   <ArrowRight
@@ -115,7 +115,7 @@ export default function HeroCarousel({ projects = [] }) {
                 </Link>
                 <Link
                   href="/#contact"
-                  className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-medium rounded-full hover:bg-white/20 transition-colors text-center"
+                  className="px-6 py-3 sm:px-8 text-sm sm:text-base bg-white/10 backdrop-blur-sm border border-white/30 text-white font-medium rounded-full hover:bg-white/20 transition-colors text-center"
                 >
                   Contact Us
                 </Link>

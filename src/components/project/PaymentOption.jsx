@@ -28,7 +28,7 @@ export default function PaymentOption() {
         <section id="payment-option" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-inter font-medium text-green-800 mb-6">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-inter font-medium text-green-800 mb-6">
                         Payment Options
                     </h2>
                     <div className="flex justify-center mb-10">
@@ -42,35 +42,37 @@ export default function PaymentOption() {
                     {plans.map((plan) => (
                         <div
                             key={plan.title}
-                            className="bg-[#f2f8f6] p-12 lg:p-16 rounded-sm flex flex-col items-center justify-center text-center shadow-sm border border-[#e2ecea] group hover:shadow-md transition-all duration-300"
+                            className="bg-[#f2f8f6] p-8 lg:p-10 rounded-sm flex flex-col justify-center text-left shadow-sm border border-[#e2ecea] group hover:shadow-md transition-all duration-300"
                         >
-                            <h3 className="text-3xl font-normal text-[#5c6976] mb-8 font-inter">
-                                {plan.title}
+                            <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-[#5c6976] mb-3 font-inter lowercase">
+                                {plan.title.replace("-", " ")}
                             </h3>
-                            <p className="text-[#8e99a3] font-inter text-sm mb-12 max-w-[200px] leading-relaxed">
-                                {plan.description}
-                            </p>
-                            <div className="mb-2">
-                                <span className="text-4xl font-bold text-[#c49a3e] font-inter">
+                            <div className="flex justify-between items-baseline w-full mb-3 gap-4 border-b border-[#e2ecea] pb-3">
+                                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#c49a3e] font-inter whitespace-nowrap">
                                     {plan.amount}
                                 </span>
+                                <span className="text-[#8e99a3] font-inter text-[10px] sm:text-xs tracking-wider lowercase">
+                                    {plan.unit.replace("PER SQUARE YARD", "per sq. yd")}
+                                </span>
                             </div>
-                            <p className="text-[#8e99a3] font-inter text-xs tracking-widest mt-4 uppercase">
-                                {plan.unit}
+                            <p className="text-[#8e99a3] font-inter text-xs sm:text-sm md:text-base leading-relaxed">
+                                {plan.description}
                             </p>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-20 bg-green-900 rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-white shadow-xl">
-                    <div className="flex items-center gap-6">
-                        <div className="bg-white/10 p-4 rounded-full">
-                            <ShieldCheck size={40} className="text-white" />
-                        </div>
-                        <div>
-                            <p className="font-bold text-2xl font-playfair mb-1">Safe & Secure Transactions</p>
-                            <p className="text-white/70 font-inter text-base">All payments are bank-verified and RERA compliant for your peace of mind.</p>
-                        </div>
+                <div className="mt-20 bg-[#14532d] rounded-[2rem] p-6 sm:p-8 md:p-10 w-full max-w-md shadow-xl flex flex-row items-center gap-4 sm:gap-5 text-white border border-[#166534]">
+                    <div className="bg-white/10 p-3 sm:p-4 rounded-full flex shrink-0 items-center justify-center">
+                        <ShieldCheck size={24} className="text-white relative sm:w-8 sm:h-8" strokeWidth={1.5} />
+                    </div>
+                    <div className="flex flex-col text-left justify-center">
+                        <h4 className="font-playfair font-bold text-md mb-1 sm:mb-2 tracking-wide leading-tight">
+                            Safe & Secure Transactions
+                        </h4>
+                        <p className="font-inter text-[11px] sm:text-xs md:text-sm text-white/80 leading-relaxed font-light mt-0 max-w-[200px] sm:max-w-none">
+                            All payments are bank-verified and RERA compliant for your peace of mind.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -5,18 +5,18 @@ export default function ProjectGallery({ project }) {
   if (!project.gallery || project.gallery.length === 0) return null;
 
   return (
-    <section className="py-20 bg-gray-50 text-gray-900 border-t border-gray-100">
+    <section className="py-16 md:py-24 bg-gray-50 text-gray-900 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-4xl font-playfair font-bold mb-4 text-[#1B4332]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 text-[#1B4332]">
               Project Gallery
             </h2>
-            <p className="text-gray-600 font-inter text-lg">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 font-inter">
               Glimpses of what awaits you at {project.name}.
             </p>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-[#1B4332] hover:text-[#133024] transition-colors uppercase tracking-widest text-sm font-bold group">
+          <button className="hidden sm:flex items-center gap-2 text-[#1B4332] hover:text-[#133024] transition-colors uppercase tracking-widest text-xs sm:text-sm font-bold group">
             View All{" "}
             <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </button>
@@ -26,7 +26,7 @@ export default function ProjectGallery({ project }) {
           {project.gallery.map((img, idx) => (
             <div
               key={idx}
-              className="relative h-80 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-500"
+              className="relative h-64 md:h-80 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-500"
             >
               <Image
                 src={img}

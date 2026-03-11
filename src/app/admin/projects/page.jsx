@@ -25,7 +25,7 @@ async function ProjectList() {
 
   if (projects.length === 0) {
     return (
-      <div className="bg-white rounded-3xl p-20 border border-dashed border-gray-200 flex flex-col items-center text-center">
+      <div className="bg-white rounded-2xl md:rounded-3xl p-10 md:p-20 border border-dashed border-gray-200 flex flex-col items-center text-center">
         <div className="p-4 bg-gray-50 rounded-full mb-6">
           <Building2 size={48} className="text-gray-300" />
         </div>
@@ -45,7 +45,7 @@ async function ProjectList() {
       {projects.map((project) => (
         <div
           key={project._id}
-          className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col md:flex-row group hover:shadow-md transition-shadow"
+          className="bg-white rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col md:flex-row group hover:shadow-md transition-shadow"
         >
           {/* Image Section */}
           <div className="md:w-72 h-48 md:h-auto relative shrink-0 overflow-hidden">
@@ -66,11 +66,11 @@ async function ProjectList() {
           </div>
 
           {/* Content Section */}
-          <div className="flex-1 p-8 flex flex-col justify-between">
+          <div className="flex-1 p-5 sm:p-6 md:p-8 flex flex-col justify-between">
             <div>
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-playfair font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl md:text-2xl font-playfair font-bold text-gray-900 mb-1">
                     {project.name}
                   </h3>
                   <p className="text-gray-400 text-sm flex items-center gap-1.5">
@@ -81,7 +81,7 @@ async function ProjectList() {
                 <ProjectActions project={project} />
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-gray-50 mt-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 py-4 md:py-6 border-y border-gray-50 mt-4 md:mt-6">
                 <div>
                   <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1.5">
                     Total Plots
@@ -120,12 +120,12 @@ async function ProjectList() {
               </div>
             </div>
 
-            <div className="flex justify-between items-center mt-8 pt-4">
-              <div className="flex -space-x-2">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 md:mt-8 pt-4 gap-4">
+              <div className="flex -space-x-2 items-center">
                 {[1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-[10px] font-bold text-gray-400 overflow-hidden"
+                    className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-[10px] font-bold text-gray-400 overflow-hidden"
                   >
                     <Image
                       src={`https://i.pravatar.cc/100?u=${project._id}${i}`}
@@ -135,30 +135,30 @@ async function ProjectList() {
                     />
                   </div>
                 ))}
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-gray-50 flex items-center justify-center text-[10px] font-bold text-gray-400">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white bg-gray-50 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-gray-400">
                   +5
                 </div>
-                <p className="ml-10 text-xs text-gray-500 font-medium self-center">
-                  Interested buyers this week
+                <p className="ml-4 md:ml-10 text-[10px] md:text-xs text-gray-500 font-medium self-center">
+                  Interested buyers
                 </p>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-3 w-full sm:w-auto">
                 <Link
                   href={`/projects/${project.slug}`}
                   target="_blank"
-                  className="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[#1B4332] transition-colors"
+                  className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 text-xs md:text-sm font-bold text-gray-400 hover:text-[#1B4332] transition-colors py-2"
                 >
                   Preview
-                  <ExternalLink size={14} />
+                  <ExternalLink size={12} />
                 </Link>
                 <Link
                   href={`/admin/plots?project=${project.slug}`}
-                  className="flex items-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-5 py-2 rounded-xl text-sm font-bold hover:bg-[#1B4332] hover:text-white transition-all group"
+                  className="flex-2 sm:flex-none flex items-center justify-center gap-2 bg-[#1B4332]/5 text-[#1B4332] px-4 md:px-5 py-2 md:py-2.5 rounded-xl text-xs md:text-sm font-bold hover:bg-[#1B4332] hover:text-white transition-all group"
                 >
                   Manage Plots
                   <ArrowRight
-                    size={16}
+                    size={14}
                     className="group-hover:translate-x-1 transition-transform"
                   />
                 </Link>

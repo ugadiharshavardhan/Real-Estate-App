@@ -12,7 +12,7 @@ const PlotTooltip = React.memo(({ plot, position }) => {
       className="fixed z-50 pointer-events-none bg-white/95 backdrop-blur-md px-4 py-3 rounded-xl shadow-xl border border-gray-100 transform -translate-x-1/2 -translate-y-full mt-[-10px] min-w-[180px] transition-opacity duration-200"
       style={{ left: position.x, top: position.y }}
     >
-      <p className="font-playfair font-bold text-[#1B4332] text-lg mb-1 border-b border-gray-100 pb-1 flex justify-between items-center">
+      <p className="font-playfair font-bold text-[#1B4332] text-base md:text-lg mb-1 border-b border-gray-100 pb-1 flex justify-between items-center">
         Plot {plot.number}
       </p>
       <div className="text-xs text-gray-600 space-y-1 mt-2">
@@ -44,7 +44,7 @@ PlotTooltip.displayName = "PlotTooltip";
 const SelectedPlotPanel = React.memo(({ plot, onClose }) => {
   if (!plot) return null;
   return (
-    <div className="absolute top-4 right-4 z-40 bg-white rounded-2xl shadow-2xl p-6 border border-gray-100 max-w-sm w-[300px] animate-in fade-in slide-in-from-right-8 duration-300">
+    <div className="absolute top-4 right-4 z-40 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 border border-gray-100 max-w-[280px] sm:max-w-sm w-full animate-in fade-in slide-in-from-right-8 duration-300">
       <button
         onClick={onClose}
         className="absolute top-4 right-4 text-gray-400 hover:bg-gray-100 p-1 rounded-full transition-colors"
@@ -71,26 +71,26 @@ const SelectedPlotPanel = React.memo(({ plot, onClose }) => {
           {plot.facing}
         </span>
       </div>
-      <h3 className="font-playfair text-3xl font-bold text-gray-900 mb-2">
+      <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
         Plot {plot.number}
       </h3>
 
       <div className="space-y-4 mt-6">
         <div className="flex justify-between items-center py-3 border-b border-gray-100">
-          <span className="text-gray-500 text-sm">Total Area</span>
-          <span className="font-bold text-gray-900">
+          <span className="text-gray-500 text-xs sm:text-sm">Total Area</span>
+          <span className="font-bold text-gray-900 text-sm sm:text-base">
             {plot.areaSqFt} Sq.Ft
           </span>
         </div>
         <div className="flex justify-between items-center py-3 border-b border-gray-100">
-          <span className="text-gray-500 text-sm">Measurement (Cents)</span>
-          <span className="font-bold text-gray-900">
+          <span className="text-gray-500 text-xs sm:text-sm">Measurement (Cents)</span>
+          <span className="font-bold text-gray-900 text-sm sm:text-base">
             {plot.areaCents}
           </span>
         </div>
-        <div className="flex justify-between items-center py-3 border-b border-gray-100 text-sm">
+        <div className="flex justify-between items-center py-3 border-b border-gray-100 text-xs sm:text-sm">
           <span className="text-gray-500">Road Access</span>
-          <span className="font-medium text-gray-900">
+          <span className="font-medium text-gray-900 text-sm sm:text-base">
             33ft / 40ft Main Road
           </span>
         </div>
@@ -191,7 +191,7 @@ export default function VentureMap() {
   const handleClosePopup = useCallback(() => setSelectedPlot(null), []);
 
   return (
-    <div className="relative w-full h-[600px] border border-gray-200 rounded-2xl overflow-hidden bg-[#fafafa] flex flex-col p-4 shadow-sm">
+    <div className="relative w-full h-[400px] md:h-[600px] border border-gray-200 rounded-2xl overflow-hidden bg-[#fafafa] flex flex-col p-4 shadow-sm">
       {svgContent ? (
         <TransformWrapper
           initialScale={1}

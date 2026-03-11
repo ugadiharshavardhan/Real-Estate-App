@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongodb";
 import Plot from "@/models/Plot";
 import Project from "@/models/Project";
+import { serialize } from "@/utils/serialization";
 
 export async function GET(request, { params }) {
     try {
@@ -21,14 +22,14 @@ export async function GET(request, { params }) {
             }
         }
 
-        const plot = await Plot.findOne(query);
+        const plot = await Plot.findOne(query).lean();
         if (!plot) {
             return NextResponse.json(
                 { success: false, error: "Plot not found" },
                 { status: 404 }
             );
         }
-        return NextResponse.json({ success: true, data: plot });
+        return NextResponse.json({ success: true, data: serialize(plot) });
     } catch (error) {
         return NextResponse.json(
             { success: false, error: error.message },
@@ -44,9 +45,9 @@ export async function PATCH(request, { params }) {
 
         await dbConnect();
         const updatedPlot = await Plot.findOneAndUpdate({ plotNumber: plotNo }, body, {
-            returnDocument: 'after',
+            new: true,
             runValidators: true,
-        });
+        }).lean();
 
         if (!updatedPlot) {
             return NextResponse.json(
@@ -54,7 +55,7 @@ export async function PATCH(request, { params }) {
                 { status: 404 }
             );
         }
-        return NextResponse.json({ success: true, data: updatedPlot });
+        return NextResponse.json({ success: true, data: serialize(updatedPlot) });
     } catch (error) {
         return NextResponse.json(
             { success: false, error: error.message },

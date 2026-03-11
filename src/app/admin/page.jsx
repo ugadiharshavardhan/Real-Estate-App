@@ -61,7 +61,7 @@ async function DashboardStats() {
       {statCards.map((card, index) => (
         <div
           key={index}
-          className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+          className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
         >
           <div className="flex justify-between items-start mb-4">
             <div className={`p-3 rounded-2xl ${card.color}`}>
@@ -178,24 +178,24 @@ export default function AdminDashboard() {
   return (
     <div className="space-y-10">
       {/* Header Section */}
-      <div className="flex justify-between items-end">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 sm:gap-4">
         <div>
-          <h1 className="text-4xl font-playfair font-bold text-gray-900 mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-1 md:mb-2">
             Dashboard
           </h1>
-          <p className="text-gray-500 font-inter">
+          <p className="text-xs sm:text-sm md:text-base text-gray-500 font-inter">
             Business performance and operational overview.
           </p>
         </div>
-        <div className="flex gap-3">
-          <button className="px-5 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-bold text-gray-600 hover:bg-gray-50 transition-all font-inter">
+        <div className="flex gap-2 sm:gap-3 w-full sm:w-auto">
+          <button className="flex-1 sm:flex-none px-4 sm:px-5 py-2 sm:py-2.5 bg-white border border-gray-200 rounded-xl text-[10px] sm:text-xs md:text-sm font-bold text-gray-600 hover:bg-gray-50 transition-all font-inter">
             Export Report
           </button>
           <Link
             href="/admin/projects"
-            className="px-5 py-2.5 bg-[#1B4332] text-white rounded-xl text-sm font-bold hover:bg-[#133024] transition-all flex items-center gap-2 font-inter shadow-lg shadow-[#1B4332]/20"
+            className="flex-1 sm:flex-none px-4 sm:px-5 py-2 sm:py-2.5 bg-[#1B4332] text-white rounded-xl text-[10px] sm:text-xs md:text-sm font-bold hover:bg-[#133024] transition-all flex items-center justify-center gap-1.5 sm:gap-2 font-inter shadow-lg shadow-[#1B4332]/20"
           >
-            <Building2 size={16} />
+            <Building2 size={16} className="hidden sm:block" />
             Add Project
           </Link>
         </div>
@@ -208,9 +208,9 @@ export default function AdminDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
         {/* Recent Enquiries Section */}
-        <div className="lg:col-span-2 bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
-          <div className="p-8 border-b border-gray-50 flex justify-between items-center">
-            <h3 className="text-xl font-bold text-gray-900 font-playfair">
+        <div className="lg:col-span-2 bg-white rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
+          <div className="p-4 sm:p-6 md:p-8 border-b border-gray-50 flex justify-between items-center">
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 font-playfair">
               Recent Enquiries
             </h3>
             <Link
@@ -228,10 +228,10 @@ export default function AdminDashboard() {
         </div>
 
         {/* Quick Actions / Status */}
-        <div className="space-y-6">
-          <div className="bg-[#1B4332] rounded-3xl p-8 text-white relative overflow-hidden shadow-xl shadow-[#1B4332]/30">
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-[#1B4332] rounded-2xl md:rounded-3xl p-6 md:p-8 text-white relative overflow-hidden shadow-xl shadow-[#1B4332]/30">
             <div className="relative z-10">
-              <h3 className="text-xl font-playfair font-bold mb-4">
+              <h3 className="text-lg md:text-xl font-playfair font-bold mb-3 md:mb-4">
                 Quick Update
               </h3>
               <p className="text-white/60 text-sm mb-6 leading-relaxed">
@@ -249,8 +249,8 @@ export default function AdminDashboard() {
             <Map className="absolute -bottom-10 -right-10 w-48 h-48 text-white/5 rotate-12" />
           </div>
 
-          <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-playfair font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm">
+            <h3 className="text-lg md:text-xl font-playfair font-bold text-gray-900 mb-4 md:mb-6 flex items-center gap-2">
               <Clock size={20} className="text-[#1B4332]" />
               Activity Log
             </h3>

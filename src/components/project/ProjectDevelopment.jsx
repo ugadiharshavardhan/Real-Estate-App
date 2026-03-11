@@ -60,10 +60,10 @@ export default function ProjectDevelopment() {
     };
 
     return (
-        <section id="project-development" className="py-24 bg-[#F8FAF9]">
+        <section id="project-development" className="py-16 md:py-24 bg-[#F8FAF9]">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-playfair font-black text-[#1B4332] mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-black text-[#1B4332] mb-4">
                         Project Development
                     </h2>
                     <div className="flex justify-center">
@@ -103,16 +103,16 @@ export default function ProjectDevelopment() {
                         {devImages.map((img, idx) => (
                             <div
                                 key={idx}
-                                className="min-w-[280px] md:min-w-[320px] aspect-[4/5] relative rounded-[2rem] overflow-hidden shadow-md snap-start group"
+                                className="min-w-[280px] md:min-w-[320px] aspect-4/5 relative rounded-4xl overflow-hidden shadow-md snap-start group"
                             >
                                 <img
                                     src={img.url}
                                     alt={img.title}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                                    <span className="text-white/70 text-xs font-bold uppercase tracking-widest mb-1">{img.status}</span>
-                                    <h3 className="text-white text-xl font-bold font-playfair">{img.title}</h3>
+                                <div className="absolute inset-0 bg-linear-to-t from-[#1B4332]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                                    <span className="text-white/70 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">{img.status}</span>
+                                    <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold font-playfair">{img.title}</h3>
                                 </div>
                             </div>
                         ))}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
@@ -50,7 +50,7 @@ export default function StarProjects({ projects = [] }) {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
             >
               Star Projects
             </motion.h2>
@@ -59,7 +59,7 @@ export default function StarProjects({ projects = [] }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-gray-600 font-inter max-w-xl"
+              className="text-sm sm:text-base md:text-lg text-gray-600 font-inter max-w-xl"
             >
               Discover our signature developments that redefine luxury and set
               new benchmarks in premium real estate.
@@ -123,10 +123,10 @@ export default function StarProjects({ projects = [] }) {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#1B4332] transition-colors">
+                    <h3 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#1B4332] transition-colors">
                       {project.name}
                     </h3>
-                    <div className="flex items-center text-gray-500 text-sm mb-4">
+                    <div className="flex items-center text-gray-500 text-xs sm:text-sm md:text-base mb-4">
                       <span className="flex items-center gap-1">
                         <svg
                           width="16"
@@ -149,11 +149,11 @@ export default function StarProjects({ projects = [] }) {
                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">
                           Starting From
                         </p>
-                        <p className="font-bold text-gray-900 text-lg">
+                        <p className="font-bold text-gray-900 text-base sm:text-lg md:text-xl">
                           {project.priceInfo}
                         </p>
                       </div>
-                      <Link href={`/projects/${project.slug}`} className="text-sm font-medium text-[#1B4332] hover:text-[#9e7f43] transition-colors underline underline-offset-4">
+                      <Link href={`/projects/${project.slug}`} className="text-xs sm:text-sm md:text-base font-medium text-[#1B4332] hover:text-[#9e7f43] transition-colors underline underline-offset-4">
                         View Details
                       </Link>
                     </div>

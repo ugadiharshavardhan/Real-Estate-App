@@ -106,13 +106,13 @@ export default function RouteSection({ ventureCoords, ventureName }) {
     };
 
     return (
-        <section className="py-16 bg-white border-t border-gray-100">
+        <section className="py-12 md:py-16 bg-white border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 overflow-hidden">
                     <div className="bg-[#1B4332] text-white p-6 md:p-8 flex justify-between items-center">
                         <div>
-                            <h4 className="text-2xl md:text-3xl font-playfair mb-0">Get Route to This Venture</h4>
-                            <p className="text-green-100/80 text-sm mt-2 font-inter tracking-wide uppercase">From your location to {ventureName}</p>
+                            <h4 className="text-xl sm:text-2xl md:text-3xl font-playfair mb-0">Get Route to This Venture</h4>
+                            <p className="text-green-100/80 text-xs sm:text-sm mt-2 font-inter tracking-wide uppercase">From your location to {ventureName}</p>
                         </div>
                         <Navigation className="hidden md:block opacity-20 w-16 h-16" strokeWidth={1} />
                     </div>
@@ -121,7 +121,7 @@ export default function RouteSection({ ventureCoords, ventureName }) {
                         <form onSubmit={handleShowRoute} className="mb-8">
                             <div className="flex flex-col md:flex-row items-end gap-6">
                                 <div className="flex-1 w-full relative">
-                                    <label htmlFor="userLocation" className="block text-sm font-semibold text-gray-700 mb-2 font-inter">
+                                    <label htmlFor="userLocation" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2 font-inter">
                                         Enter Your Starting Location
                                     </label>
                                     <div className="relative">
@@ -148,7 +148,7 @@ export default function RouteSection({ ventureCoords, ventureName }) {
                                     <button
                                         type="button"
                                         onClick={handleUseMyLocation}
-                                        className="whitespace-nowrap bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
+                                        className="whitespace-nowrap bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
                                         disabled={loading}
                                     >
                                         {loading ? (
@@ -166,7 +166,7 @@ export default function RouteSection({ ventureCoords, ventureName }) {
 
                                     <button
                                         type="submit"
-                                        className="whitespace-nowrap bg-[#1B4332] hover:bg-[#2d5a44] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
+                                        className="whitespace-nowrap bg-[#1B4332] hover:bg-[#2d5a44] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed font-inter flex items-center justify-center gap-2"
                                         disabled={loading}
                                     >
                                         Show Route

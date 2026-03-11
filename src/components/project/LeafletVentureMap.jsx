@@ -63,14 +63,14 @@ const HomeIcon = () => (
 );
 
 const StatusBox = React.memo(({ color, label, count, isFullLabel = false }) => (
-  <div className="flex items-center overflow-hidden border border-gray-900 h-10">
+  <div className="flex items-center overflow-hidden border border-gray-900 h-5 md:h-7 w-full lg:w-auto">
     {color && (
-      <div className="w-10 h-10 border-r border-gray-900 shrink-0" style={{ backgroundColor: color }}></div>
+      <div className="w-5 h-5 md:w-7 md:h-7 border-r border-gray-900 shrink-0" style={{ backgroundColor: color }}></div>
     )}
-    <div className={`px-4 grow bg-[#022c22] text-white flex items-center justify-center font-bold text-sm lg:text-base border-r border-gray-900 ${isFullLabel ? "min-w-[140px]" : ""}`}>
+    <div className={`px-1 md:px-2 grow bg-[#022c22] text-white flex items-center justify-center font-bold text-[9px] sm:text-[10px] md:text-xs lg:text-sm border-r border-gray-900 ${isFullLabel ? "sm:min-w-[90px] md:min-w-[120px]" : ""}`}>
       {label}
     </div>
-    <div className="px-4 min-w-[50px] bg-[#022c22] text-white flex items-center justify-center font-bold text-sm lg:text-base">
+    <div className="px-1 md:px-2 min-w-[20px] md:min-w-[40px] bg-[#022c22] text-white flex items-center justify-center font-bold text-[9px] sm:text-[10px] md:text-xs lg:text-sm">
       {count}
     </div>
   </div>
@@ -78,20 +78,14 @@ const StatusBox = React.memo(({ color, label, count, isFullLabel = false }) => (
 StatusBox.displayName = "StatusBox";
 
 const MapLegend = React.memo(({ stats }) => (
-  <div className="mb-8 bg-[#022c22] p-6 rounded-2xl shadow-xl overflow-x-auto">
-    <div className="flex grow items-center justify-center gap-4 min-w-max md:min-w-0">
-      <div className="flex flex-col gap-2">
-        <StatusBox color="#22c55e" label="Available Plots" count={stats.available} isFullLabel />
-        <StatusBox color="#e9d5ff" label="Mortgaged Plots" count={stats.mortgaged} isFullLabel />
-      </div>
-      <div className="flex flex-col gap-2">
-        <StatusBox label="Total Plots" count={stats.total} isFullLabel />
-        <StatusBox color="#f59e0b" label="Registered Plots" count={stats.registered} isFullLabel />
-      </div>
-      <div className="flex flex-col gap-2">
-        <StatusBox color="#fef9c3" label="Reserved Plots" count={stats.reserved} isFullLabel />
-        <StatusBox color="#ef4444" label="Booked Plots" count={stats.booked} isFullLabel />
-      </div>
+  <div className="mb-8 bg-[#022c22] p-2 md:p-3 rounded-2xl shadow-xl">
+    <div className="grid grid-cols-2 lg:flex lg:flex-row items-center justify-center gap-1 md:gap-2">
+      <StatusBox label="Total Plots" count={stats.total} isFullLabel />
+      <StatusBox color="#22c55e" label="Available Plots" count={stats.available} isFullLabel />
+      <StatusBox color="#e9d5ff" label="Mortgaged Plots" count={stats.mortgaged} isFullLabel />
+      <StatusBox color="#f59e0b" label="Registered Plots" count={stats.registered} isFullLabel />
+      <StatusBox color="#fef9c3" label="Reserved Plots" count={stats.reserved} isFullLabel />
+      <StatusBox color="#ef4444" label="Booked Plots" count={stats.booked} isFullLabel />
     </div>
   </div>
 ));
@@ -101,7 +95,7 @@ const PlotPopup = React.memo(({ info, position, onClose }) => {
   if (!info || !position) return null;
 
   return (
-    <div className="absolute top-3 right-3 z-[1000] bg-white rounded-xl shadow-2xl p-4 border border-gray-100 w-[345px] animate-in fade-in slide-in-from-right-4 duration-300">
+    <div className="absolute top-3 right-3 z-[100] bg-white rounded-xl shadow-2xl p-4 border border-gray-100 w-[345px] animate-in fade-in slide-in-from-right-4 duration-300">
       <button onClick={onClose} className="absolute top-3 right-3 text-gray-400 hover:bg-gray-100 p-1 rounded-full transition-colors">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>

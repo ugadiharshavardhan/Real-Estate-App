@@ -22,7 +22,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
       <HeroCarousel projects={projects} />
       <Recognitions projectsCount={projects.length} />
       <StarProjects projects={projects} />

@@ -76,17 +76,17 @@ export default function PlotStatusToggle({ plot }) {
 
   return (
     <>
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
         <div
-          className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${activeStatus?.color} min-w-[110px] text-center shadow-sm`}
+          className={`px-4 py-2 sm:py-1.5 rounded-xl sm:rounded-full text-[10px] font-bold uppercase tracking-wider border ${activeStatus?.color} sm:min-w-[110px] text-center shadow-sm`}
         >
           {activeStatus?.label || plot.status}
         </div>
         <button
           onClick={() => setIsOpen(true)}
-          className="text-[10px] font-black uppercase tracking-widest text-[#1B4332] hover:text-[#133024] underline underline-offset-4 decoration-2 decoration-[#1B4332]/20 hover:decoration-[#1B4332] transition-all"
+          className="px-4 py-2 sm:p-0 bg-[#1B4332]/5 sm:bg-transparent rounded-xl sm:rounded-none text-[10px] font-black uppercase tracking-widest text-[#1B4332] hover:text-[#133024] sm:underline sm:underline-offset-4 sm:decoration-2 sm:decoration-[#1B4332]/20 hover:sm:decoration-[#1B4332] transition-all text-center border border-[#1B4332]/10 sm:border-none"
         >
-          Update
+          Update Status
         </button>
       </div>
 
@@ -189,25 +189,25 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
         className="fixed inset-0 bg-black/60 backdrop-blur-md cursor-pointer"
         onClick={onClose}
       />
-      <div className="relative bg-white rounded-4xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-hidden flex flex-col font-inter animate-in fade-in zoom-in-95 duration-300">
-        <div className="p-8 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
+      <div className="relative bg-white rounded-3xl sm:rounded-4xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-hidden flex flex-col font-inter animate-in fade-in zoom-in-95 duration-300">
+        <div className="p-5 md:p-8 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
           <div className="space-y-1">
-            <h2 className="text-3xl font-playfair font-bold text-gray-900">
+            <h2 className="text-xl sm:text-3xl font-playfair font-bold text-gray-900">
               Status Control
             </h2>
-            <p className="text-[11px] text-gray-400 uppercase font-black tracking-[0.2em]">
+            <p className="text-[10px] sm:text-[11px] text-gray-400 uppercase font-black tracking-[0.2em]">
               Managing Plot #{plot.plotNumber}
             </p>
           </div>
           <button
             onClick={onClose}
-            className="p-3 hover:bg-gray-100 rounded-2xl transition-all"
+            className="p-2 sm:p-3 hover:bg-gray-100 rounded-xl sm:rounded-2xl transition-all"
           >
-            <X size={24} className="text-gray-400" />
+            <X size={20} className="text-gray-400 sm:w-6 sm:h-6" />
           </button>
         </div>
 
-        <div className="p-8 space-y-10 overflow-y-auto">
+        <div className="p-5 md:p-8 space-y-8 md:space-y-10 overflow-y-auto">
           {error && (
             <div className="p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-xs font-bold animate-in fade-in slide-in-from-top-2 duration-300">
               {error}
@@ -215,10 +215,10 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
           )}
 
           {existingCustomers.length > 0 && (
-            <div className="p-6 bg-[#1B4332]/5 rounded-3xl border border-[#1B4332]/10 space-y-3">
+            <div className="p-4 sm:p-6 bg-[#1B4332]/5 rounded-2xl sm:rounded-3xl border border-[#1B4332]/10 space-y-3">
               <div className="flex items-center gap-2 mb-1">
-                <User size={16} className="text-[#1B4332]" />
-                <span className="text-[11px] font-black uppercase tracking-widest text-[#1B4332]">
+                <User size={14} className="text-[#1B4332] sm:w-4 sm:h-4" />
+                <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#1B4332]">
                   Current Registration
                 </span>
               </div>
@@ -371,18 +371,18 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
           )}
         </div>
 
-        <div className="p-8 border-t border-gray-100 bg-gray-50/50 flex justify-end gap-4 sticky bottom-0 z-10">
+        <div className="p-5 md:p-8 border-t border-gray-100 bg-gray-50/50 flex flex-col sm:flex-row justify-end gap-3 sm:gap-4 sticky bottom-0 z-10">
           <button
             type="button"
             onClick={onClose}
-            className="px-8 py-4 rounded-2xl text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-gray-600 hover:bg-white transition-all"
+            className="w-full sm:w-auto px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-gray-400 hover:text-gray-600 hover:bg-white transition-all order-2 sm:order-1"
           >
             Cancel
           </button>
           <button
             onClick={validateAndSave}
             disabled={isPending}
-            className="px-12 py-4 bg-[#1B4332] text-white rounded-2xl text-[11px] font-black uppercase tracking-widest hover:bg-[#133024] transition-all flex items-center gap-3 shadow-2xl shadow-[#1B4332]/30 disabled:opacity-50 active:scale-95"
+            className="w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-[#1B4332] text-white rounded-xl sm:rounded-2xl text-[10px] sm:text-[11px] font-black uppercase tracking-widest hover:bg-[#133024] transition-all flex items-center justify-center gap-3 shadow-2xl shadow-[#1B4332]/30 disabled:opacity-50 active:scale-95 order-1 sm:order-2"
           >
             {isPending && <Loader2 size={16} className="animate-spin" />}
             {isPending ? "Updating Status..." : "Save Status Changes"}

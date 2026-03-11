@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -30,7 +30,7 @@ export default function Newsletter() {
 
   return (
     <section
-      className="py-24 bg-[#f5f5f3] relative overflow-hidden"
+      className="py-16 md:py-24 bg-[#f5f5f3] relative overflow-hidden"
       id="newsletter"
     >
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -64,7 +64,7 @@ export default function Newsletter() {
 
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto bg-white/5 p-2 rounded-full border border-white/10 backdrop-blur-md"
+              className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto bg-white/5 p-2 sm:p-2 rounded-3xl sm:rounded-full border border-white/10 backdrop-blur-md"
             >
               <div className="relative flex-1">
                 <input

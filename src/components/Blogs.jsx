@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { mockBlogs } from "../data/blogs";
@@ -7,7 +7,7 @@ import { ProjectCardSkeleton } from "./Skeleton";
 
 export default function Blogs() {
   return (
-    <section className="py-24 bg-white" id="blog">
+    <section className="py-16 md:py-24 bg-white" id="blogs">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2

@@ -35,8 +35,6 @@ export default async function ProjectPage({ params }) {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navbar isAbsolute={true} />
-
       <ProjectHero project={project} />
 
       <ProjectNavbar layoutSvg={project.layoutSvg} />

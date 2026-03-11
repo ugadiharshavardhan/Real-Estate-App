@@ -1,4 +1,4 @@
-﻿import {
+import {
   Facebook,
   Twitter,
   Instagram,
@@ -7,12 +7,13 @@
   Phone,
   Mail,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-800 pt-20 pb-8 border-t border-white/10">
+    <footer className="bg-green-800 pt-16 md:pt-20 pb-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
           {/* Column 1: Brand */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
@@ -32,16 +33,26 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-4 font-inter text-gray-200 text-sm opacity-80">
-              {["Our Story", "Projects", "Programs", "Career", "Blog"].map(
+              {["Our Story", "Our Projects", "Blogs", "Testimonials", "Career"].map(
                 (link) => (
                   <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="hover:text-green-400 transition-colors relative group w-fit flex"
-                    >
-                      {link}
-                      <span className="absolute -bottom-1 left-0 w-0 h-px bg-green-400 transition-all group-hover:w-full"></span>
-                    </a>
+                    {link === "Career" ? (
+                      <Link
+                        href="/careers"
+                        className="hover:text-green-400 transition-colors relative group w-fit flex"
+                      >
+                        {link}
+                        <span className="absolute -bottom-1 left-0 w-0 h-px bg-green-400 transition-all group-hover:w-full"></span>
+                      </Link>
+                    ) : (
+                      <a
+                        href={`/#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                        className="hover:text-green-400 transition-colors relative group w-fit flex"
+                      >
+                        {link}
+                        <span className="absolute -bottom-1 left-0 w-0 h-px bg-green-400 transition-all group-hover:w-full"></span>
+                      </a>
+                    )}
                   </li>
                 ),
               )}
@@ -110,12 +121,12 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 font-inter">
           <p>&copy; 2026 VENTRIVO. All Rights Reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-green-400 transition-colors">
+            <Link href="/privacy" className="hover:text-green-400 transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-green-400 transition-colors">
+            </Link>
+            <Link href="/terms" className="hover:text-green-400 transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

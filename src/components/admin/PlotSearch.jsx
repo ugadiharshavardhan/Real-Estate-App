@@ -38,7 +38,7 @@ export default function PlotSearch() {
             />
             <input
                 type="text"
-                placeholder="Search plot number..."
+                placeholder="Search plot, status, or customer..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="pl-12 pr-6 py-3 bg-white border border-gray-100 rounded-2xl text-sm font-inter w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#1B4332]/5 shadow-sm"

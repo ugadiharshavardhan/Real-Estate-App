@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 import ProgressBar from "@/components/ProgressBar";
+import Navbar from "@/components/Navbar";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           <Suspense fallback={null}>
             <ProgressBar />
           </Suspense>
+          <Navbar/>
           {children}
           <ScrollToTop />
         </body>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -70,7 +70,7 @@ export default function OurStory() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-2"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-2"
           >
             Our Story
           </motion.h2>
@@ -83,8 +83,8 @@ export default function OurStory() {
           />
         </div>
 
-        {/* Grid Layout: 3 Columns x 2 Rows */}
-        <div className="grid md:grid-cols-3 gap-4 mb-12">
+        {/* Grid Layout: 1 Column Mobile, 2 Tablets, 3 Desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {gridItems.map((item, idx) => (
             <GridItem key={idx} index={idx} type={item.type}>
               {item.type === "image" ? (
@@ -95,10 +95,10 @@ export default function OurStory() {
                 />
               ) : (
                 <>
-                  <h3 className="text-lg font-playfair font-bold text-gray-900 mb-2 italic">
+                  <h3 className="line-clamp-1 text-base sm:text-lg md:text-xl font-playfair font-bold text-gray-900 mb-2 italic">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 font-inter text-xs leading-relaxed">
+                  <p className="text-[10px] sm:text-xs md:text-sm text-gray-600 font-inter leading-relaxed">
                     {item.content}
                   </p>
                 </>
@@ -124,7 +124,7 @@ export default function OurStory() {
           </span>
 
           <div className="relative z-10">
-            <p className="text-lg md:text-xl font-playfair text-gray-800 leading-relaxed italic">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-playfair text-gray-800 leading-relaxed italic">
               In the heart of India&apos;s dynamic real estate landscape stands
               a brand with a unique vision &mdash; a vision rooted in the belief
               that every man should own a land, for it is the truest foundation

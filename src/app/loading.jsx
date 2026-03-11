@@ -1,32 +1,66 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Loading() {
-    return (
-        <div className="min-h-screen bg-white p-8 md:p-12 space-y-12 animate-pulse overflow-hidden">
-            {/* Top Header Mockup */}
-            <div className="flex justify-between items-center mb-16 opacity-40">
-                <div className="h-10 w-40 bg-gray-100 rounded-2xl" />
-                <div className="hidden md:flex gap-6">
-                    <div className="h-4 w-20 bg-gray-50 rounded-lg" />
-                    <div className="h-4 w-20 bg-gray-50 rounded-lg" />
-                    <div className="h-4 w-20 bg-gray-50 rounded-lg" />
-                </div>
-                <div className="h-10 w-32 bg-gray-100 rounded-2xl" />
-            </div>
+  return (
+    <div className="fixed inset-0 min-h-screen bg-[#FDFCFB] flex flex-col items-center justify-center z-100">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-green-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C5A059]/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+      </div>
 
-            {/* Hero Mockup */}
-            <div className="w-full h-[300px] md:h-[500px] bg-gray-50 rounded-[40px] relative overflow-hidden opacity-40">
-                <div className="absolute inset-0 animate-shimmer" style={{ background: 'linear-gradient(90deg, #f9fafb 0%, #f3f4f6 50%, #f9fafb 100%)', backgroundSize: '1000px 100%' }} />
-            </div>
+      <div className="relative flex flex-col items-center">
+        {/* Animated Logo/Wordmark */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-center"
+        >
+          <motion.div
+            animate={{ 
+              opacity: [0.4, 1, 0.4],
+            }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="text-4xl md:text-5xl font-bold font-playfair tracking-[0.2em] text-[#1B4332]"
+          >
+            VEN<span className="text-[#C5A059]">TRIVO</span>
+          </motion.div>
+          
+          {/* Minimalist Subtext */}
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="mt-4 text-[10px] uppercase font-black tracking-[0.4em] text-gray-400"
+          >
+            Crafting Legacies
+          </motion.p>
+        </motion.div>
 
-            {/* Content Grid Mockup */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 opacity-40">
-                {[1, 2, 3].map((i) => (
-                    <div key={i} className="space-y-4">
-                        <div className="h-64 bg-gray-50 rounded-3xl" />
-                        <div className="h-6 bg-gray-100 rounded-xl w-3/4" />
-                        <div className="h-4 bg-gray-50 rounded-lg w-full" />
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+        {/* Subtle Decorative Line */}
+        <motion.div 
+          className="mt-12 w-24 h-px bg-gray-100 relative overflow-hidden"
+        >
+          <motion.div 
+            animate={{ 
+              x: ["-100%", "100%"]
+            }}
+            transition={{ 
+              duration: 1.5, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-[#C5A059] to-transparent"
+          />
+        </motion.div>
+      </div>
+    </div>
+  );
 }
