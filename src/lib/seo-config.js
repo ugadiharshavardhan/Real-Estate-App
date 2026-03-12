@@ -1,19 +1,19 @@
 export const SITE_CONFIG = {
-  name: "LuxEstate",
-  titleSuffix: "Luxury Real Estate",
+  name: "Ventrivo",
+  titleSuffix: "Ventrivo Real Estate",
   description: "Premium real estate developments across prime locations. Experience modern luxury with our curated selection of villas, plots, and apartments.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://luxury-real-estate-app.vercel.app", // Fallback URL
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://ventrivo.vercel.app", // Fallback URL
   ogImage: "/images/og-image.jpg", // Make sure this exists or is generated
-  twitterHandle: "@luxestate",
+  twitterHandle: "@ventrivo",
   contact: {
-    email: "info@luxestate.com",
+    email: "info@ventrivo.com",
     phone: "+91 99999 99999",
     address: "Hitech City, Hyderabad, India",
   },
   socials: {
-    facebook: "https://facebook.com/luxestate",
-    instagram: "https://instagram.com/luxestate",
-    linkedin: "https://linkedin.com/company/luxestate",
+    facebook: "https://facebook.com/ventrivo",
+    instagram: "https://instagram.com/ventrivo",
+    linkedin: "https://linkedin.com/company/ventrivo",
   },
-  keywords: ["luxury real estate", "villas", "plots", "high-rise apartments", "investment", "modern living"],
+  keywords: ["Ventrivo", "Ventrivo Real Estate", "villas", "plots", "high-rise apartments", "investment", "modern living"],
 };
