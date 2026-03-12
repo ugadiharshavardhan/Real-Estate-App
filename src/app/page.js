@@ -1,4 +1,4 @@
-﻿import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import HeroCarousel from "../components/HeroCarousel";
 import Recognitions from "../components/Recognitions";
 import StarProjects from "../components/StarProjects";
@@ -9,12 +9,23 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { getProjects } from "@/utils/data/projects";
 
+import { SITE_CONFIG } from "@/lib/seo-config";
+
 export const metadata = {
-  title: "LuxEstate | Modern Luxury Real Estate",
-  description:
-    "Experience modern luxury real estate with LuxEstate. Premium villas, high-rise apartments, and plotted developments across prime geographic locations.",
-  keywords:
-    "luxury real estate, villas, plots, high-rise apartments, investment, modern living",
+  title: "Modern Luxury Real Estate", // This will be prefixed by "LuxEstate | " due to template
+  description: SITE_CONFIG.description,
+  keywords: SITE_CONFIG.keywords,
+  openGraph: {
+    title: `Home | ${SITE_CONFIG.name}`,
+    description: SITE_CONFIG.description,
+    url: SITE_CONFIG.url,
+    images: [SITE_CONFIG.ogImage],
+  },
+  twitter: {
+    title: `Home | ${SITE_CONFIG.name}`,
+    description: SITE_CONFIG.description,
+    images: [SITE_CONFIG.ogImage],
+  },
 };
 
 export default async function Home() {

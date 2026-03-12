@@ -14,15 +14,39 @@ import PaymentOption from "@/components/project/PaymentOption";
 import ProjectDevelopment from "@/components/project/ProjectDevelopment";
 import RouteSection from "@/components/project/RouteSection";
 
+import { SITE_CONFIG } from "@/lib/seo-config";
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
 
   if (!project) return { title: "Project Not Found" };
 
+  const url = `${SITE_CONFIG.url}/projects/${slug}`;
+
   return {
-    title: `${project.name} | Real Estate App`,
+    title: project.name,
     description: project.description,
+    openGraph: {
+      title: `${project.name} | ${SITE_CONFIG.name}`,
+      description: project.description,
+      url: url,
+      type: "article",
+      images: [
+        {
+          url: project.heroImage || SITE_CONFIG.ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} | ${SITE_CONFIG.name}`,
+      description: project.description,
+      images: [project.heroImage || SITE_CONFIG.ogImage],
+    },
   };
 }
 
@@ -33,8 +57,27 @@ export default async function ProjectPage({ params }) {
   const project = await getProjectBySlug(slug);
   if (!project) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    name: project.name,
+    description: project.description,
+    image: project.heroImage || SITE_CONFIG.ogImage,
+    url: `${SITE_CONFIG.url}/projects/${slug}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: project.location || "Hyderabad", // Use actual location if available
+      addressRegion: "Telangana",
+      addressCountry: "IN",
+    },
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ProjectHero project={project} />
 
       <ProjectNavbar layoutSvg={project.layoutSvg} />
