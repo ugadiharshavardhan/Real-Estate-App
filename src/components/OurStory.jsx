@@ -9,10 +9,10 @@ const GridItem = ({ children, index, type = "text" }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-      className={`relative h-[250px] md:h-[28dvh] flex rounded-lg overflow-hidden ${
+      className={`relative min-h-[300px] md:min-h-[350px] flex rounded-xl overflow-hidden ${
         type === "text"
-          ? "bg-white shadow-md p-6 flex-col justify-center text-center"
-          : "shadow-md group"
+          ? "bg-white shadow-xl p-8 md:p-10 flex-col justify-center text-center border border-gray-100"
+          : "shadow-lg group"
       }`}
     >
       {children}
@@ -59,46 +59,54 @@ export default function OurStory() {
 
   return (
     <section
-      className="py-12 md:py-16 bg-[#f5f5f3] min-h-dvh flex flex-col justify-center"
+      className="py-16 md:py-24 bg-[#f8f8f6] flex flex-col justify-center"
       id="our-story"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#1B4332] mb-4 block"
+          >
+            Since 2012
+          </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-2"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-6"
           >
-            Our Story
+            The Heart of Our Story
           </motion.h2>
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-20 h-1 bg-[#1B4332] mx-auto"
+            transition={{ duration: 1, delay: 0.4 }}
+            className="w-24 h-1.5 bg-[#1B4332] mx-auto rounded-full"
           />
         </div>
 
         {/* Grid Layout: 1 Column Mobile, 2 Tablets, 3 Desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {gridItems.map((item, idx) => (
             <GridItem key={idx} index={idx} type={item.type}>
               {item.type === "image" ? (
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               ) : (
                 <>
-                  <h3 className="line-clamp-1 text-base sm:text-lg md:text-xl font-playfair font-bold text-gray-900 mb-2 italic">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-playfair font-bold text-gray-900 mb-3 italic">
                     {item.title}
                   </h3>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-gray-600 font-inter leading-relaxed">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600 font-inter leading-relaxed">
                     {item.content}
                   </p>
                 </>

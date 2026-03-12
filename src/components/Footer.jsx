@@ -68,18 +68,18 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="text-green-400 shrink-0 mt-0.5" size={18} />
                 <span>
-                  123 Luxury Avenue, Prestige Tower
+                  Muddavaram Village, Bethamcherla Mandal, Kurnool District
                   <br />
-                  Banjara Hills, Hyderabad 500034
+                  Andhra Pradesh, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-green-400 shrink-0" size={18} />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919652776025"
                   className="hover:text-green-400 transition-colors"
                 >
-                  +91 98765 43210
+                  +91 9652776025
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -104,10 +104,17 @@ export default function Footer() {
               offers.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+              {[
+                { Icon: Facebook, url: "https://facebook.com" },
+                { Icon: Twitter, url: "https://twitter.com" },
+                { Icon: Instagram, url: "https://instagram.com" },
+                { Icon: Linkedin, url: "https://linkedin.com" },
+              ].map(({ Icon, url }, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-green-400 hover:text-green-900 hover:border-green-400 transition-all shadow-sm"
                 >
                   <Icon size={18} />

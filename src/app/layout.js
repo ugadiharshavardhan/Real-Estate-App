@@ -1,4 +1,4 @@
-﻿import { Suspense } from "react";
+import { Suspense } from "react";
 import { Playfair_Display, Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
@@ -19,14 +19,22 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "LuxEstate | Luxury Real Estate",
+  title: "VENTRIVO | Luxury Real Estate",
   description: "Premium real estate developments across prime locations.",
+  manifest: "/manifest.json",
+  icons: {
+    apple: "/icon-512.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en" className="scroll-smooth">
+        <head>
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#1B4332" />
+        </head>
         <body
           className={`${playfair.variable} ${inter.variable} font-inter antialiased`}
         >
@@ -36,6 +44,21 @@ export default function RootLayout({ children }) {
           <Navbar/>
           {children}
           <ScrollToTop />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                      console.log('ServiceWorker registration failed: ', err);
+                    });
+                  });
+                }
+              `,
+            }}
+          />
         </body>
       </html>
     </ClerkProvider>
