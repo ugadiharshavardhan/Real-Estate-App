@@ -34,16 +34,37 @@ export default function HeroCarousel({ projects = [] }) {
   ];
 
   // Map real database projects to slides if they exist
-  const projectSlides = useMemo(() => projects.slice(0, 5).map((p) => ({
-    id: p._id,
-    image: p.heroImage,
-    headline: p.name,
-    sub:
-      p.tagline ||
-      p.description?.substring(0, 100) + "..." ||
-      "Premium development.",
-    link: `/projects/${p.slug}`,
-  })), [projects]);
+  // We want to show multiple slides from the projects (Hero + Gallery)
+  const projectSlides = useMemo(() => {
+    if (projects.length === 0) return [];
+    
+    const allSlides = [];
+    projects.forEach((p) => {
+      // Add Hero Image
+      allSlides.push({
+        id: `${p._id}-hero`,
+        image: p.heroImage,
+        headline: p.name,
+        sub: p.tagline || p.description?.substring(0, 100) + "..." || "Premium development.",
+        link: `/projects/${p.slug}`,
+      });
+
+      // Add Gallery Images (up to 4)
+      if (p.gallery && p.gallery.length > 0) {
+        p.gallery.slice(0, 4).forEach((img, idx) => {
+          allSlides.push({
+            id: `${p._id}-gallery-${idx}`,
+            image: img,
+            headline: p.name,
+            sub: p.tagline || "Experience excellence in every detail.",
+            link: `/projects/${p.slug}`,
+          });
+        });
+      }
+    });
+
+    return allSlides;
+  }, [projects]);
 
   const slides = useMemo(() => projectSlides.length > 0 ? projectSlides : staticSlides, [projectSlides, staticSlides]);
 

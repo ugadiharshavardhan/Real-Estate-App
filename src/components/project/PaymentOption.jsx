@@ -62,17 +62,24 @@ export default function PaymentOption() {
                     ))}
                 </div>
 
-                <div className="mt-20 bg-[#14532d] rounded-[2rem] p-6 sm:p-8 md:p-10 w-full max-w-md shadow-xl flex flex-row items-center gap-4 sm:gap-5 text-white border border-[#166534]">
-                    <div className="bg-white/10 p-3 sm:p-4 rounded-full flex shrink-0 items-center justify-center">
-                        <ShieldCheck size={24} className="text-white relative sm:w-8 sm:h-8" strokeWidth={1.5} />
+                <div className="mt-20 bg-[#14532d] rounded-[2rem] p-8 md:p-12 w-full shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-white border border-[#166534]">
+                    <div className="flex flex-row items-center gap-6">
+                        <div className="bg-white/10 p-4 sm:p-5 rounded-full flex shrink-0 items-center justify-center">
+                            <ShieldCheck size={32} className="text-white sm:w-10 sm:h-10" strokeWidth={1.5} />
+                        </div>
+                        <div className="flex flex-col text-left justify-center">
+                            <h4 className="font-playfair font-bold text-xl sm:text-2xl mb-1 sm:mb-2 tracking-wide leading-tight">
+                                Safe & Secure Transactions
+                            </h4>
+                            <p className="font-inter text-sm sm:text-base text-white/80 leading-relaxed font-light mt-0 max-w-2xl">
+                                All payments are bank-verified and RERA compliant for your peace of mind.
+                            </p>
+                        </div>
                     </div>
-                    <div className="flex flex-col text-left justify-center">
-                        <h4 className="font-playfair font-bold text-md mb-1 sm:mb-2 tracking-wide leading-tight">
-                            Safe & Secure Transactions
-                        </h4>
-                        <p className="font-inter text-[11px] sm:text-xs md:text-sm text-white/80 leading-relaxed font-light mt-0 max-w-[200px] sm:max-w-none">
-                            All payments are bank-verified and RERA compliant for your peace of mind.
-                        </p>
+                    <div className="hidden lg:block">
+                         <div className="px-8 py-4 border border-white/20 rounded-full font-medium tracking-wider text-sm whitespace-nowrap">
+                            RERA CERTIFIED
+                         </div>
                     </div>
                 </div>
             </div>
