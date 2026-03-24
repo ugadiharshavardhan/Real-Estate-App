@@ -30,11 +30,14 @@ const PlotSchema = new mongoose.Schema(
     customer: [
       {
         name: String,
+        email: String,
         aadharNumber: String,
         phone: String,
         address: String,
       },
     ],
+    reservedAt: { type: Date, default: null },
+    reservedUntil: { type: Date, default: null },
   },
   { timestamps: true },
 );

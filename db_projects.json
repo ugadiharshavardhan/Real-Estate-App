@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Ugadi Ventures",
+    "slug": "ugadi-ventures",
+    "layoutSvg": "/layouts/ugadi-layout.svg"
+  },
+  {
+    "name": "harsha ventures",
+    "slug": "harsha-venture",
+    "layoutSvg": "/layouts/ugadi-layout.svg"
+  }
+]

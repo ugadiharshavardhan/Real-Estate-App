@@ -34,3 +34,21 @@ export async function getProjectPlots(slug) {
   const plots = await Plot.find({ projectId: project._id }).lean();
   return serialize(plots);
 }
+
+/**
+ * Fetches all currently reserved plots across all projects.
+ * Also populates the parent project details.
+ */
+export async function getAllReservedPlots() {
+  await dbConnect();
+  const reservedPlots = await Plot.find({ status: "reserved" })
+    .populate({
+       path: "projectId",
+       model: Project,
+       select: "name slug"
+    })
+    .sort({ reservedUntil: 1 }) // Sort by expiring soonest
+    .lean();
+    
+  return serialize(reservedPlots);
+}

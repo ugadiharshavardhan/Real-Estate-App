@@ -91,22 +91,49 @@ export async function getAdminStats() {
     const Plot = (await import("@/models/Plot")).default;
     const Enquiry = (await import("@/models/Enquiry")).default;
 
-    const [totalProjects, totalPlots, occupiedPlots, pendingEnquiries] =
+    const [projects, totalPlots, occupiedPlots, pendingEnquiriesCount] =
       await Promise.all([
-        Project.countDocuments(),
+        Project.find({}).lean(),
         Plot.countDocuments(),
         Plot.countDocuments({ status: { $ne: "available" } }),
         Enquiry.countDocuments({ status: "pending" }),
       ]);
 
+    // Calculate per-project stats
+    const projectStats = await Promise.all(projects.map(async (project) => {
+      const [pTotalPlots, pAvailablePlots, pPendingEnquiries, pRegisteredPlots, pBookedPlots, pReservedPlots] = await Promise.all([
+        Plot.countDocuments({ projectId: project._id }),
+        Plot.countDocuments({ projectId: project._id, status: "available" }),
+        Enquiry.countDocuments({ projectId: project._id, status: "pending" }),
+        Plot.countDocuments({ projectId: project._id, status: "registered" }),
+        Plot.countDocuments({ projectId: project._id, status: "booked" }),
+        Plot.countDocuments({ projectId: project._id, status: "reserved" })
+      ]);
+
+      return {
+        projectId: project._id.toString(),
+        name: project.name,
+        slug: project.slug,
+        totalPlots: pTotalPlots,
+        availablePlots: pAvailablePlots,
+        pendingEnquiries: pPendingEnquiries,
+        registeredPlots: pRegisteredPlots,
+        bookedPlots: pBookedPlots,
+        reservedPlots: pReservedPlots
+      };
+    }));
+
     return {
       success: true,
       data: {
-        totalProjects,
-        totalPlots,
-        occupiedPlots,
-        pendingEnquiries,
-        availablePlots: totalPlots - occupiedPlots,
+        globalStats: {
+          totalProjects: projects.length,
+          totalPlots,
+          occupiedPlots,
+          pendingEnquiries: pendingEnquiriesCount,
+          availablePlots: totalPlots - occupiedPlots,
+        },
+        projectStats
       },
     };
   } catch (error) {
@@ -285,6 +312,60 @@ export async function updatePlot(plotId, data) {
     return { success: true, data: JSON.parse(JSON.stringify(plot)) };
   } catch (error) {
     console.error("Error updating plot:", error);
+    return { success: false, error: error.message };
+  }
+}
+
+/**
+ * Fetch the global Site Info configuration
+ */
+export async function getSiteInfo() {
+  try {
+    await dbConnect();
+    const SiteInfo = (await import("@/models/SiteInfo")).default;
+    
+    // Always fetch the first one, or return a default structure if none exists
+    let info = await SiteInfo.findOne().lean();
+    if (!info) {
+      info = {
+        businessName: "Ugadi Ventures",
+        supportEmail: "contact@ugadiventures.com",
+        officeAddress: "123 Real Estate Plaza, Commercial Road, Kurnool, Andhra Pradesh",
+        primaryPhone: "+91 98765 43210",
+        workingHours: "Mon - Sat | 9:00 AM - 7:00 PM",
+      };
+    }
+    
+    return serialize(info);
+  } catch (error) {
+    console.error("Error fetching site info:", error);
+    return null;
+  }
+}
+
+/**
+ * Update the global Site Info configuration
+ */
+export async function updateSiteInfo(data) {
+  try {
+    const authObj = await auth();
+    await verifyAdmin();
+    await dbConnect();
+    const SiteInfo = (await import("@/models/SiteInfo")).default;
+
+    // Use upsert to create if it doesn't exist, update if it does.
+    const updatedInfo = await SiteInfo.findOneAndUpdate(
+      {}, // Empty filter matches first document
+      { ...data, updatedBy: authObj.userId },
+      { new: true, upsert: true, setDefaultsOnInsert: true }
+    );
+
+    revalidatePath("/admin/site-info");
+    revalidatePath("/"); // Revalidate homepage in case site info is used there
+
+    return { success: true, data: serialize(updatedInfo) };
+  } catch (error) {
+    console.error("Error updating site info:", error);
     return { success: false, error: error.message };
   }
 }

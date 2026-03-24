@@ -18,14 +18,18 @@ import PlotStatusToggle from "@/components/admin/PlotStatusToggle";
 import PlotActions from "@/components/admin/PlotActions";
 import PlotSearch from "@/components/admin/PlotSearch";
 import ProjectSelector from "@/components/admin/ProjectSelector";
+import PlotStatusFilter from "@/components/admin/PlotStatusFilter";
+import PlotPriceSort from "@/components/admin/PlotPriceSort";
+import AdminLoading from "@/components/admin/AdminLoading";
 
-async function PlotsInventory({ slug, q }) {
-  let plots = slug ? await getProjectPlots(slug) : [];
+async function PlotsInventory({ slug, q, statusParam, sortParam }) {
+  const allPlots = slug ? await getProjectPlots(slug) : [];
+  let filteredPlots = allPlots;
 
   // Filter plots if search query exists
   if (q) {
     const search = q.toLowerCase();
-    plots = plots.filter((plot) =>
+    filteredPlots = filteredPlots.filter((plot) =>
       plot.plotNumber?.toString().toLowerCase().includes(search) ||
       plot.status?.toLowerCase().includes(search) ||
       plot.facing?.toLowerCase().includes(search) ||
@@ -33,9 +37,20 @@ async function PlotsInventory({ slug, q }) {
     );
   }
 
+  // Filter based on status dropdown
+  if (statusParam) {
+    filteredPlots = filteredPlots.filter((plot) => plot.status === statusParam);
+  }
+
+  // Sort based on price sort dropdown
+  if (sortParam === "price-asc") {
+    filteredPlots.sort((a, b) => (a.price || 0) - (b.price || 0));
+  } else if (sortParam === "price-desc") {
+    filteredPlots.sort((a, b) => (b.price || 0) - (a.price || 0));
+  }
+
   return (
     <>
-      {/* Stats Summary */}
       {/* Stats Summary */}
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4">
         <div className="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm col-span-2 lg:col-span-1">
@@ -44,7 +59,7 @@ async function PlotsInventory({ slug, q }) {
           </p>
           <div className="flex items-center gap-2">
             <span className="text-lg md:text-xl font-bold text-gray-900 font-inter ml-2">
-              {plots.length}
+              {allPlots.length}
             </span>
             <MapIcon size={14} className="text-gray-300 md:w-4 md:h-4 ml-auto" />
           </div>
@@ -55,7 +70,7 @@ async function PlotsInventory({ slug, q }) {
           </p>
           <div className="flex items-center gap-2">
             <span className="text-lg md:text-xl font-bold text-gray-900 font-inter ml-2">
-              {plots.filter((p) => p.status === "available").length}
+              {allPlots.filter((p) => p.status === "available").length}
             </span>
           </div>
         </div>
@@ -65,7 +80,7 @@ async function PlotsInventory({ slug, q }) {
           </p>
           <div className="flex items-center gap-2">
             <span className="text-lg md:text-xl font-bold text-gray-900 font-inter ml-2">
-              {plots.filter((p) => p.status === "booked").length}
+              {allPlots.filter((p) => p.status === "booked").length}
             </span>
           </div>
         </div>
@@ -75,7 +90,7 @@ async function PlotsInventory({ slug, q }) {
           </p>
           <div className="flex items-center gap-2">
             <span className="text-lg md:text-xl font-bold text-gray-900 font-inter ml-2">
-              {plots.filter((p) => p.status === "mortgaged").length}
+              {allPlots.filter((p) => p.status === "mortgaged").length}
             </span>
           </div>
         </div>
@@ -85,7 +100,7 @@ async function PlotsInventory({ slug, q }) {
           </p>
           <div className="flex items-center gap-2">
             <span className="text-lg md:text-xl font-bold text-gray-900 font-inter ml-2">
-              {plots.filter((p) => p.status === "registered").length}
+              {allPlots.filter((p) => p.status === "registered").length}
             </span>
           </div>
         </div>
@@ -96,8 +111,8 @@ async function PlotsInventory({ slug, q }) {
       <div className="bg-white rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
         {/* Mobile View: Cards */}
         <div className="md:hidden divide-y divide-gray-50">
-          {plots && plots.length > 0 ? (
-            plots.map((plot) => (
+          {filteredPlots && filteredPlots.length > 0 ? (
+            filteredPlots.map((plot) => (
               <div key={plot._id?.toString() || plot.plotId} className="p-5 space-y-5">
                 <div className="flex justify-between items-start">
                   <div className="flex items-center gap-3">
@@ -162,8 +177,8 @@ async function PlotsInventory({ slug, q }) {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-50">
-            {plots && plots.length > 0 ? (
-              plots.map((plot) => (
+            {filteredPlots && filteredPlots.length > 0 ? (
+              filteredPlots.map((plot) => (
                 <tr
                   key={plot._id?.toString() || plot.plotId}
                   className="hover:bg-gray-50/30 transition-colors group"
@@ -237,35 +252,8 @@ async function PlotsInventory({ slug, q }) {
   );
 }
 
-function PlotsInventorySkeleton() {
-  return (
-    <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 animate-pulse">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-3">
-            <div className="h-3 bg-gray-50 rounded w-16" />
-            <div className="h-8 bg-gray-100 rounded-lg w-20" />
-          </div>
-        ))}
-      </div>
-      <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden p-8 animate-pulse">
-        <div className="space-y-4">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-              <div className="h-5 bg-gray-200 rounded w-12" />
-              <div className="h-5 bg-gray-200 rounded flex-1" />
-              <div className="h-5 bg-gray-200 rounded w-24" />
-              <div className="h-5 bg-gray-200 rounded w-20" />
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-}
-
 export default async function AdminPlots({ searchParams }) {
-  const { project: slug, q } = await searchParams; // searchParams is a Promise in Next.js 15
+  const { project: slug, q, status, sort } = await searchParams; // searchParams is a Promise in Next.js 15
   const projects = await getProjects();
 
   // Default to first project if none selected
@@ -294,14 +282,18 @@ export default async function AdminPlots({ searchParams }) {
           </h1>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+        <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto overflow-x-auto pb-2 md:pb-0">
           <PlotSearch />
+          <div className="flex gap-2">
+            <PlotStatusFilter />
+            <PlotPriceSort />
+          </div>
           <ProjectSelector projects={projects} currentSlug={activeSlug} />
         </div>
       </div>
 
-      <Suspense fallback={<PlotsInventorySkeleton />}>
-        <PlotsInventory slug={activeSlug} q={q} activeProject={activeProject} />
+      <Suspense fallback={<AdminLoading />}>
+        <PlotsInventory slug={activeSlug} q={q} statusParam={status} sortParam={sort} activeProject={activeProject} />
       </Suspense>
     </div>
   );

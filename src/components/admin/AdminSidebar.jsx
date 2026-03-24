@@ -7,10 +7,12 @@ import {
   Map,
   UserPlus,
   MessageSquare,
-  Settings,
   Building2,
   ChevronRight,
   X,
+  Clock,
+  Bell,
+  Globe,
 } from "lucide-react";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,8 +25,10 @@ export default function AdminSidebar({ isOpen, onClose }) {
     { name: "Overview", icon: LayoutDashboard, href: "/admin" },
     { name: "Projects", icon: Building2, href: "/admin/projects" },
     { name: "Plots", icon: Map, href: "/admin/plots" },
+    { name: "Reserved Plots", icon: Clock, href: "/admin/reserved" },
     { name: "Enquiries", icon: MessageSquare, href: "/admin/enquiries" },
-    { name: "Settings", icon: Settings, href: "/admin/settings" },
+    { name: "Notifications", icon: Bell, href: "/admin/notifications" },
+    { name: "Site Info", icon: Globe, href: "/admin/site-info" },
   ];
 
   const sidebarContent = (
