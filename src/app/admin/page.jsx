@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { getAdminStats } from "@/utils/actions/admin";
+import { getAdminStats, checkAdminStatus } from "@/utils/actions/admin";
 import { getEnquiries } from "@/utils/data/enquiries";
 import {
   Building2,
@@ -15,6 +15,9 @@ import AdminLoading from "@/components/admin/AdminLoading";
 import VentureSelector from "@/components/admin/VentureSelector";
 
 async function DashboardContent({ searchParams }) {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
+
   const { project: currentSlug } = await searchParams;
   const statsRes = await getAdminStats();
   const enquiries = await getEnquiries();
@@ -252,7 +255,9 @@ function DashboardSkeleton() {
   );
 }
 
-export default function AdminDashboard({ searchParams }) {
+export default async function AdminDashboard({ searchParams }) {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
   return (
     <div className="space-y-10 pb-20">
       {/* Header Section */}

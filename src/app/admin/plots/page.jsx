@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { getProjects, getProjectPlots } from "@/utils/data/projects";
+import { checkAdminStatus } from "@/utils/actions/admin";
 import {
   ArrowLeft,
   Search,
@@ -23,6 +24,9 @@ import PlotPriceSort from "@/components/admin/PlotPriceSort";
 import AdminLoading from "@/components/admin/AdminLoading";
 
 async function PlotsInventory({ slug, q, statusParam, sortParam }) {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
+
   const allPlots = slug ? await getProjectPlots(slug) : [];
   let filteredPlots = allPlots;
 
@@ -253,6 +257,9 @@ async function PlotsInventory({ slug, q, statusParam, sortParam }) {
 }
 
 export default async function AdminPlots({ searchParams }) {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
+
   const { project: slug, q, status, sort } = await searchParams; // searchParams is a Promise in Next.js 15
   const projects = await getProjects();
 

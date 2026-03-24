@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { getEnquiries } from "@/utils/data/enquiries";
+import { checkAdminStatus } from "@/utils/actions/admin";
 import {
   MessageSquare,
   Phone,
@@ -12,6 +13,9 @@ import {
 import EnquiryStatusToggle from "@/components/admin/EnquiryStatusToggle";
 
 async function EnquiryList() {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
+
   const enquiries = await getEnquiries();
 
   if (enquiries.length === 0) {
@@ -136,7 +140,9 @@ function EnquiryListSkeleton() {
   );
 }
 
-export default function AdminEnquiries() {
+export default async function AdminEnquiries() {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
   return (
     <div className="space-y-10">
       {/* Header Section */}

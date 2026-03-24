@@ -6,9 +6,9 @@ import { auth, clerkClient } from "@clerk/nextjs/server";
 import { serialize } from "../serialization";
 
 /**
- * Helper to verify admin role
+ * Helper to verify admin role (throws error if not admin)
  */
-async function verifyAdmin() {
+export async function verifyAdmin() {
   const authObj = await auth();
 
   // Try to get role from session claims first
@@ -27,6 +27,31 @@ async function verifyAdmin() {
 
   if (role !== "admin") {
     throw new Error("Unauthorized: Admin access required");
+  }
+}
+
+/**
+ * Check if the current user is an admin without throwing an error
+ */
+export async function checkAdminStatus() {
+  try {
+    const authObj = await auth();
+    if (!authObj.userId) return { isAdmin: false };
+
+    // Try to get role from session claims first
+    let role = authObj.sessionClaims?.metadata?.role || authObj.sessionClaims?.publicMetadata?.role;
+
+    // Fallback to fetching directly from Clerk if necessary
+    if (!role) {
+      const client = await clerkClient();
+      const user = await client.users.getUser(authObj.userId);
+      role = user.publicMetadata?.role;
+    }
+
+    return { isAdmin: role === "admin" };
+  } catch (error) {
+    console.error("Error checking admin status:", error);
+    return { isAdmin: false, error: error.message };
   }
 }
 
@@ -74,7 +99,9 @@ export async function updatePlotStatus(plotId, status, customerData = null) {
 
     return { success: true, data: serialize(plot) };
   } catch (error) {
-    console.error("Error updating plot status:", error);
+    if (error.message !== "Unauthorized: Admin access required") {
+      console.error("Error updating plot status:", error);
+    }
     return { success: false, error: error.message };
   }
 }
@@ -137,7 +164,9 @@ export async function getAdminStats() {
       },
     };
   } catch (error) {
-    console.error("Error fetching admin stats:", error);
+    if (error.message !== "Unauthorized: Admin access required") {
+      console.error("Error fetching admin stats:", error);
+    }
     return { success: false, error: error.message };
   }
 }

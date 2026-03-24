@@ -2,9 +2,11 @@ import { Suspense } from "react";
 import Link from "next/link";
 import AdminLoading from "@/components/admin/AdminLoading";
 import SiteInfoForm from "@/components/admin/SiteInfoForm";
-import { getSiteInfo } from "@/utils/actions/admin";
+import { getSiteInfo, checkAdminStatus } from "@/utils/actions/admin";
 
 export default async function SiteInfo() {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
   const siteInfo = await getSiteInfo();
 
   return (
