@@ -101,6 +101,10 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#1B4332" />
+          <meta
+            name="google-site-verification"
+            content="TiPjWg0s02uRKePlyZnAJ4M0WOu8NFrWZMd2aNAGm80"
+          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

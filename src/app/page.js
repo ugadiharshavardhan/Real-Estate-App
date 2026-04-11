@@ -39,7 +39,7 @@ export default async function Home() {
       <OurStory />
       <Blogs />
       <Testimonials />
-      <Newsletter />
+      <Newsletter projects={projects} />
       <Footer />
     </main>
   );

@@ -10,6 +10,7 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import ReservationForm from "./ReservationForm";
 
 // Fix Leaflet's default icon issue in React
 delete L.Icon.Default.prototype._getIconUrl;
@@ -91,7 +92,14 @@ const MapLegend = React.memo(({ stats }) => (
 ));
 MapLegend.displayName = "MapLegend";
 
-const PlotPopup = React.memo(({ info, position, onClose }) => {
+const PlotPopup = React.memo(({ info, position, onClose, onReserveSuccess }) => {
+  const [showReservationForm, setShowReservationForm] = useState(false);
+
+  // Reset form state when a new plot is selected
+  useEffect(() => {
+    setShowReservationForm(false);
+  }, [info?.plotNumber]);
+
   if (!info || !position) return null;
 
   return (
@@ -150,6 +158,33 @@ const PlotPopup = React.memo(({ info, position, onClose }) => {
                         "bg-gray-100 text-gray-800 border-gray-200"}`}>
               {info.status || "Unknown"}
             </span>
+          </div>
+
+          {info.status === "available" && (
+            <button
+              onClick={() => setShowReservationForm(true)}
+              className="w-full mt-3 py-2.5 bg-[#1B4332] text-white text-xs font-bold rounded-xl hover:bg-[#133024] transition-all shadow-md active:scale-[0.98]"
+            >
+              Reserve Plot (24 Hours)
+            </button>
+          )}
+
+        </div>
+      )}
+
+      {/* Reservation Form Modal Overlay */}
+      {showReservationForm && (
+        <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm shadow-2xl">
+          <div className="bg-white rounded-2xl w-full max-w-md p-6 relative animate-in zoom-in duration-200">
+            <ReservationForm
+              plotNumber={info.plotNumber}
+              projectSlug={info.projectSlug || "ugadi-ventures"}
+              onCancel={() => setShowReservationForm(false)}
+              onSubmit={(updatedData) => {
+                setShowReservationForm(false);
+                onReserveSuccess(updatedData);
+              }}
+            />
           </div>
         </div>
       )}
@@ -268,12 +303,12 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
 
         const dbRecord = plotsLookup.get(plotNumber);
         const customerArray = dbRecord?.customer || dbRecord?.customers || [];
-        const customerName = Array.isArray(customerArray) 
+        const customerName = Array.isArray(customerArray)
           ? customerArray.map(c => c.name).filter(Boolean).join(" & ")
           : "";
 
         setPopupInfo({
-          loading: true, plotNumber,
+          loading: true, plotNumber, projectSlug,
           area: dbRecord?.areaSqFt || feature.properties.area || "Unknown",
           areaCents: dbRecord?.areaCents || "Unknown",
           east: dbRecord?.east || 0, west: dbRecord?.west || 0,
@@ -385,7 +420,33 @@ export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
             </LayersControl>
           </MapContainer>
 
-          <PlotPopup info={popupInfo} position={popupPosition} onClose={() => setPopupInfo(null)} />
+          <PlotPopup
+            info={popupInfo}
+            position={popupPosition}
+            onClose={() => setPopupInfo(null)}
+            onReserveSuccess={(updatedData) => {
+              // Instantly update the Local UI with the newly reserved plot without a hard refresh
+              const freshNum = updatedData.plotNumber;
+
+              // Update Plots DB cache
+              setPlotsDB(prev => {
+                const exists = prev.find(p => p.plotNumber === freshNum);
+                if (exists) {
+                  return prev.map(p => p.plotNumber === freshNum ? { ...p, ...updatedData } : p);
+                }
+                return [...prev, updatedData];
+              });
+
+              // Update the popup open info
+              setPopupInfo(prev => ({
+                ...prev,
+                ...updatedData,
+                customerName: updatedData.customer?.[0]?.name || updatedData.customerName || "You (Reserved)",
+              }));
+
+              alert(`Plot ${freshNum} has been successfully reserved for 24 hours!`);
+            }}
+          />
         </div>
       </div>
 

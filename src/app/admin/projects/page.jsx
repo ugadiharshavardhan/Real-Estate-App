@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { getProjects } from "@/utils/data/projects";
+import { checkAdminStatus } from "@/utils/actions/admin";
 import {
   Building2,
   MapPin,
@@ -21,6 +22,9 @@ import {
 } from "@/components/admin/ProjectActions";
 
 async function ProjectList() {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
+
   const projects = await getProjects();
 
   if (projects.length === 0) {
@@ -204,7 +208,9 @@ function ProjectListSkeleton() {
   );
 }
 
-export default function AdminProjects() {
+export default async function AdminProjects() {
+  const { isAdmin } = await checkAdminStatus();
+  if (!isAdmin) return null;
   return (
     <div className="space-y-10">
       {/* Header Section */}

@@ -22,14 +22,24 @@ export async function GET(request, { params }) {
             }
         }
 
-        const plot = await Plot.findOne(query).lean();
+        let plot = await Plot.findOne(query);
         if (!plot) {
             return NextResponse.json(
                 { success: false, error: "Plot not found" },
                 { status: 404 }
             );
         }
-        return NextResponse.json({ success: true, data: serialize(plot) });
+
+        // Auto-expire reservation if past 24 hours
+        if (plot.status === "reserved" && plot.reservedUntil && plot.reservedUntil < new Date()) {
+            plot.status = "available";
+            plot.customer = [];
+            plot.reservedAt = null;
+            plot.reservedUntil = null;
+            await plot.save();
+        }
+
+        return NextResponse.json({ success: true, data: serialize(plot.toObject?.() || plot) });
     } catch (error) {
         return NextResponse.json(
             { success: false, error: error.message },

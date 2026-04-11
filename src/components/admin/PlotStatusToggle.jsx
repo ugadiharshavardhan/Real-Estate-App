@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { updatePlotStatus } from "@/utils/actions/admin";
-import { Loader2, Check, X, User, Phone, MapPin } from "lucide-react";
+import { Loader2, Check, X, User, Phone, MapPin, Clock } from "lucide-react";
 
 // Helper to extract and normalize customers (Moved outside to be a pure utility)
 const getCustomersFromPlot = (p) => {
@@ -17,6 +17,7 @@ const getCustomersFromPlot = (p) => {
     .filter((c) => c && typeof c === "object")
     .map((c) => ({
       name: c.name || "",
+      email: c.email || "",
       aadharNumber: c.aadharNumber || "",
       phone: c.phone || "",
       address: c.address || "",
@@ -110,7 +111,7 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
     const existing = getCustomersFromPlot(plot);
     return existing.length > 0
       ? JSON.parse(JSON.stringify(existing))
-      : [{ name: "", aadharNumber: "", phone: "", address: "" }];
+      : [{ name: "", email: "", aadharNumber: "", phone: "", address: "" }];
   });
 
   const existingCustomers = getCustomersFromPlot(plot);
@@ -148,7 +149,7 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
   const handleAddCustomer = () => {
     setCustomersData([
       ...customersData,
-      { name: "", aadharNumber: "", phone: "", address: "" },
+      { name: "", email: "", aadharNumber: "", phone: "", address: "" },
     ]);
   };
 
@@ -166,17 +167,22 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
   const validateAndSave = () => {
     setError(null);
     if (showCustomerFields) {
+      // Reservations only require Name, Phone, and Email strictly for the first user from the UI side,
+      // but admins might add aadhar/address later. For the sake of admin quick edits on reserved plots:
       for (const [index, customer] of customersData.entries()) {
-        const { name, aadharNumber, phone, address } = customer;
-        if (!name || !aadharNumber || !phone || !address) {
-          setError(`Please fill in all details for Customer #${index + 1}: Name, Aadhar Number, Phone, and Address.`);
+        const { name, phone } = customer;
+        if (!name || !phone) {
+          setError(`Please fill in at least Name and Phone for Customer #${index + 1}.`);
           return;
         }
 
-        const aadharRegex = /^\d{12}$/;
-        if (!aadharRegex.test(aadharNumber.replace(/\s/g, ""))) {
-          setError(`Please enter a valid 12-digit Aadhar Number for Customer #${index + 1}.`);
-          return;
+        // Only validate aadhar if they provided it or if it's registered/booked
+        if (customer.aadharNumber) {
+          const aadharRegex = /^\d{12}$/;
+          if (!aadharRegex.test(customer.aadharNumber.replace(/\s/g, ""))) {
+            setError(`Please enter a valid 12-digit Aadhar Number for Customer #${index + 1}.`);
+            return;
+          }
         }
       }
     }
@@ -226,10 +232,26 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
                 {existingCustomers.map((c, idx) => (
                   <div key={idx} className="flex flex-col border-l-2 border-[#1B4332]/20 pl-4 py-1">
                     <p className="text-sm font-bold text-gray-900">{c.name}</p>
-                    <p className="text-[10px] text-gray-500 font-medium">Aadhar: {c.aadharNumber}</p>
+                    <div className="flex gap-3 mt-1">
+                       {c.phone && <p className="text-[10px] text-gray-500 font-medium">📍 {c.phone}</p>}
+                       {c.email && <p className="text-[10px] text-gray-500 font-medium">✉️ {c.email}</p>}
+                    </div>
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {plot.status === "reserved" && plot.reservedUntil && (
+            <div className="p-4 bg-yellow-50 border border-yellow-100 rounded-2xl flex items-start gap-3">
+               <Clock className="text-yellow-600 w-5 h-5 shrink-0 mt-0.5" />
+               <div>
+                 <p className="text-yellow-800 text-xs font-bold">Self-Service Reservation Active</p>
+                 <p className="text-yellow-700 text-[10px] mt-1">
+                   This plot is reserved until <strong>{new Date(plot.reservedUntil).toLocaleString()}</strong>. 
+                   If the reservation expires, it will automatically become available.
+                 </p>
+               </div>
             </div>
           )}
 
@@ -318,6 +340,21 @@ function StatusModal({ plot, isPending, onClose, onSave }) {
                           className="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-white"
                         />
                       </div>
+                    </div>
+
+                    <div className="space-y-2">
+                       <div className="relative group/input">
+                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within/input:text-[#1B4332] transition-colors font-bold text-[10px]">
+                           Email
+                         </div>
+                         <input
+                           type="email"
+                           value={customer.email}
+                           onChange={(e) => handleCustomerChange(index, 'email', e.target.value)}
+                           placeholder="Email Address"
+                           className="w-full pl-16 pr-6 py-4 rounded-2xl border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#1B4332]/5 font-bold text-gray-900 text-sm transition-all bg-white"
+                         />
+                       </div>
                     </div>
 
                     <div className="space-y-2">

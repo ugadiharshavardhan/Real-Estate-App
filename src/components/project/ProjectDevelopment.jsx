@@ -11,17 +11,17 @@ export default function ProjectDevelopment() {
 
     const devImages = [
         {
-            url: "/development/road_marker.png",
+            url: "/development/road_marker.avif",
             title: "Internal Roads",
             status: "100% Completed"
         },
         {
-            url: "/development/footpath_tiles.png",
+            url: "/development/footpath_tiles.webp",
             title: "Checkered Tiles Footpath",
             status: "Completed"
         },
         {
-            url: "/development/avenue_plantation.png",
+            url: "/development/avenue_plantation.jpg",
             title: "Avenue Plantation",
             status: "90% Completed"
         },

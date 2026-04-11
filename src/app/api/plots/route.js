@@ -34,6 +34,12 @@ export async function GET(request) {
             ];
         }
 
+        // Auto-expire reservations that are past 24 hours
+        await Plot.updateMany(
+            { status: "reserved", reservedUntil: { $lt: new Date() } },
+            { $set: { status: "available", customer: [], reservedAt: null, reservedUntil: null } }
+        );
+
         const plots = await Plot.find(query).lean();
         return NextResponse.json({ success: true, data: serialize(plots) });
     } catch (error) {
